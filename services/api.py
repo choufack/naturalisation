@@ -1,10 +1,11 @@
 from flask import Flask, request, jsonify
 from moteur.moteur_eligibilite import MoteurEligibilite, Profil
 from experta import Fact
+from flask import Blueprint
 
-app = Flask(__name__)
+api_eligibility = Blueprint('api', __name__)
 
-@app.route('/eligibilite', methods=['POST'])
+@api_eligibility.route('/eligibilite', methods=['POST'])
 def calculer_eligibilite():
     """
     Endpoint pour calculer l'éligibilité.
@@ -36,5 +37,5 @@ def calculer_eligibilite():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)

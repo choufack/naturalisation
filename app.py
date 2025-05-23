@@ -6,8 +6,10 @@ import sys
 import os
 from moteur.moteur_eligibilite import MoteurEligibilite, Profil  # Import du moteur d'éligibilité
 from experta import Fact
+from services.api import api_eligibility
 
 app = Flask(__name__)
+app.register_blueprint(api_eligibility, url_prefix='/api')
 class ResidencePermitApp:
     def __init__(self, root, questions_file):
         self.root = root
@@ -158,5 +160,6 @@ class ResidencePermitApp:
 
 if __name__ == "__main__":
     app.run(debug=True)
-    app = ResidencePermitApp(root, "schemas/questions.json")
+    root = tk.Tk()
+    ResidencePermitApp(root, "schemas/questions.json")
 
