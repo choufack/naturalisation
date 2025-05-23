@@ -1,0 +1,1315 @@
+{
+    "titres_de_sejour": [
+      {
+        "libelle": "Carte de résident - Regroupement familial (Général)",
+        "code_agdref": "1505",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif d’état civil (acte de naissance)",
+            "Justificatif de nationalité (passeport)",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3, 35mm x 45mm)",
+            "Déclaration non-polygamie (si applicable)",
+            "Justificatif de paiement (taxe + timbre)",
+            "Certificat médical (OFII)"
+          ],
+          "documents_specifiques": [
+            "Visa de long séjour pour regroupement familial",
+            "Copie carte de résident de l’étranger rejoint",
+            "Si conjoint: Déclaration conjointe vie commune",
+            "Si conjoint: Extrait acte de mariage",
+            "Si conjoint: Justificatifs 3 ans résidence (scolarité, impôts, contrats)"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement",
+            "Carte de résident expirante",
+            "Attestation séjour (<3 ans hors France ou <3 ans UE/<6 ans France)"
+          ],
+          "documents_specifiques": [
+            "Carte du conjoint rejoint",
+            "Si conjoint: Déclaration conjointe vie commune",
+            "Si conjoint: Preuves communauté de vie (bail, facture EDF)",
+            "Exceptions: Violences conjugales (plainte, certificats)",
+            "Exceptions: Décès conjoint (acte décès)"
+          ]
+        }
+      },
+      {
+        "libelle": "Carte de résident - Regroupement familial (Algériens)",
+        "code_agdref": "1505",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif d’état civil",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement",
+            "Certificat médical"
+          ],
+          "documents_specifiques": [
+            "Visa de long séjour",
+            "Certificat de résidence 10 ans de l’étranger rejoint",
+            "Si conjoint: Déclaration conjointe vie commune",
+            "Si conjoint: Justificatifs communauté de vie (bail, facture EDF)"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement",
+            "Certificat de résidence expirant",
+            "Attestation séjour (<3 ans hors France)"
+          ],
+          "documents_specifiques": [
+            "Certificat de résidence en cours",
+            "Justificatifs état civil/nationalité (si non fournis)",
+            "Preuves communauté de vie"
+          ]
+        }
+      },
+      {
+        "libelle": "Carte de séjour temporaire - Vie privée et familiale (Regroupement familial)",
+        "code_agdref": "-",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Certificat médical (si requis)",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "VLS-TS (sauf exceptions)",
+            "Décision regroupement familial",
+            "Carte de séjour résident",
+            "Si conjoint: Déclaration conjointe vie commune",
+            "Si conjoint: Acte de mariage"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de séjour (carte, VLS-TS)",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Carte conjoint rejoint",
+            "Si conjoint: Déclaration conjointe",
+            "Si conjoint: Preuves vie commune",
+            "Exceptions: Violences conjugales",
+            "Exceptions: Décès conjoint"
+          ]
+        }
+      },
+      {
+        "libelle": "Certificat de résidence algérien 1 an - Regroupement familial",
+        "code_agdref": "-",
+        "premiere_demande": {
+          "documents_communs": [],
+          "documents_specifiques": []
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement",
+            "Certificat de résidence expirant",
+            "Attestation séjour (<3 ans hors France)"
+          ],
+          "documents_specifiques": [
+            "Certificat de résidence en cours",
+            "Justificatifs état civil/nationalité (si non fournis)",
+            "Preuves communauté de vie"
+          ]
+        }
+      },
+      {
+        "libelle": "Carte de séjour temporaire - Recherche d’emploi/création d’entreprise (Étudiant)",
+        "code_agdref": "1235",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif de nationalité (passeport)",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement (taxe, timbre, visa si requis)",
+            "Couverture sociale"
+          ],
+          "documents_specifiques": [
+            "Carte de séjour étudiant ou VLS-TS validé",
+            "Diplôme (master, CGE, licence pro) ou attestation réussite",
+            "Projet création d’entreprise (si applicable)"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Couverture sociale"
+          ],
+          "documents_specifiques": [
+            "Carte de séjour temporaire en cours",
+            "Diplôme ou attestation réussite",
+            "Preuves poursuite projet (si applicable)"
+          ]
+        }
+      },
+      {
+        "libelle": "Autorisation provisoire de séjour - Recherche d’emploi (Étudiant, accords bilatéraux)",
+        "code_agdref": "1111",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Couverture sociale"
+          ],
+          "documents_specifiques": [
+            "Carte de séjour étudiant ou VLS-TS validé",
+            "Diplôme enseignement supérieur ou attestation réussite",
+            "Projet création d’entreprise (si applicable)"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Couverture sociale"
+          ],
+          "documents_specifiques": [
+            "APS en cours",
+            "Diplôme enseignement supérieur ou attestation réussite"
+          ]
+        }
+      },
+      {
+        "libelle": "Carte de séjour temporaire - Recherche d’emploi/création d’entreprise (Chercheur)",
+        "code_agdref": "1236",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Couverture sociale"
+          ],
+          "documents_specifiques": [
+            "Carte de séjour chercheur ou VLS-TS validé",
+            "Confirmation achèvement recherches (différée possible)",
+            "Projet création d’entreprise (si applicable)"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Couverture sociale"
+          ],
+          "documents_specifiques": [
+            "Carte de séjour temporaire en cours",
+            "Confirmation achèvement recherches",
+            "Preuves poursuite projet (si applicable)"
+          ]
+        }
+      },
+      {
+        "libelle": "Carte de résident de longue durée - UE (5 ans de présence régulière)",
+        "code_agdref": "3148",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif d’état civil",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (5)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement",
+            "Certificat médical",
+            "Intégration républicaine (déclaration principes, A2 français sauf >65 ans)"
+          ],
+          "documents_specifiques": [
+            "Justificatifs 5 ans séjour ininterrompu (scolarité, impôts, contrats)",
+            "Pour carte bleue européenne: 2 ans en France",
+            "Ressources stables/suffisantes (paie, impôts)",
+            "Assurance-maladie"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement",
+            "Carte de résident expirante",
+            "Attestation séjour (<3 ans hors UE/<6 ans hors France)"
+          ],
+          "documents_specifiques": [
+            "Maintien conditions initiales (résidence, ressources, assurance)"
+          ]
+        }
+      },
+      {
+        "libelle": "Carte de séjour temporaire - Étranger titulaire statut longue durée-UE autre État membre",
+        "code_agdref": "3134-1",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif d’état civil",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (5)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement",
+            "Certificat médical",
+            "Intégration républicaine"
+          ],
+          "documents_specifiques": [
+            "Carte résident longue durée-UE autre État membre",
+            "Ressources suffisantes/stables",
+            "Assurance-maladie",
+            "Justificatifs motif installation (autorisation travail, immatriculation)"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement",
+            "Carte de séjour expirante"
+          ],
+          "documents_specifiques": [
+            "Preuves maintien motif installation (travail, entreprise)",
+            "Ressources/assurance"
+          ]
+        }
+      },
+      {
+        "libelle": "Carte de résident permanent",
+        "code_agdref": "1599",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement",
+            "Carte de résident expirante",
+            "Attestation séjour (<3 ans hors France ou <3 ans UE/<6 ans France)"
+          ],
+          "documents_specifiques": [
+            "Intégration républicaine (si non vérifiée): Déclaration principes; A2 français (sauf >65 ans)",
+            "Maintien conditions initiales (mariage, ressources)",
+            "Preuve détention cartes (1 ou 2 cartes, ou >60 ans: acte naissance)"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement",
+            "Carte de résident expirante",
+            "Attestation séjour"
+          ],
+          "documents_specifiques": [
+            "Intégration républicaine (si non vérifiée)",
+            "Maintien conditions initiales"
+          ]
+        }
+      },
+      {
+        "libelle": "Carte de résident - Ancien combattant (Unité combattante française)",
+        "code_agdref": "1506",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif d’état civil",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (5)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement (taxe, timbre, visa 200€ si irrégulier)",
+            "Certificat médical",
+            "Intégration républicaine"
+          ],
+          "documents_specifiques": [
+            "Visa ou carte de séjour",
+            "Carte du combattant",
+            "Livret militaire"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement",
+            "Carte de résident expirante",
+            "Attestation séjour (<3 ans hors France)"
+          ],
+          "documents_specifiques": [
+            "Maintien statut ancien combattant: Attestation à jour",
+            "Justificatifs service militaire (si requis)",
+            "Intégration républicaine (si non vérifiée)"
+          ]
+        }
+      },
+      {
+        "libelle": "Carte de résident - Ancien combattant (FFI)",
+        "code_agdref": "1507",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif d’état civil",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (5)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement",
+            "Certificat médical",
+            "Intégration républicaine"
+          ],
+          "documents_specifiques": [
+            "Visa ou carte de séjour",
+            "Carte du combattant",
+            "Certificat démobilisation",
+            "Justificatif blessure"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement",
+            "Carte de résident expirante",
+            "Attestation séjour"
+          ],
+          "documents_specifiques": [
+            "Maintien statut",
+            "Justificatifs service",
+            "Intégration républicaine (si non vérifiée)"
+          ]
+        }
+      },
+      {
+        "libelle": "Carte de résident - Ancien combattant (Unités alliées)",
+        "code_agdref": "1508",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif d’état civil",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (5)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement",
+            "Certificat médical",
+            "Intégration républicaine"
+          ],
+          "documents_specifiques": [
+            "Visa ou carte de séjour",
+            "Carte du combattant",
+            "Livret militaire"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement",
+            "Carte de résident expirante",
+            "Attestation séjour"
+          ],
+          "documents_specifiques": [
+            "Maintien statut",
+            "Justificatifs service",
+            "Intégration républicaine (si non vérifiée)"
+          ]
+        }
+      },
+      {
+        "libelle": "Carte de résident - Ascendant à charge enfant français (Général)",
+        "code_agdref": "314-11 2°",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif d’état civil",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement (taxe, visa 200€ si irrégulier)",
+            "Certificat médical",
+            "Intégration républicaine (sauf certains pays)"
+          ],
+          "documents_specifiques": [
+            "Visa de long séjour",
+            "Nationalité française enfant (CNI, certificat <6 mois)",
+            "Lien familial (acte naissance enfant, livret famille)",
+            "Prise en charge: Ressources enfant (impôts, paie)",
+            "Prise en charge: Absence ressources ascendant (pensions, relevés)",
+            "Prise en charge: Virements réguliers",
+            "Prise en charge: Attestation consulaire isolement",
+            "Prise en charge: Déclaration absence autres soutiens"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement",
+            "Carte de résident expirante",
+            "Attestation séjour (<3 ans hors France)"
+          ],
+          "documents_specifiques": [
+            "Nationalité française enfant",
+            "Lien familial (actes à jour)",
+            "Prise en charge (si requis): Ressources enfant; Absence ressources ascendant"
+          ]
+        }
+      },
+      {
+        "libelle": "Carte de résident - Ascendant à charge enfant français (Algériens)",
+        "code_agdref": "7 bis g",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif d’état civil",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement",
+            "Certificat médical",
+            "Intégration républicaine (sauf certains pays)"
+          ],
+          "documents_specifiques": [
+            "Visa ou carte de séjour",
+            "Nationalité française enfant",
+            "Lien familial",
+            "Prise en charge: Ressources enfant",
+            "Prise en charge: Absence ressources ascendant",
+            "Prise en charge: Virements réguliers",
+            "Prise en charge: Attestation consulaire",
+            "Prise en charge: Déclaration absence soutiens",
+            "Prise en charge: Certificat fiscal foyer enfant"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement",
+            "Certificat de résidence expirant",
+            "Attestation séjour"
+          ],
+          "documents_specifiques": [
+            "Justificatifs similaires première demande (nationalité enfant, lien, prise en charge)"
+          ]
+        }
+      },
+      {
+        "libelle": "Carte de résident - Ascendant à charge enfant français (Tunisiens)",
+        "code_agdref": "10 1 e",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif d’état civil",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement",
+            "Certificat médical",
+            "Intégration républicaine (sauf certains pays)"
+          ],
+          "documents_specifiques": [
+            "Visa ou carte de séjour",
+            "Résidence enfant France (scolarité, crèche)",
+            "Nationalité française enfant",
+            "Lien familial",
+            "Contribution/autorité parentale: Documents état civil, décision judiciaire, preuves contribution (pension, achats enfant)"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement",
+            "Carte de résident expirante",
+            "Attestation séjour"
+          ],
+          "documents_specifiques": [
+            "Nationalité française enfant",
+            "Lien familial",
+            "Prise en charge (si requis)"
+          ]
+        }
+      },
+      {
+        "libelle": "Certificat de résidence algérien 10 ans - Conjoint de Français",
+        "code_agdref": "-",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif d’état civil",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement (taxe, visa 200€ si irrégulier)"
+          ],
+          "documents_specifiques": [
+            "Acte de mariage",
+            "Preuves communauté de vie",
+            "Nationalité française conjoint"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Certificat de résidence expirant",
+            "Justificatif d’état civil/nationalité (si non fournis)",
+            "Attestation séjour (<3 ans hors France)",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Maintien conditions: Acte de mariage; Preuves communauté de vie; Nationalité française conjoint"
+          ]
+        }
+      },
+      {
+        "libelle": "Certificat de résidence algérien 10 ans - Parent d’enfant français",
+        "code_agdref": "-",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif d’état civil",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement"
+          ],
+          "documents_specifiques": [
+            "Preuve filiation",
+            "Contribution entretien/éducation",
+            "Résidence enfant France"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Certificat de résidence expirant",
+            "Justificatif d’état civil/nationalité",
+            "Attestation séjour",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Maintien conditions: Filiation; Contribution; Résidence enfant"
+          ]
+        }
+      },
+      {
+        "libelle": "Certificat de résidence algérien 10 ans - Enfant de Français (>21 ans, à charge)",
+        "code_agdref": "-",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif d’état civil",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement"
+          ],
+          "documents_specifiques": [
+            "Preuve filiation",
+            "Dépendance financière parent français (relevés bancaires, attestations)"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Certificat de résidence expirant",
+            "Justificatif d’état civil/nationalité",
+            "Attestation séjour",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Maintien conditions: Filiation; Dépendance financière"
+          ]
+        }
+      },
+      {
+        "libelle": "Certificat de résidence algérien 10 ans - Rente accident travail/maladie professionnelle",
+        "code_agdref": "-",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif d’état civil",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement"
+          ],
+          "documents_specifiques": [
+            "Justificatifs rente (attestation, bordereaux)"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Certificat de résidence expirant",
+            "Justificatif d’état civil/nationalité",
+            "Attestation séjour",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Maintien conditions: Justificatifs rente"
+          ]
+        }
+      },
+      {
+        "libelle": "Certificat de résidence algérien 10 ans - Résidence depuis âge 10 ans",
+        "code_agdref": "-",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif d’état civil",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement"
+          ],
+          "documents_specifiques": [
+            "Justificatifs résidence depuis 10 ans (scolarité, contrats, impôts)"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Certificat de résidence expirant",
+            "Justificatif d’état civil/nationalité",
+            "Attestation séjour",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Maintien conditions: Justificatifs résidence"
+          ]
+        }
+      },
+      {
+        "libelle": "Certificat de résidence algérien 10 ans - 10 ans/15 ans présence régulière",
+        "code_agdref": "-",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif d’état civil",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement"
+          ],
+          "documents_specifiques": [
+            "Photocopies titres de séjour (sauf étudiant)",
+            "Justificatifs 10/15 ans résidence (scolarité, contrats, impôts)"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Certificat de résidence expirant",
+            "Justificatif d’état civil/nationalité",
+            "Attestation séjour",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Maintien conditions: Justificatifs résidence"
+          ]
+        }
+      },
+      {
+        "libelle": "Certificat de résidence algérien 10 ans - 5 ans vie privée et familiale",
+        "code_agdref": "-",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif d’état civil",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement"
+          ],
+          "documents_specifiques": [
+            "Photocopies certificats vie privée et familiale 5 ans"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Certificat de résidence expirant",
+            "Justificatif d’état civil/nationalité",
+            "Attestation séjour",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Maintien conditions: Justificatifs vie privée et familiale"
+          ]
+        }
+      },
+      {
+        "libelle": "Certificat de résidence algérien 10 ans - Ressortissant francophone 10 ans présence",
+        "code_agdref": "-",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif d’état civil",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Déclaration non-polygamie",
+            "Justificatif de paiement"
+          ],
+          "documents_specifiques": [
+            "Justificatifs 10 ans présence",
+            "Preuve nationalité pays francophone"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Certificat de résidence expirant",
+            "Justificatif d’état civil/nationalité",
+            "Attestation séjour",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Maintien conditions: Justificatifs présence; Nationalité francophone"
+          ]
+        }
+      },
+      {
+        "libelle": "VLS-TS - Étudiant recherche emploi/création entreprise",
+        "code_agdref": "1235",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Certificat médical (si requis)",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "VLS-TS validé ou carte étudiant",
+            "Diplôme (master, CGE, licence pro)",
+            "Projet création d’entreprise",
+            "Couverture sociale"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de séjour (carte, VLS-TS)",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Carte de séjour temporaire",
+            "Diplôme",
+            "Preuves poursuite projet",
+            "Couverture sociale"
+          ]
+        }
+      },
+      {
+        "libelle": "VLS-TS - Étudiant accords bilatéraux",
+        "code_agdref": "1111",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Certificat médical (si requis)",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "VLS-TS validé ou carte étudiant",
+            "Diplôme enseignement supérieur",
+            "Projet création d’entreprise"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de séjour",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "APS en cours",
+            "Diplôme enseignement supérieur"
+          ]
+        }
+      },
+      {
+        "libelle": "VLS-TS - Chercheur recherche emploi/création entreprise",
+        "code_agdref": "1236",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Certificat médical (si requis)",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "VLS-TS validé ou carte chercheur",
+            "Confirmation achèvement recherches",
+            "Projet création d’entreprise"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de séjour",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Carte de séjour temporaire",
+            "Confirmation achèvement recherches",
+            "Preuves poursuite projet"
+          ]
+        }
+      },
+      {
+        "libelle": "VLS-TS - Étudiant algérien",
+        "code_agdref": "7 ter",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Certificat médical (si requis)",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "VLS-TS étudiant",
+            "Inscription établissement",
+            "Ressources (≥615 €/mois)",
+            "Couverture sociale"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de séjour",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Carte de séjour temporaire",
+            "Inscription établissement",
+            "Ressources",
+            "Couverture sociale"
+          ]
+        }
+      },
+      {
+        "libelle": "VLS-TS - Salarié",
+        "code_agdref": "-",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Certificat médical (si requis)",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "VLS-TS ou carte de séjour",
+            "Autorisation travail (CERFA 15187*02)",
+            "DSN ou attestation activité 12 mois"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de séjour",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Carte de séjour temporaire",
+            "Autorisation travail",
+            "Preuves activité (paie, DS Blaze)"
+          ]
+        }
+      },
+      {
+        "libelle": "VLS-TS - Travailleur temporaire",
+        "code_agdref": "-",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Certificat médical (si requis)",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "VLS-TS ou carte de séjour",
+            "Autorisation travail (CERFA 15186*03)",
+            "Déclaration détachement (si détaché)"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de séjour",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Carte de séjour temporaire",
+            "Autorisation travail",
+            "Preuves activité"
+          ]
+        }
+      },
+      {
+        "libelle": "VLS-TS - Entrepreneur/Profession libérale",
+        "code_agdref": "-",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Certificat médical (si requis)",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "VLS-TS ou carte de séjour",
+            "Immatriculation (K, Kbis, URSSAF)",
+            "Documents arrêté INTV1629756A",
+            "Ressources SMIC"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de séjour",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Carte de séjour temporaire",
+            "Immatriculation",
+            "Preuves activité (ressources, URSSAF)"
+          ]
+        }
+      },
+      {
+        "libelle": "VLS-TS - Vie privée et familiale (Regroupement familial)",
+        "code_agdref": "-",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Certificat médical (si requis)",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "VLS-TS (sauf exceptions)",
+            "Décision regroupement familial",
+            "Carte de séjour résident",
+            "Si conjoint: Déclaration conjointe vie commune",
+            "Si conjoint: Acte de mariage"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de séjour",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Carte conjoint rejoint",
+            "Si conjoint: Déclaration conjointe",
+            "Si conjoint: Preuves vie commune",
+            "Exceptions: Violences conjugales",
+            "Exceptions: Décès"
+          ]
+        }
+      },
+      {
+        "libelle": "VLS-TS - Vie privée et familiale (Conjoint de Français)",
+        "code_agdref": "-",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Certificat médical (si requis)",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "VLS-TS (sauf exceptions)",
+            "Acte de mariage",
+            "Nationalité française conjoint (CNI, certificat)",
+            "Déclaration conjointe",
+            "Preuves vie commune"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de séjour",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Acte de mariage",
+            "Nationalité française conjoint",
+            "Déclaration conjointe",
+            "Preuves vie commune",
+            "Exceptions: Violences conjugales",
+            "Exceptions: Décès"
+          ]
+        }
+      },
+      {
+        "libelle": "VLS-TS - Vie privée et familiale (Parent d’enfant français)",
+        "code_agdref": "-",
+        "premiere_demande": {
+          "documents_communs": [
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Certificat médical (si requis)",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "VLS-TS (sauf exceptions)",
+            "Nationalité française enfant",
+            "Filiation",
+            "Contribution entretien/éducation"
+          ]
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de séjour",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Filiation",
+            "Contribution entretien/éducation",
+            "Résidence enfant France"
+          ]
+        }
+      },
+      {
+        "libelle": "Carte de séjour temporaire - Regroupement familial (Renouvellement)",
+        "code_agdref": "-",
+        "premiere_demande": {
+          "documents_communs": [],
+          "documents_specifiques": []
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de séjour",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Carte conjoint rejoint",
+            "Si conjoint: Déclaration conjointe",
+            "Si conjoint: Preuves vie commune",
+            "Exceptions: Violences conjugales",
+            "Exceptions: Décès"
+          ]
+        }
+      },
+      {
+        "libelle": "Carte de séjour temporaire - Conjoint de Français (Renouvellement)",
+        "code_agdref": "-",
+        "premiere_demande": {
+          "documents_communs": [],
+          "documents_specifiques": []
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de séjour",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Acte de mariage",
+            "Nationalité française conjoint",
+            "Déclaration conjointe",
+            "Preuves vie commune",
+            "Exceptions: Violences conjugales",
+            "Exceptions: Décès"
+          ]
+        }
+      },
+      {
+        "libelle": "Carte de séjour temporaire - Parent d’enfant français (Renouvellement)",
+        "code_agdref": "-",
+        "premiere_demande": {
+          "documents_communs": [],
+          "documents_specifiques": []
+        },
+        "renouvellement": {
+          "documents_communs": [
+            "Justificatif de séjour",
+            "Justificatif de nationalité",
+            "Justificatif de domicile (<6 mois)",
+            "Photographies (3)",
+            "Justificatif de paiement",
+            "Déclaration non-polygamie"
+          ],
+          "documents_specifiques": [
+            "Filiation",
+            "Contribution entretien/éducation",
+            "Résidence enfant France"
+          ]
+        }
+      }
+    ],
+    "naturalisations": [
+      {
+        "libelle": "Ascendant d’un citoyen français",
+        "demande": {
+          "documents": [
+            "Formulaire Cerfa n°15561*03 (2)",
+            "Timbre fiscal (55 €)",
+            "Photographies (2)",
+            "Titre de séjour (photocopie)",
+            "Passeport (photocopie)",
+            "Actes d’état civil (naissance, parents, mariage, divorce, enfants, décès)",
+            "Filiation descendant (acte naissance, jugement adoption)",
+            "Nationalité française descendant (acte, certificat, décret)",
+            "Résidence actuelle (domicile)",
+            "Résidence 25 ans (carrière, impôts, scolarité)",
+            "Résidence conjoint/enfants (titre, scolarité)"
+          ]
+        }
+      },
+      {
+        "libelle": "Frère ou sœur d’un citoyen français",
+        "demande": {
+          "documents": [
+            "Formulaire Cerfa n°15562*03 (2)",
+            "Timbre fiscal (55 €)",
+            "Photographies (2)",
+            "Titre de séjour",
+            "Passeport",
+            "Actes d’état civil (naissance, parents, mariage, divorce, enfants)",
+            "Lien familial (acte frère/sœur, livret famille)",
+            "Nationalité française frère/sœur (certificat, acte mention)",
+            "Scolarité (6-16 ans)",
+            "Résidence actuelle",
+            "Résidence depuis 16 ans (carrière, contrats)",
+            "Résidence conjoint/enfants"
+          ]
+        }
+      },
+      {
+        "libelle": "Par mariage",
+        "demande": {
+          "documents": [
+            "Formulaire Cerfa n°15277*04 (2)",
+            "Timbre fiscal (55 €)",
+            "Photographies (2)",
+            "Titre de séjour",
+            "Passeport",
+            "Actes d’état civil (naissance, mariage <3 mois, divorce, enfants)",
+            "Nationalité française conjoint (acte, certificat)",
+            "Communauté vie ≥4 ans (domicile commun, enfants, impôts)",
+            "Résidence régulière 3 ans (si <5 ans mariage)",
+            "Casier judiciaire étranger (sauf réfugiés)",
+            "Connaissance français (B1, TCF/TEF, dispense)"
+          ]
+        }
+      },
+      {
+        "libelle": "Par décret",
+        "demande": {
+          "documents": [
+            "Formulaire (2)",
+            "Timbre fiscal (55 €)",
+            "Photographies (2)",
+            "Titre de séjour",
+            "Passeport",
+            "Actes d’état civil (naissance, mariage, PACS, divorce, enfants, décès)",
+            "Situation familiale (titre conjoint, nationalité, scolarité enfants)",
+            "Domicile (location, propriété, hébergement)",
+            "Situation fiscale (impôts 3 ans, P237)",
+            "Ressources/activités (contrats, paie, immatriculation)",
+            "Casier judiciaire étranger",
+            "Situation militaire (anciens combattants)",
+            "Connaissance français (B1, TCF/TEF, dispense)"
+          ]
+        }
+      }
+    ]
+  }

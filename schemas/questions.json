@@ -1,0 +1,184 @@
+[
+    {
+      "question_id": "Q0_service",
+      "label": "Que souhaitez-vous simuler ?",
+      "type": "checkbox",
+      "options": [
+        { "value": "sejour", "label": "Titre de séjour" },
+        { "value": "nationalite", "label": "Nationalité française" }
+      ],
+      "fact": "services"
+    },
+    {
+      "question_id": "Q0b_currentPermit",
+      "label": "Quel titre de séjour possédez-vous actuellement ?",
+      "type": "select",
+      "visible_if": [{ "fact": "services", "op": "contains", "value": "sejour" }],
+      "options": [
+        { "value": "none", "label": "Aucun (première demande)" },
+        { "value": "VLS_TS", "label": "Visa long séjour valant titre de séjour (VLS-TS)" },
+        { "value": "CS_TEMP_VPF", "label": "Temporaire – Vie privée & familiale" },
+        { "value": "CS_TEMP_SALARIE", "label": "Temporaire – Salarié" },
+        { "value": "CS_TEMP_ETUDIANT", "label": "Temporaire – Étudiant" },
+        { "value": "CS_TEMP_ENTREPRENEUR", "label": "Temporaire – Entrepreneur" },
+        { "value": "CS_TEMP_VISITEUR", "label": "Temporaire – Visiteur" },
+        { "value": "CS_TEMP_AUTRES", "label": "Temporaire – Autres" },
+        { "value": "CS_MULTI", "label": "Pluriannuelle" },
+        { "value": "CS_PASSEPORT_TALENT", "label": "Passeport Talent" },
+        { "value": "CS_RESIDENT_UE", "label": "Résident UE" },
+        { "value": "CS_RESIDENT_10Y", "label": "Résident 10 ans" },
+        { "value": "CS_PERMANENT", "label": "Résident permanent" },
+        { "value": "APS", "label": "APS (post-études)" },
+        { "value": "OTHER", "label": "Autre" }
+      ],
+      "fact": "currentPermit"
+    },
+    {
+      "question_id": "Q1_nationality",
+      "label": "Quelle est votre nationalité ?",
+      "type": "select",
+      "options": [
+        { "value": "FR", "label": "Français·e" },
+        { "value": "MA", "label": "Marocain·e" },
+        { "value": "TN", "label": "Tunisien·ne" },
+        { "value": "CM", "label": "Camerounais·e" },
+        { "value": "SN", "label": "Sénégalais·e" },
+        { "value": "AUTRE", "label": "Autre nationalité" }
+      ],
+      "fact": "nationality"
+    },
+    {
+      "question_id": "Q2_yearsResidence",
+      "label": "Depuis combien d’années résidez-vous de façon continue en France ?",
+      "type": "number",
+      "minimum": 0,
+      "step": 1,
+      "fact": "yearsResidence"
+    },
+    {
+      "question_id": "Q3_familySituations",
+      "label": "Situation familiale en France",
+      "type": "checkbox",
+      "visible_if": [{ "fact": "services", "op": "contains", "value": "sejour" }],
+      "options": [
+        { "value": "conjointMariage", "label": "Conjoint·e de Français·e" },
+        { "value": "conjointPacs", "label": "PACS avec Français·e" },
+        { "value": "parentEnfantFr", "label": "Parent d’enfant français·e mineur·e" },
+        { "value": "familleMembreUE", "label": "Membre de famille UE" },
+        { "value": "familleNonEULongueDuree", "label": "Famille non-UE résident longue durée" },
+        { "value": "celibataire", "label": "Célibataire" }
+      ],
+      "fact": "familySituations"
+    },
+    {
+      "question_id": "Q4_professionalSituations",
+      "label": "Votre situation professionnelle en France",
+      "type": "select",
+      "visible_if": [{ "fact": "services", "op": "contains", "value": "sejour" }],
+      "options": [
+        { "value": "emploi_CDI", "label": "Emploi – CDI" },
+        { "value": "emploi_CDD", "label": "Emploi – CDD" },
+        { "value": "emploi_detachement", "label": "Détachement intra-groupe" },
+        { "value": "emploi_saisonnier", "label": "Travail saisonnier" },
+        { "value": "entrepreneur", "label": "Entrepreneur / indépendant" },
+        { "value": "etudes", "label": "Études supérieures" },
+        { "value": "stage", "label": "Stage (tripartite)" },
+        { "value": "chercheur", "label": "Chercheur" },
+        { "value": "sans_emploi", "label": "Sans emploi / visiteur" }
+      ],
+      "fact": "professionalSituations"
+    },
+    {
+      "question_id": "Q5_resourcesLevel",
+      "label": "Quel est votre niveau de ressources mensuelles ?",
+      "type": "select",
+      "visible_if": [{ "fact": "services", "op": "contains", "value": "sejour" }],
+      "options": [
+        { "value": "moins_1200", "label": "< 1 200 €" },
+        { "value": "1200_1426", "label": "1 200 € – 1 426 €" },
+        { "value": "plus_1426", "label": "> 1 426 €" }
+      ],
+      "fact": "resourcesLevel"
+    },
+    {
+      "question_id": "Q5b_housingSituation",
+      "label": "Quel est votre statut de logement ?",
+      "type": "select",
+      "visible_if": [{ "fact": "services", "op": "contains", "value": "sejour" }],
+      "options": [
+        { "value": "locataire", "label": "Locataire (bail à votre nom)" },
+        { "value": "proprietaire", "label": "Propriétaire" },
+        { "value": "heberge", "label": "Hébergé·e à titre gratuit" },
+        { "value": "foyer", "label": "Résident·e en foyer / hôtel" },
+        { "value": "autre", "label": "Autre situation" }
+      ],
+      "fact": "housingSituation"
+    },
+    {
+      "question_id": "Q6_specialSituations",
+      "label": "Situation particulière (facultatif)",
+      "type": "checkbox",
+      "visible_if": [{ "fact": "services", "op": "contains", "value": "sejour" }],
+      "options": [
+        { "value": "auPair", "label": "Jeune au pair" },
+        { "value": "volontaire", "label": "Mission de volontariat" },
+        { "value": "sante", "label": "Soins médicaux / humanitaire" },
+        { "value": "victimeTraite", "label": "Victime de traite / proxénétisme" },
+        { "value": "parentEnfantMalade", "label": "Parent d’enfant malade" },
+        { "value": "mineurIsole", "label": "Mineur isolé" },
+        { "value": "APS_etudes", "label": "APS post-études" },
+        { "value": "refugie", "label": "Réfugié statutaire" },
+        { "value": "talentArtiste", "label": "Talent artistique" },
+        { "value": "sportifPro", "label": "Sportif professionnel" }
+      ],
+      "fact": "specialSituations"
+    },
+    {
+      "question_id": "Q7_bornInFrance",
+      "label": "Êtes-vous né·e en France ?",
+      "type": "radio",
+      "visible_if": [{ "fact": "services", "op": "contains", "value": "nationalite" }],
+      "options": [
+        { "value": true, "label": "Oui" },
+        { "value": false, "label": "Non" }
+      ],
+      "fact": "bornInFrance"
+    },
+    {
+      "question_id": "Q8_yearsSince11",
+      "label": "Depuis votre 11ᵉ anniversaire, avez-vous vécu ≥ 5 ans en France ?",
+      "type": "radio",
+      "visible_if": [
+        { "fact": "services", "op": "contains", "value": "nationalite" },
+        { "fact": "bornInFrance", "op": "==", "value": true }
+      ],
+      "options": [
+        { "value": true, "label": "Oui" },
+        { "value": false, "label": "Non" }
+      ],
+      "fact": "yearsSince11"
+    },
+    {
+      "question_id": "Q9_niveauB1",
+      "label": "Votre maîtrise du français est-elle au moins B1 (oral & écrit) ?",
+      "type": "radio",
+      "visible_if": [{ "fact": "services", "op": "contains", "value": "nationalite" }],
+      "options": [
+        { "value": true, "label": "Oui" },
+        { "value": false, "label": "Non" }
+      ],
+      "fact": "niveauB1"
+    },
+    {
+      "question_id": "Q10_majeurCasier",
+      "label": "Êtes-vous majeur·e et sans condamnation pénale grave ?",
+      "type": "radio",
+      "visible_if": [{ "fact": "services", "op": "contains", "value": "nationalite" }],
+      "options": [
+        { "value": true, "label": "Oui" },
+        { "value": false, "label": "Non" }
+      ],
+      "fact": "majeurCasier"
+    }
+  ]
+  
