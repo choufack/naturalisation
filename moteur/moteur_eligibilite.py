@@ -1,180 +1,203 @@
+# -*- coding: utf-8 -*-
 from flask import Flask, render_template_string, request
 from experta import *
 
 app = Flask(__name__)
 
+###############################################################################
+# 1. PROFIL : toutes les clés issues du questionnaire
+###############################################################################
 class Profil(Fact):
+    """Fact porteur de toutes les réponses du formulaire.
+    Les clés avec un point (ex. family.link) seront aplaties en
+    family_link via flatten_keys()."""
     pass
 
+###############################################################################
+# 2. MOTEUR D'ÉLIGIBILITÉ
+###############################################################################
 class MoteurEligibilite(KnowledgeEngine):
-    @Rule(Profil(mariage_francais_depuis_4_ans=True, niveau_francais=True))
+
+    # ======================== FAMILLE ========================
+    @Rule(
+        Profil(family_link='mariage', family_community=True, family_yearsMarriage=MATCH.y),
+        TEST(lambda y: y >= 4)
+    )
     def nationalite_par_mariage(self):
-        self.declare(Fact(eligibilite="Nationalité française par mariage avec un Français"))
+        self.declare(Fact(eligibilite='Nationalité française par mariage (≥ 4 ans)'))
 
-    @Rule(Profil(frere_ou_soeur_francais=True, residence_10_ans=True))
-    def nationalite_par_fratrie(self):
-        self.declare(Fact(eligibilite="Nationalité française par lien de fratrie et scolarité"))
+    @Rule(Profil(family_link="mariage", family_community=True, family_yearsMarriage=MATCH.y), TEST(lambda y: y >= 4))
+    def nationalite_par_mariage(self):
+        print("Règle activée : Nationalité par mariage")
+        self.declare(Fact(eligibilite="Nationalité française par mariage (≥ 4 ans)"))
 
-    @Rule(Profil(residence_france_plus_5_ans=True, niveau_francais=True))
-    def nationalite_par_naturalisation(self):
-        self.declare(Fact(eligibilite="Naturalisation française par résidence de 5 ans"))
-
-    @Rule(Profil(ascendant_francais=True))
-    def nationalite_par_ascendant(self):
-        self.declare(Fact(eligibilite="Nationalité française en tant qu’ascendant d’un Français"))
-
-    @Rule(Profil(parent_enfant_francais=True))
-    def sejour_parent_enfant_francais(self):
-        self.declare(Fact(eligibilite="Carte de séjour 'vie privée et familiale' – parent d’un enfant français"))
-
-    @Rule(Profil(conjoint_francais=True))
-    def sejour_conjoint_francais(self):
-        self.declare(Fact(eligibilite="Carte de séjour 'vie privée et familiale' – conjoint de Français"))
-
-    @Rule(Profil(pacs_francais=True, vie_commune_1_an=True))
+    @Rule(Profil(family_link='pacs', family_community=True))
     def sejour_pacs(self):
-        self.declare(Fact(eligibilite="Carte de séjour 'vie privée et familiale' – partenaire Pacsé avec un Français"))
+        self.declare(Fact(eligibilite='Carte VP&F – partenaire Pacsé avec un Français'))
 
-    @Rule(Profil(entree_jeune_avant_13_ans=True, residence_continue=True))
-    def sejour_jeune_majeur(self):
-        self.declare(Fact(eligibilite="Carte de séjour 'vie privée et familiale' – jeune entré avant 13 ans"))
+    @Rule(Profil(family_link='parentEnfFr'))
+    def sejour_parent_enfant_francais(self):
+        self.declare(Fact(eligibilite='Carte VP&F – parent d’enfant français'))
 
-    @Rule(Profil(aide_sociale=True))
-    def sejour_ase(self):
-        self.declare(Fact(eligibilite="Carte de séjour 'vie privée et familiale' – jeune pris en charge par l’ASE"))
+    @Rule(Profil(family_link='regroupement'))
+    def sejour_regroupement_familial(self):
+        self.declare(Fact(eligibilite='Carte de séjour – regroupement familial'))
 
-    @Rule(Profil(ne_en_france=True, residence_8_ans=True, scolarite_5_ans=True))
-    def sejour_ne_en_france(self):
-        self.declare(Fact(eligibilite="Carte de séjour 'vie privée et familiale' – né et scolarisé en France"))
+    @Rule(Profil(family_link='famUE'))
+    def sejour_famille_ue(self):
+        self.declare(Fact(eligibilite='Carte de séjour – membre de famille citoyen UE/EEE'))
 
-    @Rule(Profil(sante_grave=True))
-    def sejour_sante(self):
-        self.declare(Fact(eligibilite="Carte de séjour pour soins médicaux en France"))
-
-    @Rule(Profil(residence_france_plus_10_ans=True))
-    def sejour_longue_residence(self):
-        self.declare(Fact(eligibilite="Carte de séjour pour résidence habituelle de plus de 10 ans"))
-
-    @Rule(Profil(liens_personnels_familiaux=True))
-    def sejour_liens_familiaux(self):
-        self.declare(Fact(eligibilite="Carte de séjour pour liens personnels et familiaux importants"))
-
-    @Rule(Profil(victime_traite=True))
-    def sejour_protection(self):
-        self.declare(Fact(eligibilite="Carte de séjour – protection des victimes de traite ou proxénétisme"))
-
-    @Rule(Profil(promesse_embauche=True, vls_ts=True))
+    # ======================== TRAVAIL ========================
+    @Rule(Profil(work_contract=MATCH.c, work_permit=True), TEST(lambda c: c in ('CDI', 'CDD')))
     def sejour_salarie(self):
-        self.declare(Fact(eligibilite="Carte de séjour 'salarié' ou 'travailleur temporaire'"))
+        self.declare(Fact(eligibilite='Carte de séjour « salarié »'))
 
-    @Rule(Profil(travail_saisonnier=True))
-    def sejour_saisonnier(self):
-        self.declare(Fact(eligibilite="Carte de séjour 'travailleur saisonnier'"))
-
-    @Rule(Profil(diplome_francais=True, motive_travail=True))
-    def sejour_recherche_emploi(self):
-        self.declare(Fact(eligibilite="Carte de séjour 'recherche d’emploi / création d’entreprise'"))
-
-    @Rule(Profil(etudiant=True))
-    def sejour_etudiant(self):
-        self.declare(Fact(eligibilite="Carte de séjour 'étudiant'"))
-
-    @Rule(Profil(stage=True))
-    def sejour_stagiaire(self):
-        self.declare(Fact(eligibilite="Carte de séjour 'stagiaire'"))
-
-    @Rule(Profil(au_pair=True))
-    def sejour_au_pair(self):
-        self.declare(Fact(eligibilite="Carte de séjour 'jeune au pair'"))
-
-    @Rule(Profil(visiteur=True))
-    def sejour_visiteur(self):
-        self.declare(Fact(eligibilite="Carte de séjour 'visiteur'"))
-
-    @Rule(Profil(entrepreneur=True))
-    def sejour_entrepreneur(self):
-        self.declare(Fact(eligibilite="Carte de séjour 'entrepreneur / profession libérale'"))
-
-    @Rule(Profil(passeport_talent=True))
-    def sejour_passeport_talent(self):
-        self.declare(Fact(eligibilite="Carte de séjour 'passeport talent' (toutes catégories)"))
-
-    @Rule(Profil(passeport_talent_famille=True))
-    def sejour_passeport_talent_famille(self):
-        self.declare(Fact(eligibilite="Carte de séjour 'passeport talent – famille'"))
-
-    @Rule(Profil(ict_detache=True))
+    @Rule(Profil(work_contract='detache'))
     def sejour_ict(self):
-        self.declare(Fact(eligibilite="Carte de séjour 'salarié détaché ICT'"))
+        self.declare(Fact(eligibilite='Carte de séjour « salarié détaché ICT »'))
 
-    @Rule(Profil(volontariat=True))
+    @Rule(Profil(work_contract='saisonnier'))
+    def sejour_saisonnier(self):
+        self.declare(Fact(eligibilite='Carte de séjour « travailleur saisonnier »'))
+
+    # ======================== ÉTUDES ========================
+    @Rule(Profil(studies_status='etudiant'))
+    def sejour_etudiant(self):
+        self.declare(Fact(eligibilite='Carte de séjour « étudiant »'))
+
+    @Rule(Profil(studies_status='stagiaire'))
+    def sejour_stagiaire(self):
+        self.declare(Fact(eligibilite='Carte de séjour « stagiaire »'))
+
+    @Rule(Profil(studies_status='chercheur'))
+    def sejour_chercheur(self):
+        self.declare(Fact(eligibilite='Passeport talent – chercheur'))
+
+    # ======================== INVEST / TALENT ========================
+    @Rule(
+        Profil(invest_registered=True, invest_hasBP=True, invest_funds=MATCH.f),
+        TEST(lambda f: f >= 30000)
+    )
+    def passeport_talent_entrepreneur(self):
+        self.declare(Fact(eligibilite='Passeport talent – création d’entreprise (≥ 30 000 €)'))
+
+    @Rule(Profil(invest_registered=True))
+    def sejour_entrepreneur(self):
+        self.declare(Fact(eligibilite='Carte de séjour « entrepreneur / profession libérale »'))
+
+    # ======================== VISITEUR ========================
+    @Rule(Profil(visitor_resources=MATCH.r), TEST(lambda r: r in ('1200_1426', 'plus_1426')))
+    def sejour_visiteur(self):
+        self.declare(Fact(eligibilite='Carte de séjour « visiteur » (ressources suffisantes)'))
+
+    # ======================== SITUATIONS SPÉCIALES ========================
+    @Rule(Profil(specialSituations=MATCH.s), TEST(lambda s: 'auPair' in s))
+    def sejour_au_pair(self):
+        self.declare(Fact(eligibilite='Carte de séjour « jeune au pair »'))
+
+    @Rule(Profil(specialSituations=MATCH.s), TEST(lambda s: 'volontaire' in s))
     def sejour_volontaire(self):
-        self.declare(Fact(eligibilite="Autorisation de séjour pour mission de volontariat"))
+        self.declare(Fact(eligibilite='Autorisation de séjour – volontariat'))
 
-    @Rule(Profil(parent_enfant_malade=True))
+    @Rule(Profil(specialSituations=MATCH.s), TEST(lambda s: 'medical' in s))
+    def sejour_medical(self):
+        self.declare(Fact(eligibilite='Carte de séjour pour soins médicaux en France'))
+
+    @Rule(Profil(specialSituations=MATCH.s), TEST(lambda s: 'victimeTraite' in s))
+    def sejour_protection(self):
+        self.declare(Fact(eligibilite='Carte – protection des victimes de traite ou proxénétisme'))
+
+    @Rule(Profil(specialSituations=MATCH.s), TEST(lambda s: 'parentSickChild' in s))
     def sejour_parent_enfant_malade(self):
-        self.declare(Fact(eligibilite="Autorisation provisoire de séjour – parent d’enfant malade"))
+        self.declare(Fact(eligibilite='APS – parent d’enfant malade'))
 
-    @Rule(Profil(certificat_residence_algerien_1an=True))
-    def certificat_algerien_1an(self):
-        self.declare(Fact(eligibilite="Certificat de résidence algérien – 1 an"))
+    @Rule(Profil(specialSituations=MATCH.s), TEST(lambda s: 'ancienCombattant' in s))
+    def carte_ancien_combattant(self):
+        self.declare(Fact(eligibilite='Carte de séjour « ancien combattant / FFI »'))
 
-    @Rule(Profil(certificat_residence_algerien_10ans=True))
-    def certificat_algerien_10ans(self):
-        self.declare(Fact(eligibilite="Certificat de résidence algérien – 10 ans"))
+    @Rule(Profil(specialSituations=MATCH.s), TEST(lambda s: 'refugie' in s))
+    def titre_refugie(self):
+        self.declare(Fact(eligibilite='Titre de séjour réfugié / protection subsidiaire'))
 
-    @Rule(Profil(certificat_retraite_algerien=True))
-    def certificat_retraite_algerien(self):
-        self.declare(Fact(eligibilite="Certificat de résidence – retraité algérien"))
+    @Rule(Profil(specialSituations=MATCH.s), TEST(lambda s: 'humanitaire' in s))
+    def sejour_humanitaire(self):
+        self.declare(Fact(eligibilite='Carte de séjour pour motif humanitaire'))
 
-    @Rule(Profil(carte_resident=True))
-    def carte_resident(self):
-        self.declare(Fact(eligibilite="Carte de résident"))
+    @Rule(Profil(specialSituations=MATCH.s), TEST(lambda s: 'talentArtiste' in s))
+    def passeport_talent_artiste(self):
+        self.declare(Fact(eligibilite='Passeport talent – artiste / interprète'))
 
-    @Rule(Profil(carte_resident_ue=True))
-    def carte_resident_ue(self):
-        self.declare(Fact(eligibilite="Carte de résident de longue durée – UE"))
+    @Rule(Profil(specialSituations=MATCH.s), TEST(lambda s: 'sportifPro' in s))
+    def passeport_talent_sportif(self):
+        self.declare(Fact(eligibilite='Passeport talent – sportif professionnel'))
 
-    @Rule(Profil(carte_resident_permanent=True))
-    def carte_resident_permanent(self):
-        self.declare(Fact(eligibilite="Carte de résident permanent"))
+    # ======================== DURÉE DE RÉSIDENCE ========================
+    @Rule(Profil(yearsResidence=MATCH.y), TEST(lambda y: y >= 10))
+    def sejour_longue_residence(self):
+        self.declare(Fact(eligibilite='Carte de séjour pour résidence habituelle de plus de 10 ans'))
 
-    @Rule(Profil(enfant_ne_en_france=True, res_5_ans_depuis_11=True))
-    def nationalite_enfant_france(self):
-        self.declare(Fact(eligibilite="Nationalité française – enfant né en France"))
+    # ------------------------------------------------------------------
+    #  Ajoutez ici d'autres règles si nécessaire (certificats algériens,
+    #  carte de résident longue durée UE, etc.)
+    # ------------------------------------------------------------------
 
-    @Rule(Profil(adoption=True))
-    def nationalite_adoption(self):
-        self.declare(Fact(eligibilite="Nationalité française – enfant adopté"))
+###############################################################################
+# 3.  UTILITAIRE : aplatissement des clés et conversion des valeurs
+###############################################################################
 
-    @Rule(Profil(enfant_recueilli=True))
-    def nationalite_recueilli(self):
-        self.declare(Fact(eligibilite="Nationalité française – enfant recueilli par un Français"))
+def flatten_keys(form):
+    """Convertit les clés dot‑notation en snake_case et adapte les types."""
+    out = {}
+    for k in form:
+        key = k.replace('.', '_')
+        values = form.getlist(k)
 
-    @Rule(Profil(reintegration_declaration=True))
-    def nationalite_reintegration_decl(self):
-        self.declare(Fact(eligibilite="Réintégration dans la nationalité par déclaration"))
+        # Checkbox = liste
+        if len(values) > 1:
+            out[key] = values
+            continue
 
-    @Rule(Profil(reintegration_decret=True))
-    def nationalite_reintegration_decret(self):
-        self.declare(Fact(eligibilite="Réintégration dans la nationalité par décret"))
+        v = values[0]
+        if v.lower() in ('oui', 'non', 'true', 'false'):
+            out[key] = v.lower() in ('oui', 'true')
+        else:
+            # Tentative de conversion en entier
+            try:
+                out[key] = int(v)
+            except ValueError:
+                out[key] = v
+    return out
 
-    @Rule(Profil(etudiant_ne_en_france_major=True))
-    def nationalite_etudiant_major(self):
-        self.declare(Fact(eligibilite="Nationalité française automatique à 18 ans pour enfant né en France"))
-
+###############################################################################
+# 4.  ROUTE PRINCIPALE (démo Jinja)
+###############################################################################
 @app.route('/', methods=['GET', 'POST'])
 def index():
     resultats = []
     if request.method == 'POST':
-        data = {k: (v == 'oui') for k, v in request.form.items()}
+        data = flatten_keys(request.form)
         moteur = MoteurEligibilite()
         moteur.reset()
         moteur.declare(Profil(**data))
         moteur.run()
-        resultats = [f["eligibilite"] for f in moteur.facts.values() if isinstance(f, Fact) and f.get("eligibilite")]
+        resultats = [
+            f['eligibilite']
+            for f in moteur.facts.values()
+            if isinstance(f, Fact) and f.get('eligibilite')
+        ]
 
-    return render_template_string("""...HTML FORMULAIRE...""", resultats=resultats)
+    return render_template_string('''
+    <h1>Test d\'éligibilité titre / nationalité</h1>
+    <form method="post">
+        <!-- PLACEHOLDER : votre formulaire dynamique (React / Jinja) -->
+        <button type="submit">Tester</button>
+    </form>
+    {% if resultats %}
+        <h2>Résultats :</h2>
+        <ul>{% for r in resultats %}<li>{{ r }}</li>{% endfor %}</ul>
+    {% endif %}
+    ''', resultats=resultats)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

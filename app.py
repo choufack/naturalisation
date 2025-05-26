@@ -1,15 +1,17 @@
 import json
-import Flask
+from flask import Flask
 import tkinter as tk
 from tkinter import ttk, messagebox
-import sys
-import os
+import requests
+import threading
 from moteur.moteur_eligibilite import MoteurEligibilite, Profil  # Import du moteur d'éligibilité
 from experta import Fact
-from services.api import api_eligibility
+from api import api_eligibility
 
+# Initialisation de l'application Flask
 app = Flask(__name__)
 app.register_blueprint(api_eligibility, url_prefix='/api')
+
 class ResidencePermitApp:
     def __init__(self, root, questions_file):
         self.root = root
@@ -54,7 +56,16 @@ class ResidencePermitApp:
         if not self.questions:
             return
 
-        question = self.questions[self.current_question_index]
+        all_questions = self.questions.get("pivots", []) + [
+            question
+            for panel in self.questions.get("panels", [])
+            for question in panel.get("questions", [])
+        ]
+
+        if self.current_question_index >= len(all_questions):
+            return
+
+        question = all_questions[self.current_question_index]
         self.question_label.config(text=question["label"])
 
         # Clear previous widget
@@ -84,6 +95,21 @@ class ResidencePermitApp:
             self.answer_widget = ttk.Entry(self.main_frame)
             self.answer_widget.grid(row=1, column=0, columnspan=2)
             self.answer_widget.bind("<FocusOut>", lambda e: self.update_number_response(question["question_id"]))
+        elif question["type"] == "radio":
+            self.answer_widget = ttk.Frame(self.main_frame)
+            self.answer_widget.grid(row=1, column=0, columnspan=2)
+            for option in question["options"]:
+                var = tk.BooleanVar(value=False)
+                radio = ttk.Radiobutton(
+                    self.answer_widget,
+                    text=option["label"],
+                    variable=var,
+                    value=option["value"],
+                    command=lambda opt=option: self.update_radio_response(question["question_id"], opt)
+                )
+                radio.pack(anchor="w")
+        else:
+            print(f"Type de question non pris en charge : {question['type']}")
 
     def update_checkbox_response(self, question_id, option, var):
         """Mettre à jour les réponses pour les questions à choix multiples."""
@@ -109,7 +135,12 @@ class ResidencePermitApp:
 
     def next_question(self):
         """Passer à la question suivante."""
-        if self.current_question_index < len(self.questions) - 1:
+        all_questions = self.questions.get("pivots", []) + [
+            question
+            for panel in self.questions.get("panels", [])
+            for question in panel.get("questions", [])
+        ]
+        if self.current_question_index < len(all_questions) - 1:
             self.current_question_index += 1
             self.show_question()
         else:
@@ -125,7 +156,7 @@ class ResidencePermitApp:
         """Envoyer les réponses à l'API Flask et afficher les résultats."""
         try:
             # URL de l'API Flask
-            api_url = "http://127.0.0.1:5000/eligibilite"
+            api_url = "http://127.0.0.1:5000/api/eligibilite"
 
             # Envoyer les réponses sous forme de JSON
             response = requests.post(api_url, json=self.responses)
@@ -147,19 +178,19 @@ class ResidencePermitApp:
         messagebox.showinfo("Résultats", result_text)
         self.root.quit()
 
-    def convert_responses_to_facts(self):
-        """Convert user responses to Experta facts."""
-        facts = []
-        for question_id, response in self.responses.items():
-            if isinstance(response, list):
-                for value in response:
-                    facts.append(Profil(**{question_id: value}))
-            else:
-                facts.append(Profil(**{question_id: response}))
-        return facts
+
+def run_flask():
+    """Démarrer le serveur Flask dans un thread séparé."""
+    app.run(debug=True, use_reloader=False)
+
 
 if __name__ == "__main__":
-    app.run(debug=True)
-    root = tk.Tk()
-    ResidencePermitApp(root, "schemas/questions.json")
+    # Démarrer Flask dans un thread séparé
+    flask_thread = threading.Thread(target=run_flask)
+    flask_thread.daemon = True
+    flask_thread.start()
 
+    # Démarrer l'interface Tkinter
+    root = tk.Tk()
+    app = ResidencePermitApp(root, "schemas/questions.json")
+    root.mainloop()
