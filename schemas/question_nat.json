@@ -1,0 +1,353 @@
+{
+    "pivots": [
+      {
+        "question_id": "NO_nationality",
+        "label": "Quelle est votre nationalité?",
+        "type": "select",
+        "options": [
+          { "value": "FR", "label": "Français-e" },
+          { "value": "DZ", "label": "Algérien-ne" },
+          { "value": "MA", "label": "Marocain-e" },
+          { "value": "TN", "label": "Tunisien-ne" },
+          { "value": "SN", "label": "Sénégalais-e" },
+          { "value": "CM", "label": "Camerounais-e" },
+          { "value": "GB", "label": "Britannique" },
+          { "value": "US", "label": "Américain-e" },
+          { "value": "CN", "label": "Chinois-e" },
+          { "value": "IN", "label": "Indien-ne" },
+          { "value": "OTHER", "label": "Autre nationalité" },
+          { "value": "STATELESS", "label": "Apatride" }
+        ],
+        "fact": "nationality"
+      },
+      {
+        "question_id": "N1_situation",
+        "label": "Quelle situation vous décrit le mieux?",
+        "type": "select",
+        "options": [
+          { "value": "mariage", "label": "Marié-e à un-e Français-e" },
+          { "value": "ascendant", "label": "Parent / grand-parent d'un Français" },
+          { "value": "sibling", "label": "Frère / sœur d'un Français" },
+          { "value": "jus_soli", "label": "Né-e en France de parents étrangers" },
+          { "value": "adoption", "label": "Adopté-e / recueilli-e par un Français" },
+          { "value": "reintegration", "label": "J'ai déjà eu la nationalité française" },
+          { "value": "naturalisation", "label": "Résidence longue (naturalisation)" }
+        ],
+        "fact": "mainPath"
+      },
+      {
+        "question_id": "N2_residenceYears",
+        "label": "Depuis combien d'années résidez-vous de façon continue en France?",
+        "type": "select",
+        "options": [
+          { "value": "<5", "label": "Moins de 5 ans" },
+          { "value": "5-10", "label": "5 à 10 ans" },
+          { "value": ">10", "label": "Plus de 10 ans" },
+          { "value": "born", "label": "Toute ma vie (né-e en France)" }
+        ],
+        "fact": "residenceBracket"
+      },
+      {
+        "question_id": "N3_lang",
+        "label": "Votre maîtrise du français est-elle au moins **B1** (oral & écrit)?",
+        "type": "radio",
+        "options": [
+          { "value": true, "label": "Oui" },
+          { "value": false, "label": "Non" }
+        ],
+        "visible_if": [
+          { "fact": "mainPath", "nin": ["jus_soli", "adoption"] }
+        ],
+        "fact": "frenchB1"
+      },
+      {
+        "question_id": "N4_casier",
+        "label": "Casier judiciaire exempt de condamnations graves?",
+        "type": "radio",
+        "options": [
+          { "value": true, "label": "Oui" },
+          { "value": false, "label": "Non" }
+        ],
+        "visible_if": [
+          { "fact": "mainPath", "nin": ["jus_soli", "adoption"] }
+        ],
+        "fact": "cleanRecord"
+      },
+      {
+        "question_id": "N5_absence",
+        "label": "Avez-vous séjourné hors de France plus de 6 mois consécutifs ces 5 dernières années?",
+        "type": "radio",
+        "options": [
+          { "value": true, "label": "Oui" },
+          { "value": false, "label": "Non" }
+        ],
+        "visible_if": [
+          { "fact": "mainPath", "eq": "naturalisation" }
+        ],
+        "fact": "longAbsence"
+      },
+      {
+        "question_id": "N6_housingSituation",
+        "label": "Quel est votre statut de logement?",
+        "type": "select",
+        "options": [
+          { "value": "locataire", "label": "Locataire" },
+          { "value": "proprietaire", "label": "Propriétaire" },
+          { "value": "heberge", "label": "Hébergé-e gratuitement" },
+          { "value": "foyer", "label": "Foyer / résidence sociale" },
+          { "value": "autre", "label": "Autre" }
+        ],
+        "fact": "housingSituation"
+      }
+    ],
+    "panels": [
+      {
+        "panel_id": "B_mariage",
+        "visible_if": [
+          { "fact": "mainPath", "eq": "mariage" }
+        ],
+        "questions": [
+          {
+            "question_id": "X1_maritalHistory",
+            "label": "Historique matrimonial : divorce, séparation, décès...?",
+            "type": "select",
+            "options": [
+              { "value": "never", "label": "Jamais marié-e" },
+              { "value": "divorce", "label": "Divorcé-e" },
+              { "value": "separation", "label": "Séparé-e" },
+              { "value": "repudiation", "label": "Répudiation" },
+              { "value": "widowed", "label": "Veuf-ve" }
+            ],
+            "fact": "maritalHistory"
+          },
+          {
+            "question_id": "X2_minorChildren",
+            "label": "Avez-vous des enfants mineurs à charge?",
+            "type": "radio",
+            "options": [
+              { "value": true, "label": "Oui" },
+              { "value": false, "label": "Non" }
+            ],
+            "fact": "hasMinorChildren"
+          },
+          {
+            "question_id": "M1_yearsMarriageOK",
+            "label": "Marié'e depuis **4 ans ou plus** (5 ans si hors France)?",
+            "type": "radio",
+            "options": [
+              { "value": true, "label": "Oui" },
+              { "value": false, "label": "Non" }
+            ],
+            "fact": "marriage4y"
+          },
+          {
+            "question_id": "M2_communityLife",
+            "label": "Communauté de vie ininterrompue?",
+            "type": "radio",
+            "options": [
+              { "value": true, "label": "Oui" },
+              { "value": false, "label": "Non" }
+            ],
+            "fact": "communityLife"
+          }
+        ]
+      },
+      {
+        "panel_id": "B_ascendant",
+        "visible_if": [
+          { "fact": "mainPath", "eq": "ascendant" }
+        ],
+        "questions": [
+          {
+            "question_id": "X1_maritalHistory",
+            "label": "Historique matrimonial : divorce, séparation, décès...?",
+            "type": "select",
+            "options": [
+              { "value": "never", "label": "Jamais marié-e" },
+              { "value": "divorce", "label": "Divorcé-e" },
+              { "value": "separation", "label": "Séparé-e" },
+              { "value": "repudiation", "label": "Répudiation" },
+              { "value": "widowed", "label": "Veuf-ve" }
+            ],
+            "fact": "maritalHistory"
+          },
+          {
+            "question_id": "X2_minorChildren",
+            "label": "Avez-vous des enfants mineurs à charge?",
+            "type": "radio",
+            "options": [
+              { "value": true, "label": "Oui" },
+              { "value": false, "label": "Non" }
+            ],
+            "fact": "hasMinorChildren"
+          },
+          {
+            "question_id": "A1_ascendantLink",
+            "label": "Quel lien vous unit au Français?",
+            "type": "select",
+            "options": [
+              { "value": "parent", "label": "Parent" },
+              { "value": "grandparent", "label": "Grand-parent" }
+            ],
+            "fact": "ascendant.link"
+          }
+        ]
+      },
+      {
+        "panel_id": "B_sibling",
+        "visible_if": [
+          { "fact": "mainPath", "eq": "sibling" }
+        ],
+        "questions": [
+          {
+            "question_id": "X1_maritalHistory",
+            "label": "Historique matrimonial : divorce, séparation, décès...?",
+            "type": "select",
+            "options": [
+              { "value": "never", "label": "Jamais marié-e" },
+              { "value": "divorce", "label": "Divorcé-e" },
+              { "value": "separation", "label": "Séparé-e" },
+              { "value": "repudiation", "label": "Répudiation" },
+              { "value": "widowed", "label": "Veuf-ve" }
+            ],
+            "fact": "maritalHistory"
+          },
+          {
+            "question_id": "X2_minorChildren",
+            "label": "Avez-vous des enfants mineurs à charge?",
+            "type": "radio",
+            "options": [
+              { "value": true, "label": "Oui" },
+              { "value": false, "label": "Non" }
+            ],
+            "fact": "hasMinorChildren"
+          },
+          {
+            "question_id": "S1_schoolingFR",
+            "label": "Scolarité 6-16 ans en France?",
+            "type": "radio",
+            "options": [
+              { "value": true, "label": "Oui" },
+              { "value": false, "label": "Non" }
+            ],
+            "fact": "schoolingFR"
+          }
+        ]
+      },
+      {
+        "panel_id": "B_jussoli",
+        "visible_if": [
+          { "fact": "mainPath", "eq": "jus_soli" }
+        ],
+        "questions": [
+          {
+            "question_id": "J1_resFive11",
+            "label": "5 ans en France depuis 11 ans?",
+            "type": "radio",
+            "options": [
+              { "value": true, "label": "Oui" },
+              { "value": false, "label": "Non" }
+            ],
+            "fact": "res5since11"
+          },
+          {
+            "question_id": "J2_ageBracket",
+            "label": "Quel est votre âge?",
+            "type": "select",
+            "options": [
+              { "value": "<18", "label": "Moins de 18 ans" },
+              { "value": ">=18", "label": "18 ans ou plus" }
+            ],
+            "fact": "ageBracket"
+          }
+        ]
+      },
+      {
+        "panel_id": "B_adoption",
+        "visible_if": [
+          { "fact": "mainPath", "eq": "adoption" }
+        ],
+        "questions": [
+          {
+            "question_id": "A1_pleniere",
+            "label": "Adoption plénière rendue par un tribunal français?",
+            "type": "radio",
+            "options": [
+              { "value": true, "label": "Oui" },
+              { "value": false, "label": "Non" }
+            ],
+            "fact": "adoptionPleniere"
+          },
+          {
+            "question_id": "A2_recueil",
+            "label": "Recueil ≥ 3 ans par un Français?",
+            "type": "radio",
+            "options": [
+              { "value": true, "label": "Oui" },
+              { "value": false, "label": "Non" }
+            ],
+            "fact": "recueil3ans"
+          }
+        ]
+      },
+      {
+        "panel_id": "B_reintegration",
+        "visible_if": [
+          { "fact": "mainPath", "eq": "reintegration" }
+        ],
+        "questions": [
+          {
+            "question_id": "R1_links",
+            "label": "Résidez-vous en France ou avez-vous des liens manifestes?",
+            "type": "radio",
+            "options": [
+              { "value": true, "label": "Oui" },
+              { "value": false, "label": "Non" }
+            ],
+            "fact": "strongLinks"
+          }
+        ]
+      },
+      {
+        "panel_id": "B_naturalisation",
+        "visible_if": [
+          { "fact": "mainPath", "eq": "naturalisation" }
+        ],
+        "questions": [
+          {
+            "question_id": "X1_maritalHistory",
+            "label": "Historique matrimonial : divorce, séparation, décès...?",
+            "type": "select",
+            "options": [
+              { "value": "never", "label": "Jamais marié-e" },
+              { "value": "divorce", "label": "Divorcé-e" },
+              { "value": "separation", "label": "Séparé-e" },
+              { "value": "repudiation", "label": "Répudiation" },
+              { "value": "widowed", "label": "Veuf-ve" }
+            ],
+            "fact": "maritalHistory"
+          },
+          {
+            "question_id": "X2_minorChildren",
+            "label": "Avez-vous des enfants mineurs à charge?",
+            "type": "radio",
+            "options": [
+              { "value": true, "label": "Oui" },
+              { "value": false, "label": "Non" }
+            ],
+            "fact": "hasMinorChildren"
+          },
+          {
+            "question_id": "N6_stableIncome",
+            "label": "Disposez-vous d'un emploi ou de ressources stables?",
+            "type": "radio",
+            "options": [
+              { "value": true, "label": "Oui" },
+              { "value": false, "label": "Non" }
+            ],
+            "fact": "stableIncome"
+          }
+        ]
+      }
+    ]
+  }

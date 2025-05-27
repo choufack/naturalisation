@@ -7,7 +7,8 @@ from moteur.moteur_eligibilite import MoteurEligibilite, Profil, flatten_keys
 # from utils.constants import JSON_PATH  # Chemin vers le fichier questions.json
 
 # Chemin relatif vers le fichier questions.json
-JSON_PATH = "schemas/questions.json"
+NAT_JSON_PATH = "schemas/question_nat.json"
+TITLE_JSON_PATH = "schemas/question_titre.json"
 
 # Création du Blueprint pour l'API
 api_eligibility = Blueprint("api", __name__)
@@ -21,9 +22,29 @@ PROFILES: Dict[str, Dict[str, Any]] = {}
 @api_eligibility.route("/questions", methods=["GET"])
 def questions():
     """Renvoie le JSON de configuration du questionnaire."""
+    question_type = request.args.get('type', 'all')  # Default to 'all' if no type specified
+    
     try:
-        with open(JSON_PATH, "r", encoding="utf-8") as f:
-            return jsonify(json.load(f)), 200
+        if question_type == "nationality":
+            with open(NAT_JSON_PATH, "r", encoding="utf-8") as f:
+                questions_data = json.load(f)
+            return jsonify(questions_data), 200
+        elif question_type == "title":
+            with open(TITLE_JSON_PATH, "r", encoding="utf-8") as f:
+                questions_data = json.load(f)
+            return jsonify(questions_data), 200
+        else:
+            questions_data = {}
+            with open(NAT_JSON_PATH, "r", encoding="utf-8") as f:
+                nat_questions = json.load(f)
+                questions_data['nationality'] = nat_questions
+                
+            with open(TITLE_JSON_PATH, "r", encoding="utf-8") as f:
+                title_question = json.load(f)
+                questions_data['title'] = title_question
+            
+            return jsonify(questions_data), 200
+        
     except FileNotFoundError:
         return jsonify({"error": "Fichier questions.json introuvable"}), 404
     except json.JSONDecodeError:
