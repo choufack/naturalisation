@@ -26,10 +26,10 @@ class MoteurEligibilite(KnowledgeEngine):
     def nationalite_par_mariage(self):
         self.declare(Fact(eligibilite='Nationalité française par mariage (≥ 4 ans)'))
 
-    @Rule(Profil(family_link="mariage", family_community=True, family_yearsMarriage=MATCH.y), TEST(lambda y: y >= 4))
-    def nationalite_par_mariage(self):
-        print("Règle activée : Nationalité par mariage")
-        self.declare(Fact(eligibilite="Nationalité française par mariage (≥ 4 ans)"))
+    # @Rule(Profil(family_link="mariage", family_community=True, family_yearsMarriage=MATCH.y), TEST(lambda y: y >= 4))
+    # def nationalite_par_mariage(self):
+    #     print("Règle activée : Nationalité par mariage")
+    #     self.declare(Fact(eligibilite="Nationalité française par mariage (≥ 4 ans)"))
 
     @Rule(Profil(family_link='pacs', family_community=True))
     def sejour_pacs(self):
@@ -48,9 +48,17 @@ class MoteurEligibilite(KnowledgeEngine):
         self.declare(Fact(eligibilite='Carte de séjour – membre de famille citoyen UE/EEE'))
 
     # ======================== TRAVAIL ========================
-    @Rule(Profil(work_contract=MATCH.c, work_permit=True), TEST(lambda c: c in ('CDI', 'CDD')))
-    def sejour_salarie(self):
+    @Rule(Profil(work_contract='CDI', work_permit=True))
+    def sejour_salarie_cdi(self):
         self.declare(Fact(eligibilite='Carte de séjour « salarié »'))
+    
+    @Rule(Profil(work_contract='CDD', work_permit=True))
+    def sejour_salarie_cdd(self):
+        self.declare(Fact(eligibilite='Carte de séjour « salarié »'))
+        
+    # @Rule(Profil(work_contract=MATCH.c, work_permit=True), TEST(lambda c: c in ('CDI', 'CDD')))
+    # def sejour_salarie(self):
+    #     self.declare(Fact(eligibilite='Carte de séjour « salarié »'))
 
     @Rule(Profil(work_contract='detache'))
     def sejour_ict(self):
@@ -75,8 +83,9 @@ class MoteurEligibilite(KnowledgeEngine):
 
     # ======================== INVEST / TALENT ========================
     @Rule(
-        Profil(invest_registered=True, invest_hasBP=True, invest_funds=MATCH.f),
-        TEST(lambda f: f >= 30000)
+        Profil(invest_registered=True, invest_hasBP=True),
+        AS.profil << Profil(invest_funds=MATCH.f),
+        TEST(lambda f: int(f) >= 30000 if f is not None else False)
     )
     def passeport_talent_entrepreneur(self):
         self.declare(Fact(eligibilite='Passeport talent – création d’entreprise (≥ 30 000 €)'))
@@ -145,29 +154,69 @@ class MoteurEligibilite(KnowledgeEngine):
 # 3.  UTILITAIRE : aplatissement des clés et conversion des valeurs
 ###############################################################################
 
+# def flatten_keys(form):
+#     """Convertit les clés dot‑notation en snake_case et adapte les types."""
+#     out = {}
+#     for k in form:
+#         key = k.replace('.', '_')
+#         # Handle both Flask request.form and regular dict
+#         values = form.getlist(k) if hasattr(form, 'getlist') else [form[k]]
+
+#         # Checkbox = liste
+#         if len(values) > 1:
+#             out[key] = values
+#             continue
+
+#         v = values[0]
+#         # Tentative de conversion en entier d'abord
+#         try:
+#             out[key] = int(v)
+#         except (ValueError, TypeError):
+#             # Si ce n'est pas un entier, traiter comme une chaîne
+#             if isinstance(v, str) and v.lower() in ('oui', 'non', 'true', 'false'):
+#                 out[key] = v.lower() in ('oui', 'true')
+#             else:
+#                 out[key] = v
+#     return out
+
+
 def flatten_keys(form):
-    """Convertit les clés dot‑notation en snake_case et adapte les types."""
+    """Convertit les clés dot-notation en snake_case et adapte les types.
+    Version améliorée avec meilleure gestion des erreurs."""
     out = {}
     for k in form:
         key = k.replace('.', '_')
-        values = form.getlist(k)
-
-        # Checkbox = liste
+        values = form.getlist(k) if hasattr(form, 'getlist') else [form[k]]
+        
+        # Checkbox/multi-select = liste
         if len(values) > 1:
             out[key] = values
             continue
 
         v = values[0]
-        if v.lower() in ('oui', 'non', 'true', 'false'):
-            out[key] = v.lower() in ('oui', 'true')
-        else:
-            # Tentative de conversion en entier
-            try:
-                out[key] = int(v)
-            except ValueError:
+        
+        # Gérer les entrées vides
+        if v == '' or v is None:
+            out[key] = None
+            continue
+        
+        # Tentative de conversion en entier
+        try:
+            out[key] = int(v)
+        except (ValueError, TypeError):
+            # Gestion des booléens
+            if isinstance(v, str):
+                v_lower = v.lower()
+                if v_lower in ('oui', 'true', '1'):
+                    out[key] = True
+                elif v_lower in ('non', 'false', '0'):
+                    out[key] = False
+                else:
+                    out[key] = v
+            else:
                 out[key] = v
+    
     return out
-
 ###############################################################################
 # 4.  ROUTE PRINCIPALE (démo Jinja)
 ###############################################################################

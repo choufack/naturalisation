@@ -2,9 +2,9 @@ import json
 import uuid
 from typing import Dict, Any
 from flask import Blueprint, jsonify, request, current_app
-from moteur.moteur_eligibilite import MoteurEligibilite, Profil
-from utils.helpers import flatten_keys  # Assurez-vous que cette fonction est définie
-from utils.constants import JSON_PATH  # Chemin vers le fichier questions.json
+from moteur.moteur_eligibilite import MoteurEligibilite, Profil, flatten_keys
+# from utils.helpers import flatten_keys  # Assurez-vous que cette fonction est définie
+# from utils.constants import JSON_PATH  # Chemin vers le fichier questions.json
 
 # Chemin relatif vers le fichier questions.json
 JSON_PATH = "schemas/questions.json"
@@ -41,7 +41,9 @@ def eligibilite_direct():
 
     # Aplatir les clés et calculer l'éligibilité
     answers = flatten_keys(payload)
+    print(answers)  # Debugging output
     results = calculer_eligibilite(answers)
+    print(f"results: {results}")  # Debugging output
     return jsonify({"results": results}), 200
 
 ###############################################################################
