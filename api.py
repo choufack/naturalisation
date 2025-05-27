@@ -95,13 +95,9 @@ def calculer_eligibilite(answers: Dict[str, Any]) -> list:
     moteur = MoteurEligibilite()
     moteur.reset()
 
-    # Déclarer les faits dans le moteur
-    for key, value in answers.items():
-        if isinstance(value, list):  # Gérer les listes (checkbox)
-            for item in value:
-                moteur.declare(Profil(**{key: item}))
-        else:
-            moteur.declare(Profil(**{key: value}))
+    
+    # Déclarer un seul fait Profil avec toutes les réponses
+    moteur.declare(Profil(**answers))
 
     # Exécuter le moteur
     moteur.run()

@@ -207,9 +207,9 @@ def flatten_keys(form):
             # Gestion des booléens
             if isinstance(v, str):
                 v_lower = v.lower()
-                if v_lower in ('oui', 'true', '1'):
+                if v_lower in ('oui', 'true'):
                     out[key] = True
-                elif v_lower in ('non', 'false', '0'):
+                elif v_lower in ('non', 'false'):
                     out[key] = False
                 else:
                     out[key] = v
