@@ -192,5 +192,7 @@ if __name__ == "__main__":
 
     # Démarrer l'interface Tkinter
     root = tk.Tk()
-    app = ResidencePermitApp(root, "schemas/questions.json")
+    # app = ResidencePermitApp(root, "schemas/questions.json")
+    app = ResidencePermitApp(root, "schemas/question_nat.json")
+    # app = ResidencePermitApp(root, "schemas/question_titre.json")
     root.mainloop()
