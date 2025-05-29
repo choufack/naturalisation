@@ -99,7 +99,8 @@
           { "value": "refugie", "label": "Réfugiée" },
           { "value": "parentSickChild", "label": "Parent d'un enfant malade" },
           { "value": "talentArtiste", "label": "Artiste / culturel" },
-          { "value": "sportifPro", "label": "Sportif professionnel" }
+          { "value": "sportifPro", "label": "Sportif professionnel" },
+          { "value": "violenceConjugale", "label": "Violence conjugale" }
         ],
         "fact": "specialSituations"
       }
