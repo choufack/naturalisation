@@ -13,14 +13,14 @@
         "fact": "currentPermit"
       },
       {
-        "question_id": "Q1_nationality",
+        "question_id": "Q1_nationality_sim",
         "label": "Quelle est votre nationalité ?",
         "type": "select",
         "options": [
           { "value": "none", "label": "Cameroun" },
           { "value": "vls_etudiant", "label": "Algerie" }
         ],
-        "fact": "nationality"
+        "fact": "nationality_sim"
       },
       {
         "question_id": "Q2_yearsResidence",

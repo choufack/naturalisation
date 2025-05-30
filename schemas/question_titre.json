@@ -38,7 +38,7 @@
         "fact": "currentPermit"
       },
       {
-        "question_id": "Q1_nationality",
+        "question_id": "Q1_nationality_sim",
         "label": "Quelle est votre nationalité ?",
         "type": "select",
         "options": [
@@ -51,7 +51,7 @@
           { "value": "IN", "label": "Indien-ne" },
           { "value": "PM", "label": "Saint-Pierrais-e et Miquelonais-e" }
         ],
-        "fact": "nationality"
+        "fact": "nationality_sim"
       },
       {
         "question_id": "Q2_yearsResidence",
@@ -287,7 +287,7 @@
       },
       {
         "panel_id": "P_bilateral",
-        "visible_if": [{ "fact": "nationality", "in": ["DZ", "MA", "TN", "SN", "CM", "LB", "IN", "PM"] }],
+        "visible_if": [{ "fact": "nationality_sim", "in": ["DZ", "MA", "TN", "SN", "CM", "LB", "IN", "PM"] }],
         "questions": [
           {
             "id": "B1_agreement",
@@ -303,7 +303,7 @@
       },
       {
         "panel_id": "P_certifAlg1",
-        "visible_if": [{ "fact": "nationality", "eq": "DZ" }],
+        "visible_if": [{ "fact": "nationality_sim", "eq": "DZ" }],
         "questions": [
           {
             "id": "C1_motif",
@@ -321,7 +321,7 @@
       },
       {
         "panel_id": "P_certifAlg10",
-        "visible_if": [{ "fact": "nationality", "eq": "DZ" }],
+        "visible_if": [{ "fact": "nationality_sim", "eq": "DZ" }],
         "questions": [
           {
             "id": "C10_type",

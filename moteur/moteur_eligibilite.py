@@ -293,14 +293,14 @@ class MoteurEligibilite(KnowledgeEngine):
 
     # ======================== CERTIFICATS ALGÉRIENS ========================
     @Rule(
-        Profil(nationality='DZ', alg1_motif=MATCH.m),
+        Profil(nationality_sim='DZ', alg1_motif=MATCH.m),
         TEST(lambda m: m in ['mariage', 'parent', 'etat_sante', 'vie_priv'])
     )
     def certificat_alg_1an(self):
         self.declare(Fact(eligibilite='Certificat algérien 1 an'))
 
     @Rule(
-        Profil(nationality='DZ', alg10_type=MATCH.t),
+        Profil(nationality_sim='DZ', alg10_type=MATCH.t),
         TEST(lambda t: t in ['res10', 'famViePriv', 'francophone', 'rente'])
     )
     def certificat_alg_10ans(self):

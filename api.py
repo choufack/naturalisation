@@ -25,7 +25,7 @@ def questions():
     question_type = request.args.get('type', 'all')  # Default to 'all' if no type specified
     
     try:
-        if question_type == "nationality":
+        if question_type == "nationality_sim":
             with open(NAT_JSON_PATH, "r", encoding="utf-8") as f:
                 questions_data = json.load(f)
             return jsonify(questions_data), 200
@@ -37,7 +37,7 @@ def questions():
             questions_data = {}
             with open(NAT_JSON_PATH, "r", encoding="utf-8") as f:
                 nat_questions = json.load(f)
-                questions_data['nationality'] = nat_questions
+                questions_data['nationality_sim'] = nat_questions
                 
             with open(TITLE_JSON_PATH, "r", encoding="utf-8") as f:
                 title_question = json.load(f)
