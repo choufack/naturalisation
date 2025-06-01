@@ -26,53 +26,51 @@ class MoteurEligibilite(KnowledgeEngine):
     def nationalite_par_mariage(self):
         self.declare(Fact(eligibilite='Nationalité française par mariage (≥ 4 ans)'))
 
-    @Rule(Profil(family_link='mariage', family_community=True, valid_visa_or_residence=True))
+    @Rule(Profil(family_link='mariage', family_community=True, currentPermit=MATCH.p),
+          TEST(lambda p: p not in ['none', 'other']))
     def sejour_vpf_conjoint_francais(self):
         self.declare(Fact(eligibilite='Carte de Séjour "vie privée et familiale" - Conjoint de citoyen français'))
 
-    @Rule(Profil(family_link='pacs', family_community=True, valid_visa_or_residence=True))
+    @Rule(Profil(family_link='pacs', family_community=True, currentPermit=MATCH.p),
+          TEST(lambda p: p not in ['none', 'other']))
     def sejour_vpf_pacs(self):
         self.declare(Fact(eligibilite='Carte de Séjour "vie privée et familiale" - Partenaire Pacsé avec un Français'))
 
-    @Rule(Profil(family_link='parentEnfFr', french_minor_child_in_france=True, supporting_child=True, valid_visa_or_residence=True))
+    @Rule(Profil(family_link='parentEnfFr', hasMinorChildren=True, currentPermit=MATCH.p),
+          TEST(lambda p: p not in ['none', 'other']))
     def sejour_vpf_parent_enfant_francais(self):
         self.declare(Fact(eligibilite='Carte de Séjour "vie privée et familiale" - Parent d\'enfant français mineur'))
 
-    @Rule(Profil(family_link='regroup', entered_france_as_minor_family_reunification=True))
+    @Rule(Profil(family_link='regroup', ageBracket='<18'))
     def sejour_vpf_reunification_mineur(self):
         self.declare(Fact(eligibilite='Carte de Séjour "vie privée et familiale" - Jeune adulte entré par regroupement familial'))
 
-    @Rule(Profil(family_link='famUE', spouse_of_eu_long_term_resident=True, resided_in_eu_country=True, own_resources=True, health_insurance=True))
+    @Rule(Profil(family_link='famUE', currentPermit=MATCH.p),
+          TEST(lambda p: p not in ['none', 'other']))
     def sejour_vpf_eu_long_term_resident(self):
         self.declare(Fact(eligibilite='Carte de Séjour "vie privée et familiale" - Membre de famille d\'un étranger résident UE'))
 
-    @Rule(Profil(born_or_raised_in_france=True, specific_residence_and_schooling_conditions=True))
+    @Rule(Profil(residenceBracket='born', schoolingFR=True))
     def sejour_vpf_jeune_france(self):
         self.declare(Fact(eligibilite='Carte de Séjour "vie privée et familiale" - Jeune né ou entré mineur en France'))
 
-    @Rule(
-        Profil(work_accident_pension=True, disability_rate=MATCH.dr),
-        TEST(lambda dr: dr >= 20 if dr else False)
-    )
+    @Rule(Profil(specialSituations=MATCH.s), TEST(lambda s: 'medical' in s))
     def sejour_vpf_pension_accident(self):
         self.declare(Fact(eligibilite='Carte de Séjour "vie privée et familiale" - Bénéficiaire pension accident travail'))
 
-    @Rule(
-        Profil(uninterrupted_work_in_approved_orgs=True, minimum_duration=MATCH.md),
-        TEST(lambda md: md >= 3 if md else False)
-    )
+    @Rule(Profil(specialSituations=MATCH.s), TEST(lambda s: 'volontaire' in s))
     def sejour_vpf_travail_solidaire(self):
         self.declare(Fact(eligibilite='Carte de Séjour "vie privée et familiale" - Travail solidaire'))
 
-    @Rule(Profil(humanitarian_reasons=True))
+    @Rule(Profil(specialSituations=MATCH.s), TEST(lambda s: 'humanitaire' in s))
     def sejour_vpf_humanitaire(self):
         self.declare(Fact(eligibilite='Carte de Séjour "vie privée et familiale" - Raisons humanitaires'))
 
-    @Rule(Profil(victim_of_domestic_violence=True, protection_order=True))
+    @Rule(Profil(specialSituations=MATCH.s), TEST(lambda s: 'victimeTraite' in s))
     def sejour_vpf_violence_domestique(self):
         self.declare(Fact(eligibilite='Carte de Séjour "vie privée et familiale" - Victime violence domestique'))
 
-    @Rule(Profil(victim_of_human_trafficking=True, filed_complaint=True))
+    @Rule(Profil(specialSituations=MATCH.s), TEST(lambda s: 'victimeTraite' in s))
     def sejour_vpf_traite(self):
         self.declare(Fact(eligibilite='Carte de Séjour "vie privée et familiale" - Victime traite ou proxénétisme'))
 
@@ -85,113 +83,98 @@ class MoteurEligibilite(KnowledgeEngine):
     def sejour_salarie_cdd(self):
         self.declare(Fact(eligibilite='Carte de Séjour "salarié"'))
 
-    @Rule(
-        Profil(work_contract='detache', seniority_at_least_6_months=True, salary_above_threshold=MATCH.s),
-        TEST(lambda s: s >= 1801.8 if s else False)
-    )
+    @Rule(Profil(work_contract='detache', work_salary=MATCH.s),
+          TEST(lambda s: s >= 1801.8))
     def sejour_ict(self):
         self.declare(Fact(eligibilite='Carte de Séjour "salarié détaché ICT"'))
 
-    @Rule(Profil(work_contract='saisonnier', seasonal_work_limit=True, residence_outside_france=True, approved_seasonal_contract=True))
+    @Rule(Profil(work_contract='saisonnier', work_permit=True))
     def sejour_saisonnier(self):
         self.declare(Fact(eligibilite='Carte de Séjour "travailleur saisonnier"'))
 
-    @Rule(Profil(temporary_work_contract=True, work_permit=True, valid_visa_for_temporary_work=True))
+    @Rule(Profil(work_contract=MATCH.w, work_permit=True), TEST(lambda w: w in ['CDI', 'CDD', 'saisonnier', 'detache']))
     def sejour_travailleur_temporaire(self):
         self.declare(Fact(eligibilite='Carte de Séjour "travailleur temporaire"'))
 
     # ======================== ÉTUDES ========================
-    @Rule(
-        Profil(studies_status='etudiant', higher_education_enrollment=True, monthly_income_above_threshold=MATCH.i),
-        TEST(lambda i: i >= 615 if i else False)
-    )
+    @Rule(Profil(studies_status='etudiant', visitor_resources=MATCH.r),
+          TEST(lambda r: r in ['1200_1426', 'plus_1426']))
     def sejour_etudiant(self):
         self.declare(Fact(eligibilite='Visa "étudiant" / Carte de Séjour "étudiant"'))
 
-    @Rule(Profil(studies_status='stagiaire', tripartite_internship_agreement=True, internship_over_3_months=True))
+    @Rule(Profil(studies_status='stagiaire'))
     def sejour_stagiaire(self):
         self.declare(Fact(eligibilite='Visa ou Carte de Séjour "stagiaire"'))
 
-    @Rule(Profil(studies_status='chercheur', approved_host_organization_agreement=True))
+    @Rule(Profil(studies_status='chercheur'))
     def sejour_chercheur(self):
         self.declare(Fact(eligibilite='Passeport talent – chercheur'))
 
-    @Rule(
-        Profil(eu_mobility_program_student=True, enrolled_in_mobility_program=True, monthly_income_above_threshold=MATCH.i),
-        TEST(lambda i: i >= 615 if i else False)
-    )
+    @Rule(Profil(studies_status='etudiant', visitor_resources=MATCH.r),
+          TEST(lambda r: r in ['1200_1426', 'plus_1426']))
     def sejour_mobilite_etudiant(self):
         self.declare(Fact(eligibilite='Carte de Séjour "étudiant - programme de mobilité"'))
 
     # ======================== INVEST / TALENT ========================
-    @Rule(Profil(entrepreneur_or_self_employed=True, registered_business_activity=True, viable_activity=True, sufficient_resources=True))
+    @Rule(Profil(invest_registered=True, invest_hasBP=True, invest_funds=MATCH.f),
+          TEST(lambda f: f > 0))
     def sejour_entrepreneur(self):
         self.declare(Fact(eligibilite='Carte de Séjour "entrepreneur/profession libérale"'))
 
-    @Rule(
-        Profil(diploma_master_or_higher=True, employment_contract_over_3_months=True, salary_above_threshold=MATCH.s),
-        TEST(lambda s: s >= 43243 if s else False)
-    )
+    @Rule(Profil(studies_degree=MATCH.d, work_contract=MATCH.c, work_salary=MATCH.s),
+          TEST(lambda d, c, s: d != '' and c in ['CDI', 'CDD'] and s >= 43243))
     def passeport_talent_salarie(self):
         self.declare(Fact(eligibilite='Passeport talent – salarié qualifié'))
 
-    @Rule(
-        Profil(hired_by_innovative_company=True, r_and_d_related_contract=True, salary_above_threshold=MATCH.s),
-        TEST(lambda s: s >= 43243 if s else False)
-    )
+    @Rule(Profil(work_contract=MATCH.c, work_salary=MATCH.s),
+          TEST(lambda c,s : c in ['CDI', 'CDD'] and s >= 43243))
     def passeport_talent_recrute(self):
         self.declare(Fact(eligibilite='Passeport talent – recrutement entreprise innovante'))
 
-    @Rule(
-        Profil(bachelor_degree_or_experience=True, contract_one_year_or_more=True, salary_above_threshold=MATCH.s),
-        TEST(lambda s: s >= 53836.5 if s else False)
-    )
+    @Rule(Profil(studies_degree=MATCH.d, work_contract=MATCH.c, work_salary=MATCH.s),
+          TEST(lambda d,c,s: d != ''and c in ['CDI', 'CDD'] and s >= 53836.5))
     def passeport_talent_carte_bleue(self):
         self.declare(Fact(eligibilite='Passeport talent – carte bleue européenne'))
 
-    @Rule(
-        Profil(seconded_within_group=True, seniority_at_least_3_months=True, salary_above_threshold=MATCH.s),
-        TEST(lambda s: s >= 38918.88 if s else False)
-    )
+    @Rule(Profil(work_contract='detache', work_salary=MATCH.s),
+          TEST(lambda s: s >= 38918.88))
     def passeport_talent_mission(self):
         self.declare(Fact(eligibilite='Passeport talent – salarié en mission'))
 
-    @Rule(Profil(diploma_master_or_higher_or_experience=True, serious_business_creation_plan=True))
+    @Rule(Profil(studies_degree=MATCH.d, invest_hasBP=True),
+          TEST(lambda d: d != ''))
     def passeport_talent_creation(self):
         self.declare(Fact(eligibilite='Passeport talent – création d’entreprise'))
 
-    @Rule(Profil(recognized_innovative_project=True))
+    @Rule(Profil(invest_hasBP=True))
     def passeport_talent_projet(self):
         self.declare(Fact(eligibilite='Passeport talent – projet innovant'))
 
-    @Rule(Profil(investment_above_threshold=True, job_creation_or_preservation=True))
+    @Rule(Profil(invest_funds=MATCH.f),
+          TEST(lambda f: f >= 10000))
     def passeport_talent_investisseur(self):
         self.declare(Fact(eligibilite='Passeport talent – investisseur'))
 
-    @Rule(
-        Profil(legal_representative=True, contract_over_3_months=True, salary_above_threshold=MATCH.s),
-        TEST(lambda s: s >= 64864.8 if s else False)
-    )
+    @Rule(Profil(work_contract=MATCH.c, work_salary=MATCH.s),
+          TEST(lambda c,s: c in ['CDI', 'CDD'] and s >= 64864.8))
     def passeport_talent_mandataire(self):
         self.declare(Fact(eligibilite='Passeport talent – mandataire social'))
 
-    @Rule(Profil(artistic_or_cultural_profession=True, sufficient_resources=True))
+    @Rule(Profil(specialSituations=MATCH.s), TEST(lambda s: 'talentArtiste' in s))
     def passeport_talent_artiste(self):
         self.declare(Fact(eligibilite='Passeport talent – profession artistique et culturelle'))
 
-    @Rule(Profil(international_recognition=True, intention_to_work_in_france=True))
+    @Rule(Profil(specialSituations=MATCH.s), TEST(lambda s: 'talentArtiste' in s))
     def passeport_talent_renomme(self):
         self.declare(Fact(eligibilite='Passeport talent – personne de renommée internationale'))
 
-    @Rule(Profil(spouse_or_minor_child_of_passport_holder=True))
+    @Rule(Profil(family_link=MATCH.f), TEST(lambda f: f in ['mariage', 'parentEnfFr']))
     def passeport_talent_famille(self):
         self.declare(Fact(eligibilite='Passeport talent (famille)'))
 
     # ======================== VISITEUR ========================
-    @Rule(
-        Profil(stay_over_3_months=True, sufficient_annual_income=MATCH.i, health_insurance_coverage=True, no_employment=True),
-        TEST(lambda i: i >= 17115.69 if i else False)
-    )
+    @Rule(Profil(visitor_resources='plus_1426', visitor_housing=MATCH.h),
+          TEST(lambda h: h in ['locataire', 'proprietaire', 'heberge']))
     def sejour_visiteur(self):
         self.declare(Fact(eligibilite='Carte de Séjour "visiteur"'))
 
@@ -237,79 +220,85 @@ class MoteurEligibilite(KnowledgeEngine):
         self.declare(Fact(eligibilite='Passeport talent – sportif professionnel'))
 
     # ======================== RÉSIDENCE LONGUE DURÉE ========================
-    @Rule(Profil(residency_at_least_5_years=True, health_insurance=True, income_above_smic=True, language_level_a2=True))
+    @Rule(Profil(yearsResidence=MATCH.y, resident_languageA2=True, stableIncome=True),
+          TEST(lambda y: y >= 5))
     def carte_resident_ld_ue(self):
         self.declare(Fact(eligibilite='Carte de Résident Longue Durée - UE'))
 
-    @Rule(Profil(married_to_french_for_at_least_3_years=True, community_of_life=True, language_requirements=True))
+    @Rule(Profil(family_link='mariage', family_yearsMarriage=MATCH.y, family_community=True, resident_languageA2=True),
+          TEST(lambda y: y >= 3))
     def carte_resident_epoux(self):
         self.declare(Fact(eligibilite='Carte de Résident - Époux de Français'))
 
     # ======================== NATURALISATION ========================
-    @Rule(
-        Profil(ancestor_of_french_citizen=True, regular_residence_at_least_25_years=MATCH.y),
-        TEST(lambda y: y >= 25)
-    )
+    @Rule(Profil(mainPath='ascendant', ascendant_link=MATCH.a, residenceBracket='>10'),
+          TEST(lambda a: a in ['parent', 'grandparent']))
     def naturalisation_ascendant(self):
         self.declare(Fact(eligibilite='Naturalisation par Déclaration – Ascendant'))
 
-    @Rule(Profil(sibling_of_french_citizen=True, residence_in_france_since_age_16=True))
+    @Rule(Profil(mainPath='sibling', schoolingFR=True))
     def naturalisation_fratrie(self):
         self.declare(Fact(eligibilite='Naturalisation par Déclaration – Fratrie'))
 
-    @Rule(Profil(married_to_french_citizen_for_at_least_4_years=True, community_of_life=True, language_b1_proficiency=True))
+    @Rule(Profil(mainPath='mariage', marriage4y=True, communityLife=True, frenchB1=True))
     def naturalisation_mariage(self):
         self.declare(Fact(eligibilite='Naturalisation par Déclaration – Mariage'))
 
-    @Rule(Profil(residency_at_least_5_years=True, integration_criteria=True, language_b1_proficiency=True))
+    @Rule(Profil(yearsResidence=MATCH.y, pluri_integrationOK=True, frenchB1=True),
+          TEST(lambda y: y >= 5))
     def naturalisation_decret(self):
         self.declare(Fact(eligibilite='Naturalisation par Décret'))
 
     # ======================== AUTRES ========================
-    @Rule(Profil(eu_citizen_working_professionally=True))
+    @Rule(Profil(nationality_sim=MATCH.n, work_contract=MATCH.c),
+          TEST(lambda n,c: n in ['FR', 'GB'] and c in ['CDI', 'CDD']))
     def sejour_eu_travailleur(self):
         self.declare(Fact(eligibilite='Carte de Séjour pour Européen - Travailleur'))
 
-    @Rule(Profil(eu_citizen_enrolled_in_studies=True, health_insurance=True))
+    @Rule(Profil(nationality_sim=MATCH.n, studies_status='etudiant'),
+          TEST(lambda n: n in ['FR', 'GB']))
     def sejour_eu_etudiant(self):
         self.declare(Fact(eligibilite='Carte de Séjour pour Européen - Étudiant'))
 
-    @Rule(Profil(eu_citizen_retired_or_inactive=True, health_insurance=True))
+    @Rule(Profil(nationality_sim=MATCH.n, specialSituations=MATCH.s),
+          TEST(lambda n,s: n in ['FR', 'GB'] and 'retraite' in s))
     def sejour_eu_retraite(self):
         self.declare(Fact(eligibilite='Carte de Séjour pour Européen - Retraité ou inactif'))
 
-    @Rule(Profil(family_member_of_eu_citizen=True))
+    @Rule(Profil(family_link='famUE'))
     def sejour_eu_famille(self):
         self.declare(Fact(eligibilite='Carte de Séjour pour Européen - Membre de la famille'))
 
-    @Rule(Profil(minor_foreign_resident_in_france=True, parent_or_guardian_with_valid_title=True))
+    @Rule(Profil(ageBracket='<18', hasMinorChildren=True))
     def document_mineur(self):
         self.declare(Fact(eligibilite='Document de Circulation pour Mineur Étranger'))
 
     # ======================== DURÉE DE RÉSIDENCE ========================
-    @Rule(Profil(yearsResidence=MATCH.y), TEST(lambda y: y >= 10))
+    @Rule(Profil(yearsResidence=MATCH.y),
+          TEST(lambda y: y >= 10))
     def sejour_longue_residence(self):
         self.declare(Fact(eligibilite='Carte de séjour pour résidence habituelle de plus de 10 ans'))
 
     # ======================== CERTIFICATS ALGÉRIENS ========================
-    @Rule(
-        Profil(nationality_sim='DZ', alg1_motif=MATCH.m),
-        TEST(lambda m: m in ['mariage', 'parent', 'etat_sante', 'vie_priv'])
-    )
+    @Rule(Profil(nationality_sim='DZ', alg1_motif=MATCH.m),
+          TEST(lambda m: m in ['mariage', 'parent', 'etat_sante', 'vie_priv']))
     def certificat_alg_1an(self):
         self.declare(Fact(eligibilite='Certificat algérien 1 an'))
 
-    @Rule(
-        Profil(nationality_sim='DZ', alg10_type=MATCH.t),
-        TEST(lambda t: t in ['res10', 'famViePriv', 'francophone', 'rente'])
-    )
+    @Rule(Profil(nationality_sim='DZ', alg10_type=MATCH.t),
+          TEST(lambda t: t in ['res10', 'famViePriv', 'francophone', 'rente']))
     def certificat_alg_10ans(self):
         self.declare(Fact(eligibilite='Certificat algérien 10 ans'))
 
     # ======================== PLURIANNUELLE ========================
-    @Rule(Profil(previous_temporary_card=True, continuing_conditions=True, attended_cir=True, republican_principles=True))
+    @Rule(Profil(currentPermit=MATCH.c, pluri_integrationOK=True),
+          TEST(lambda c: c.startswith('csp_')))
     def carte_pluriannuelle(self):
         self.declare(Fact(eligibilite='Carte de Séjour Pluriannuelle "générale"'))
+
+
+
+
 ###############################################################################
 # 3.  UTILITAIRE : aplatissement des clés et conversion des valeurs
 ###############################################################################
