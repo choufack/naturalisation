@@ -1,0 +1,332 @@
+[
+  {
+    "nom_procedure": "Carte de séjour - Vie privée et familiale - Conjoint de Français",
+    "pieces_a_fournir": [
+      "Preuve d’entrée/séjour régulier (visa, VLS-TS validé en ligne, titre de séjour, ou déclaration sur l’honneur d’entrée régulière).; Passeport (pages état civil, validité, cachets, visas) ou attestation/carte consulaire avec photo, ou carte d’identité avec photo, ou certificat de nationalité (<6 mois) avec photo.; Copie intégrale de l’acte de naissance (<3 mois si France, mentions récentes, traduit par traducteur agréé si nécessaire).; Justificatif de domicile (<6 mois) : facture électricité/gaz/eau/téléphone fixe/internet, bail location (<6 mois), quittance loyer, taxe habitation, ou attestation hébergeant avec justificatif identité/domicile.; 3 photos d’identité (35x45 mm, norme ISO/IEC 19794-5:2005).; Preuve de nationalité française du conjoint (passeport, CNI, ou certificat de nationalité <6 mois).; Copie intégrale de l’acte de mariage (<3 mois, ou transcription si célébré à l’étranger).; Déclaration sur l’honneur conjointe de vie commune et documents prouvant ≥6 mois de communauté de vie (bail, quittance EDF, RIB, avis imposition commun).; Déclaration sur l’honneur de non-polygamie (si ressortissant d’un pays l’autorisant).; Exemplaire signé de l’engagement à respecter les principes de la République.; Justificatif de paiement du droit de timbre (à la délivrance).; Certificat médical OFII (à la délivrance)."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Vie privée et familiale - Pacs avec Français",
+    "pieces_a_fournir": [
+      "Copie intégrale de l’acte de naissance (<3 mois si France, mentions récentes, traduit par traducteur agréé si nécessaire).; Passeport (pages état civil, validité, cachets, visas) ou attestation/carte consulaire avec photo, ou carte d’identité avec photo, ou certificat de nationalité (<6 mois) avec photo.; Justificatif de domicile (<6 mois) : facture électricité/gaz/eau/téléphone fixe/internet, bail location (<6 mois), quittance loyer, taxe habitation, ou attestation hébergeant avec justificatif identité/domicile.; 3 photos d’identité (35x45 mm, norme ISO/IEC 19794-5:2005).; Justificatif de paiement du droit de timbre (à la délivrance).; Déclaration sur l’honneur de non-polygamie (si ressortissant d’un pays l’autorisant).; Copie du Pacs et certificat de non-dissolution (<3 mois).; Copie du passeport ou CNI du partenaire pacsé français.; Documents prouvant relations certaines et continues avec partenaire (bail, quittance EDF, RIB, avis imposition commun).; Documents prouvant durée résidence habituelle continue France ≥1 an (certificats scolarité, avis imposition, contrats travail).; Exemplaire signé de l’engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Vie privée et familiale - Parent d’enfant français mineur",
+    "pieces_a_fournir": [
+      "Preuve d’entrée/séjour régulier.; Copie intégrale de l’acte de naissance.; Passeport ou carte d'identité ou certificat de nationalité.; 3 photos d’identité.; Justificatif de domicile.; Engagement à respecter les principes de la République.; Acte de naissance de l’enfant français.; Preuve de nationalité française de l’enfant.; Justificatif de résidence de l’enfant.; Preuves de contribution à l’entretien/éducation ≥2 ans.; Justificatif de paiement du droit de timbre."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Vie privée et familiale - Membre de famille d’un résident longue durée-UE",
+    "pieces_a_fournir": [
+      "Carte de séjour ‘résident de longue durée – UE’ ou certificat demande.; Copie intégrale de l’acte de naissance.; Passeport ou carte d'identité ou certificat de nationalité.; Justificatif de domicile.; 3 photos d’identité.; Justificatif de paiement du droit de timbre.; Déclaration de non-polygamie.; Certificat médical OFII.; Preuve de résidence régulière dans le pays membre.; Justificatifs de ressources.; Justificatif d’assurance maladie.; Engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Vie privée et familiale - Jeune adulte entré par regroupement familial",
+    "pieces_a_fournir": [
+      "Visa VLS-TS regroupement familial.; Copie intégrale de l’acte de naissance.; Passeport ou carte d'identité ou certificat de nationalité.; Justificatif de domicile.; 3 photos d’identité.; Justificatif de paiement du droit de timbre.; Décision de regroupement familial.; Carte de résident de l’étranger rejoint.; Certificat médical OFII.; Déclaration de non-polygamie.; Engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Vie privée et familiale - Jeune né ou entré mineur",
+    "pieces_a_fournir": [
+      "Copie intégrale de l’acte de naissance.; Passeport ou carte d'identité ou certificat de nationalité.; Justificatif de domicile.; 3 photos d’identité.; Déclaration de non-polygamie.; Engagement à respecter les principes de la République.; Justificatif de paiement du droit de timbre.; Justificatifs spécifiques (résidence, scolarité, statut parents)."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Vie privée et familiale - Pension d’accident du travail",
+    "pieces_a_fournir": [
+      "Copie intégrale de l’acte de naissance.; Justificatif de domicile.; 3 photos d’identité.; Justificatif de paiement du droit de timbre.; Déclaration de non-polygamie.; Certificat médical OFII.; Justificatif d’invalidité ≥20%.; Justificatifs de versement de la pension.; Engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Vie privée et familiale - Travail solidaire",
+    "pieces_a_fournir": [
+      "Copie intégrale de l’acte de naissance.; Passeport ou carte d'identité ou certificat de nationalité.; Justificatif de domicile.; 3 photos d’identité.; Justificatif de paiement du droit de timbre.; Certificat médical OFII.; Déclaration de non-polygamie.; Justificatifs d’activité ininterrompue 3 ans.; Preuves de projet d’intégration.; Rapport responsable de l’organisme.; Engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Vie privée et familiale - Raisons humanitaires ou exceptionnelles",
+    "pieces_a_fournir": [
+      "Copie intégrale de l’acte de naissance.; Passeport ou carte d'identité ou certificat de nationalité.; Justificatif de domicile.; 3 photos d’identité.; Justificatif de paiement du droit de timbre.; Certificat médical OFII.; Déclaration de non-polygamie.; Justificatifs de raisons humanitaires.; Engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Vie privée et familiale - Victime de violence domestique ou mariage forcé",
+    "pieces_a_fournir": [
+      "Copie intégrale de l’acte de naissance.; Passeport ou carte d'identité ou certificat de nationalité.; Justificatif de domicile.; 3 photos d’identité.; Ordonnance de protection.; Engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Vie privée et familiale - Victime de traite, proxénétisme ou logement indigne",
+    "pieces_a_fournir": [
+      "Copie intégrale de l’acte de naissance.; Passeport ou titre d’identité.; Justificatif de domicile.; 3 photos d’identité.; Récépissé de plainte ou référence à la procédure judiciaire incluant témoignage.; Engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Salarié",
+    "pieces_a_fournir": [
+      "VLS-TS mention ‘salarié’ ou titre de séjour valide.; Passeport ou titre d’identité.; Justificatif de domicile.; 3 photos d’identité.; Paiement du droit de timbre.; Certificat médical OFII.; Autorisation de travail (CERFA n°15187*02).; Engagement à respecter les principes de la République.; Justificatifs de maintien du contrat.; Si sans emploi : attestation pour France Travail et avis de situation."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Travailleur temporaire",
+    "pieces_a_fournir": [
+      "VLS-TS mention ‘travailleur temporaire’ ou titre de séjour valide.; Passeport ou titre d’identité.; Justificatif de domicile.; 3 photos d’identité.; Paiement du droit de timbre.; Autorisation de travail (CERFA n°15186*03).; Engagement à respecter les principes de la République.; Justificatifs poursuite du CDD.; Si nouvel emploi : attestation employeur précédent pour France Travail."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Entrepreneur/Profession libérale",
+    "pieces_a_fournir": [
+      "VLS-TS ou titre de séjour valide.; Passeport ou titre d’identité.; Justificatif de domicile.; 3 photos d’identité.; Paiement du droit de timbre.; Certificat médical OFII.; Engagement à respecter les principes de la République.; Pièces selon type d'activité (immatriculation, statuts, plan d’affaires, revenus, autorisations réglementaires, etc.)."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour pluriannuelle - Générale",
+    "pieces_a_fournir": [
+      "Documents requis pour la carte temporaire correspondante.; Preuve assiduité/sérieux formations CIR (si soumis).; Engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Passeport talent - Salarié qualifié",
+    "pieces_a_fournir": [
+      "VLS-TS ou titre de séjour valide.; Passeport ou titre d’identité.; Justificatif de domicile.; 3 photos d’identité.; Attestation employeur.; Diplôme requis.; Justificatifs rémunération ≥43243 €/an.; Engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Passeport talent - Recrutement entreprise innovante",
+    "pieces_a_fournir": [
+      "VLS-TS ou titre de séjour valide.; Passeport ou titre d’identité.; Justificatif de domicile.; 3 photos d’identité.; Attestation employeur.; Attestation innovation entreprise.; Justificatifs rémunération ≥43243 €/an.; Engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Passeport talent - Carte bleue européenne",
+    "pieces_a_fournir": [
+      "VLS-TS ou titre de séjour valide.; Passeport ou titre d’identité.; Justificatif de domicile.; 3 photos d’identité.; Attestation employeur.; Diplôme ou preuve expérience.; Justificatifs cotisations, Kbis, etc.; Preuves qualification, CV, diplômes.; Autorisation réglementaire (si applicable).; Mandat mandataire (si nécessaire).; Engagement à respecter les principes de la République.; Preuves séjour dans autre État membre (si applicable)."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Passeport talent - Salarié en mission",
+    "pieces_a_fournir": [
+      "VLS-TS ou titre de séjour valide.; Passeport ou titre d’identité.; Justificatif de domicile.; 3 photos d’identité.; Attestation employeur.; Lettre mission/fonctions.; Certificat détachement sécu sociale ou immatriculation.; Engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Passeport talent - Chercheur",
+    "pieces_a_fournir": [
+      "VLS-TS ou titre de séjour valide.; Passeport ou titre d’identité.; Justificatif de domicile.; 3 photos d’identité.; Diplôme ≥master.; Convention d’accueil.; Engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Passeport talent - Création d’entreprise",
+    "pieces_a_fournir": [
+      "VLS-TS ou titre de séjour valide.; Passeport ou équivalent.; Justificatif de domicile.; 3 photos d’identité.; Diplôme ≥master ou document justifiant 5 ans expérience.; Formulaire Cerfa commerçant/artisan/industriel.; Casier judiciaire ou bordereau fiscal.; Présentation projet, plan d’affaires, budget prévisionnel.; Capacité à exercer (si nécessaire).; Justificatif investissement ≥30000 €.; Cautionnement bancaire ou solde créditeur.; Documents spécifiques (nom propre, reprise, filiale, etc.).; Immatriculation entreprise ou affiliation régime social.; Engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Passeport talent - Projet innovant",
+    "pieces_a_fournir": [
+      "VLS-TS ou titre de séjour valide.; Passeport ou équivalent.; Justificatif de domicile.; 3 photos d’identité.; Avis d’un organisme public.; Document reconnaissance projet innovant.; Engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Passeport talent - Investisseur",
+    "pieces_a_fournir": [
+      "VLS-TS ou titre de séjour valide.; Passeport ou équivalent.; Justificatif de domicile.; 3 photos d’identité.; Preuve gestion ou participation capital.; Preuve création/sauvegarde emploi ou engagement.; Preuve investissement ou engagement.; Certificat dépôt fonds propres.; Accord de prêt bancaire.; Document d’effectivité de l’investissement.; Engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Passeport talent - Mandataire social",
+    "pieces_a_fournir": [
+      "VLS-TS ou titre de séjour valide.; Passeport ou équivalent.; Justificatif de domicile.; 3 photos d’identité.; Preuve de la fonction de mandataire social.; Contrat ou justificatif expérience ≥3 mois.; Justificatif de rémunération ≥64864,80 €.; Engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Passeport talent - Profession artistique et culturelle",
+    "pieces_a_fournir": [
+      "VLS-TS ou titre de séjour valide.; Passeport ou équivalent.; Justificatif de domicile.; 3 photos d’identité.; Engagement à respecter les principes de la République.; Pour salarié : ressources ≥1261,26 €/mois (≥51%), Cerfa n°15617, contrats ≥3 mois.; Pour non-salarié : justificatifs statut artiste/auteur, projet."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Passeport talent - Personne de renommée internationale",
+    "pieces_a_fournir": [
+      "VLS-TS ou titre de séjour valide.; Passeport ou équivalent.; Justificatif de domicile.; 3 photos d’identité.; Preuve de ressources.; Documents notoriété.; Documents projet en France.; Engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Passeport talent (famille)",
+    "pieces_a_fournir": [
+      "VLS-TS mention ‘talent famille’ ou titre de séjour valide.; Passeport ou équivalent.; Justificatif de domicile.; 3 photos d’identité.; Paiement droit de timbre.; Carte de séjour de l’époux/parent.; Acte de mariage ou de naissance (<3 mois).; Engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Travailleur saisonnier",
+    "pieces_a_fournir": [
+      "VLS-TS mention ‘travailleur saisonnier’ ou titre de séjour valide.; Passeport ou équivalent.; Acte de naissance.; Justificatif de domicile.; 3 photos d’identité.; Autorisation de travail (CERFA n°15186*03).; Engagement résidence hors France.; Engagement à respecter les principes de la République.; Paiement du droit de timbre.; Certificat médical OFII."
+    ]
+  },
+  {
+    "nom_procedure": "APS - Parent d’enfant malade",
+    "pieces_a_fournir": [
+      "Acte de naissance demandeur.; Passeport demandeur.; Justificatif de domicile.; 3 photos d’identité.; Engagement à respecter les principes de la République.; Déclaration de non-polygamie.; Justificatifs de résidence France ≥1 an.; Jugement autorité parentale (si non parent).; Justificatifs charge de l’enfant.; Acte de naissance et pièce d’identité de l’enfant.; Certificat médical OFII (par médecin, transmis)."
+    ]
+  },
+  {
+    "nom_procedure": "APS - Mission de volontariat",
+    "pieces_a_fournir": [
+      "VLS-TS.; Acte de naissance.; Passeport.; Justificatif de domicile.; 3 photos d’identité.; Contrat de volontariat.; Décision d’agrément de l’organisation.; Lettre d’engagement à quitter France.; Engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de résident - Époux de Français",
+    "pieces_a_fournir": [
+      "Visa de long séjour valant titre de séjour (VLS-TS) validé en ligne ou titre de séjour valide.; Justificatif ≥3 ans séjour régulier France (cartes séjour, attestations renouvellement).; Copie intégrale acte de mariage (<3 mois, ou transcription si célébré à l’étranger).; Passeport (pages état civil, validité, cachets, visas) ou attestation/carte consulaire avec photo, ou carte d’identité avec photo, ou certificat de nationalité (<6 mois) avec photo.; Justificatif de domicile (<6 mois) : facture électricité/gaz/eau/téléphone fixe/internet, bail location (<6 mois), quittance loyer, taxe habitation, ou attestation hébergeant avec justificatif identité/domicile.; 3 photos d’identité (35x45 mm, norme ISO/IEC 19794-5:2005).; Certificat médical OFII (à la délivrance).; Déclaration sur l’honneur de non-polygamie (si ressortissant d’un pays l’autorisant).; Preuve nationalité française conjoint (passeport, CNI, certificat nationalité <6 mois).; Justificatifs communauté de vie (déclaration conjointe, bail, quittance EDF, RIB, avis imposition commun).; Preuve français A2 (diplôme/certification per arrêté INTV1805032A, sauf >65 ans).; Exemplaire signé de l’engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de résident longue durée - UE",
+    "pieces_a_fournir": [
+      "Copie intégrale acte de naissance (<3 mois si France, mentions récentes, traduit par traducteur agréé si nécessaire).; Passeport (pages état civil, validité, cachets, visas) ou attestation/carte consulaire avec photo, ou carte d’identité avec photo, ou certificat de nationalité (<6 mois) avec photo.; Justificatif de domicile (<6 mois) : facture électricité/gaz/eau/téléphone fixe/internet, bail location (<6 mois), quittance loyer, taxe habitation, ou attestation hébergeant avec justificatif identité/domicile.; 5 photos d’identité (35x45 mm, norme ISO/IEC 19794-5:2005).; Justificatif de paiement taxe titre de séjour et droit de timbre (à la délivrance).; Déclaration sur l’honneur de respect des principes régissant la République française.; Déclaration sur l’honneur de non-polygamie (si ressortissant d’un pays l’autorisant).; Justificatifs 5 ans séjour régulier ininterrompu (certificats scolarité, avis imposition, contrats travail, bulletins salaire, attestations carte séjour).; Justificatifs ressources suffisantes, stables, régulières 5 ans (bulletins paie, avis imposition, pension, contrat travail, attestation bancaire, ≥SMIC brut/mois).; Justificatif assurance maladie (carte ou attestation).; Diplôme/certification niveau A2 français (per arrêté INTV1805032A, sauf >65 ans ou membres famille ressortissants Bénin, Burkina Faso, Cameroun, Centrafrique, Congo, Côte d’Ivoire, Mali, Mauritanie, Niger, Sénégal, Togo, Tunisie pour premier titre).; Certificat médical OFII (à la délivrance).; Pour Carte bleue européenne : Preuve 5 ans UE dont 2 ans France (titres séjour autres États membres)."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de résident au titre du regroupement familial",
+    "pieces_a_fournir": [
+      "Visa de long séjour valant titre de séjour (VLS-TS) validé en ligne pour regroupement familial.; Copie intégrale acte de naissance (<3 mois si France, mentions récentes, traduit par traducteur agréé si nécessaire, sauf si titulaire carte séjour).; Passeport (pages état civil, validité, cachets, visas) ou attestation/carte consulaire avec photo, ou carte d’identité avec photo, ou certificat de nationalité (<6 mois) avec photo.; Justificatif de domicile (<6 mois) : facture électricité/gaz/eau/téléphone fixe/internet, bail location (<6 mois), quittance loyer, taxe habitation, ou attestation hébergeant avec justificatif identité/domicile.; 3 photos d’identité (35x45 mm, norme ISO/IEC 19794-5:2005).; Déclaration sur l’honneur de non-polygamie (si ressortissant d’un pays l’autorisant).; Justificatif de paiement taxe titre de séjour et droit de timbre (à la délivrance).; Certificat médical OFII (à la délivrance).; Copie carte de résident de l’étranger rejoint.; Si conjoint : Déclaration sur l’honneur conjointe attestant vie commune, extrait acte de mariage (<3 mois), justificatifs résidence non interrompue ≥3 ans (certificats scolarité, avis imposition, contrats travail, bulletins salaire, attestations carte séjour)."
+    ]
+  },
+  {
+    "nom_procedure": "Certificat de résidence pour Algérien de 10 ans - Regroupement familial",
+    "pieces_a_fournir": [
+      "Visa de long séjour valant titre de séjour (VLS-TS) validé en ligne pour regroupement familial.; Copie intégrale acte de naissance (<3 mois si France, mentions récentes, traduit par traducteur agréé si nécessaire, sauf si titulaire carte séjour).; Passeport (pages état civil, validité, cachets, visas) ou attestation/carte consulaire avec photo, ou carte d’identité avec photo, ou certificat de nationalité (<6 mois) avec photo.; Justificatif de domicile (<6 mois) : facture électricité/gaz/eau/téléphone fixe/internet, bail location (<6 mois), quittance loyer, taxe habitation, ou attestation hébergeant avec justificatif identité/domicile.; 3 photos d’identité (35x45 mm, norme ISO/IEC 19794-5:2005).; Déclaration sur l’honneur de non-polygamie.; Justificatif de paiement taxe titre de séjour et droit de timbre (à la délivrance).; Certificat médical OFII (à la délivrance).; Certificat de résidence pour Algérien de 10 ans de l’étranger rejoint.; Si conjoint : Déclaration sur l’honneur conjointe attestant vie commune, justificatifs communauté de vie (contrat bail, relevé compte, facture EDF)."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de résident permanent",
+    "pieces_a_fournir": [
+      "Passeport (pages état civil, validité, cachets, visas) ou attestation/carte consulaire avec photo, ou carte d’identité avec photo, ou certificat de nationalité (<6 mois) avec photo.; Justificatif de domicile (<6 mois) : facture électricité/gaz/eau/téléphone fixe/internet, bail location (<6 mois), quittance loyer, taxe habitation, ou attestation hébergeant avec justificatif identité/domicile.; 3 photos d’identité (35x45 mm, norme ISO/IEC 19794-5:2005).; Déclaration sur l’honneur de non-polygamie (si ressortissant d’un pays l’autorisant).; Justificatif de paiement taxe titre de séjour et droit de timbre (à la délivrance).; Carte de résident arrivant à expiration.; Attestation sur l’honneur : ne pas avoir séjourné >3 ans consécutifs hors France (ou >6 ans hors UE pour résident longue durée-UE, sans acquisition statut résident longue durée-UE autre État membre).; Justificatifs intégration républicaine (si non vérifiés) : déclaration sur l’honneur de respect des principes régissant la République française, diplôme/certification niveau A2 français (per arrêté INTV1805032A, sauf >65 ans).; Si sur demande après première carte : copie carte de résident précédente.; Si automatique après deux cartes : copies des deux cartes de résident précédentes.; Si automatique >60 ans : justificatif d’âge (acte de naissance, passeport) et copie carte de résident."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de résident pour ancien combattant",
+    "pieces_a_fournir": [
+      "Copie intégrale acte de naissance (<3 mois si France, mentions récentes, traduit par traducteur agréé si nécessaire, sauf si titulaire carte séjour).; Passeport (pages état civil, validité, cachets, visas) ou attestation/carte consulaire avec photo, ou carte d’identité avec photo, ou certificat de nationalité (<6 mois) avec photo.; Justificatif de domicile (<6 mois) : facture électricité/gaz/eau/téléphone fixe/internet, bail location (<6 mois), quittance loyer, taxe habitation, ou attestation hébergeant avec justificatif identité/domicile.; 5 photos d’identité (35x45 mm, norme ISO/IEC 19794-5:2005).; Déclaration sur l’honneur de non-polygamie (si ressortissant d’un pays l’autorisant).; Justificatif de paiement taxe titre de séjour et droit de timbre (à la délivrance).; Si entrée irrégulière : droit de visa de régularisation (200 €, 50 € à la demande, reste à la délivrance).; Certificat médical OFII (à la délivrance).; Déclaration sur l’honneur de respect des principes régissant la République française.; Diplôme/certification niveau A2 français (per arrêté INTV1805032A, sauf >65 ans).; Visa de long ou court séjour valide (photocopie pages cachets/visas) ou carte de séjour valide.; Carte du combattant délivrée par autorités compétentes (e.g., Office National des Anciens Combattants).; Si unité combattante armée française : Livret militaire attestant service.; Si FFI : Certificat de démobilisation ou justificatif blessure au combat (certificat médical, rapport militaire).; Si unité combattante alliée ou armée alliée : Livret militaire attestant service."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de résident pour ascendant à charge d’un enfant français",
+    "pieces_a_fournir": [
+      "Copie intégrale acte de naissance (<3 mois si France, mentions récentes, traduit par traducteur agréé si nécessaire, sauf si titulaire carte séjour).; Passeport (pages état civil, validité, cachets, visas) ou attestation/carte consulaire avec photo, ou carte d’identité avec photo, ou certificat de nationalité (<6 mois) avec photo.; Justificatif de domicile (<6 mois) : facture électricité/gaz/eau/téléphone fixe/internet, bail location (<6 mois), quittance loyer, taxe habitation, ou attestation hébergeant avec justificatif identité/domicile.; 3 photos d’identité (35x45 mm, norme ISO/IEC 19794-5:2005).; Déclaration sur l’honneur de non-polygamie (si ressortissant d’un pays l’autorisant).; Justificatif de paiement taxe titre de séjour et droit de timbre (à la délivrance).; Si entrée irrégulière : droit de visa de régularisation (200 €, 50 € à la demande, reste à la délivrance).; Certificat médical OFII (à la délivrance).; Déclaration sur l’honneur de respect des principes régissant la République française (sauf Tunisiens/Marocains pour premier titre).; Diplôme/certification niveau A2 français (per arrêté INTV1805032A, sauf >65 ans ou Tunisiens/Marocains pour premier titre).; Visa de long séjour (photocopie pages cachets/visas).; Carte nationale d’identité ou certificat de nationalité française de l’enfant (<6 mois).; Documents d’état civil prouvant lien familial (copie intégrale acte de naissance enfant, livret de famille).; Justificatifs ressources suffisantes enfant français (et conjoint) : avis d’imposition, attestations bancaires, bulletins salaire, attestation hébergement, contrat location/acte propriété.; Justificatifs absence ressources ascendant : versements pension/retraites, virements réguliers enfant français, relevé de compte.; Attestation consulat sur isolement ascendant et situation financière autres enfants pays d’origine.; Déclaration demandeur sur absence autres enfants pouvant accueillir dans pays d’origine.; Mention personne à charge sur déclaration revenus enfant français, avec montant versé."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour temporaire - Recherche d’emploi ou création d’entreprise - Étudiant",
+    "pieces_a_fournir": [
+      "Visa de long séjour valant titre de séjour (VLS-TS) validé en ligne ou carte de séjour étudiant/étudiant programme mobilité valide.; Passeport (pages état civil, validité, cachets, visas) ou attestation/carte consulaire avec photo, ou carte d’identité avec photo, ou certificat de nationalité (<6 mois) avec photo.; Justificatif de domicile (<6 mois) : facture électricité/gaz/eau/téléphone fixe/internet, bail location (<6 mois), quittance loyer, taxe habitation, ou attestation hébergeant avec justificatif identité/domicile.; 3 photos d’identité (35x45 mm, norme ISO/IEC 19794-5:2005).; Justificatif de paiement taxe titre de séjour et droit de timbre (à la délivrance).; Justificatif couverture sociale (attestation affiliation sécurité sociale ou assurance privée).; Diplôme (master, niveau I labellisé CGE, licence professionnelle obtenue dans l’année, ou attestation réussite définitive).; Si création entreprise : Justificatifs projet création entreprise dans domaine formation (business plan, statuts prévisionnels, étude marché, lettres intention partenaires).; Certificat médical OFII (à la délivrance, si requis)."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour temporaire - Recherche d’emploi ou création d’entreprise - Chercheur",
+    "pieces_a_fournir": [
+      "Visa de long séjour valant titre de séjour (VLS-TS) validé en ligne ou carte de séjour chercheur/chercheur programme mobilité valide.; Passeport (pages état civil, validité, cachets, visas) ou attestation/carte consulaire avec photo, ou carte d’identité avec photo, ou certificat de nationalité (<6 mois).; Justificatif de domicile (<6 mois) : facture électricité/gaz/eau/téléphone fixe/internet, bail location (<6 mois), quittance loyer, taxe habitation, ou attestation hébergeant avec justificatif identité/domicile.; 3 photos d’identité (35x45 mm, norme ISO/IEC 19794-5:2005).; Justificatif de paiement taxe titre de séjour et droit de timbre (à la délivrance).; Justificatif couverture sociale (attestation affiliation sécurité sociale ou assurance privée).; Confirmation achèvement travaux recherche par organisme (présentation différée possible à délivrance carte).; Si création entreprise : Justificatifs projet création entreprise dans domaine recherches (business plan, statuts prévisionnels, étude marché, lettres intention partenaires).; Certificat médical OFII (à la délivrance, si requis)."
+    ]
+  },
+  {
+    "nom_procedure": "Autorisation provisoire de séjour - Recherche d’emploi (accords bilatéraux)",
+    "pieces_a_fournir": [
+      "Visa de long séjour valant titre de séjour (VLS-TS) validé en ligne ou carte de séjour étudiant valide.; Passeport (pages état civil, validité, cachets, visas) ou attestation/carte consulaire avec photo, ou carte d’identité avec photo, ou certificat de nationalité (<6 mois).; Justificatif de domicile (<6 mois) : facture électricité/gaz/eau/téléphone fixe/internet, bail location (<6 mois), quittance loyer, taxe habitation, ou attestation hébergeant avec justificatif identité/domicile.; 3 photos d’identité (35x45 mm, norme ISO/IEC 19794-5:2005).; Justificatif de paiement taxe droit de timbre et droit de visa de régularisation (à la délivrance).; Justificatif couverture sociale (attestation affiliation sécurité sociale ou assurance privée).; Diplôme délivré par établissement d’enseignement supérieur (conformément accord bilatéral) ou attestation réussite définitive.; Si création entreprise : Justificatifs projet création entreprise dans domaine formation (business plan, statuts prévisionnels, étude marché, lettres intention partenaires)."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Salarié détaché ICT",
+    "pieces_a_fournir": [
+      "Visa de long séjour valant titre de séjour (VLS-TS) validé en ligne mention ‘salarié détaché ICT’ ou titre de séjour valide.; Passeport (pages état civil, validité, cachets, visas) ou attestation/carte consulaire avec photo, ou carte d’identité avec photo, ou certificat de nationalité (<6 mois) avec photo.; Justificatif de domicile (<6 mois) : facture électricité/gaz/eau/téléphone fixe/internet, bail location (<6 mois), quittance loyer, taxe habitation, ou attestation hébergeant avec justificatif identité/domicile.; 3 photos d’identité (35x45 mm, norme ISO/IEC 19794-5:2005).; Formulaire Cerfa n°15619 et documents requis.; Contrat de travail entreprise étrangère ou équivalent.; Justificatifs ancienneté ≥6 mois (attestation employeur, fiches paie).; Justificatif ressources ≥1801,80 €/mois brut.; Preuve appartenance même groupe.; Diplômes cadre/expert.; Si mannequinat : licence agence.; Si spectacle vivant : licence entrepreneur spectacles.; Si spectacles occasionnels : déclaration préalable direction régionale affaires culturelles.; Mandat pour mandataire (si nécessaire).; Exemplaire signé de l’engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Visiteur",
+    "pieces_a_fournir": [
+      "Visa de long séjour valant titre de séjour (VLS-TS) validé en ligne mention ‘visiteur’ ou titre de séjour valide (sauf titulaire carte ‘résident longue durée – UE’ autre pays UE).; Copie intégrale acte de naissance (<3 mois si France, mentions récentes, traduit par traducteur agréé si nécessaire).; Passeport (pages état civil, validité, cachets, visas) ou attestation/carte consulaire avec photo, ou carte d’identité avec photo, ou certificat de nationalité (<6 mois) avec photo.; Justificatif de domicile (<6 mois) : facture électricité/gaz/eau/téléphone fixe/internet, bail location (<6 mois), quittance loyer, taxe habitation, ou attestation hébergeant avec justificatif identité/domicile.; 3 photos d’identité (35x45 mm, norme ISO/IEC 19794-5:2005).; Exemplaire signé de l’engagement à respecter les principes de la République.; Certificat médical OFII (à la délivrance).; Justificatifs ressources (attestations bancaires, cautions, titre pension, ≥17115,69 €/an).; Si pris en charge : ressources garant, attestation prise en charge, carte d’identité garant.; Attestation sur l’honneur manuscrite de ne pas travailler.; Attestation assurance maladie couvrant durée séjour.; Justificatif paiement taxe titre et droit de timbre (à la délivrance)."
+    ]
+  },
+  {
+    "nom_procedure": "Certificat de résidence pour Algérien d’1 ou 2 ans - Étudiant",
+    "pieces_a_fournir": [
+      "Visa de long séjour valant titre de séjour (VLS-TS) validé en ligne mention ‘étudiant’.; Passeport (pages état civil, validité, cachets, visas) ou attestation/carte consulaire avec photo.; Justificatif de domicile (<6 mois)...; 3 photos d’identité (35x45 mm, norme ISO/IEC 19794-5:2005).; Certificat d’inscription dans un établissement d’enseignement supérieur français (année en cours).; Justificatif de ressources (≥615 €/mois)...; Attestation d’assurance maladie couvrant la durée du séjour.; Justificatif de paiement de la taxe titre de séjour...; Certificat médical OFII (à la délivrance, si requis)."
+    ]
+  },
+  {
+    "nom_procedure": "Carte de séjour - Retraité",
+    "pieces_a_fournir": [
+      "Passeport (pages état civil, validité, cachets, visas) ou attestation/carte consulaire avec photo, ou carte d’identité avec photo, ou certificat de nationalité (<6 mois) avec photo.; Justificatif de domicile (<6 mois) : facture électricité/gaz/eau/téléphone fixe/internet, bail location (<6 mois), quittance loyer, taxe habitation, ou attestation hébergeant avec justificatif identité/domicile.; 3 photos d’identité (35x45 mm, norme ISO/IEC 19794-5:2005).; Déclaration sur l’honneur de non-polygamie (si ressortissant d’un pays l’autorisant).; Justificatif résidence régulière France avec carte de résident.; Justificatif pension retraite (dernier avis paiement caisse).; Justificatifs résidence hors France (quittance loyer, facture, certificat autorités municipales).; Exemplaire signé de l’engagement à respecter les principes de la République."
+    ]
+  },
+  {
+    "nom_procedure": "Déclaration de nationalité - Ascendant de Français",
+    "pieces_a_fournir": [
+      "Timbre fiscal électronique ‘accès à la nationalité française’ (55 €).; 2 photos d’identité récentes, tête nue, format réglementaire, avec nom, prénom(s), date de naissance au dos.; Photocopie recto-verso du titre de séjour en cours de validité (si hors UE).; Photocopie de toutes les pages écrites ou tamponnées du passeport, ou carte d’identité nationale (si UE sans passeport).; Copie intégrale de l’acte de naissance du demandeur, mentionnant noms et prénoms des parents, traduit par traducteur agréé si en langue étrangère, légalisé/apostillé si requis.; Actes de naissance ou mariage des parents (si l’acte de naissance ne mentionne pas leurs dates de naissance).; Copie intégrale de l’acte de naissance du descendant français, mentionnant noms des parents, ou jugement d’adoption pour enfant adopté.; Pour petit-enfant ou arrière-petit-enfant : copies intégrales des actes de naissance des ascendants (parents, grands-parents) pour établir filiation.; Preuve de nationalité française du descendant : copie intégrale de l’acte de naissance (si né en France de parents nés en France), ou acte de naissance avec mention d’acquisition de nationalité, ou ampliation de décret/déclaration, ou certificat de nationalité française (<6 mois).; Justificatif de domicile récent : attestation CAF, facture électricité/gaz/téléphone fixe, quittance loyer.; Justificatifs de 25 ans de résidence régulière en France : relevé de carrière, relevé de situation individuelle, avis d’imposition, certificats de scolarité, contrats de travail, attestations de carte de séjour.; Pour conjoint marié : copie du titre de séjour ou justificatif de résidence en France (si UE).; Pour enfants mineurs : justificatifs de résidence en France (certificat de scolarité, attestation crèche, ou autres).; Pour réfugiés/apatrides : certificats de naissance/mariage délivrés par l’OFPRA."
+    ]
+  },
+  {
+    "nom_procedure": "Déclaration de nationalité - Frère/Sœur de Français",
+    "pieces_a_fournir": [
+      "Timbre fiscal électronique ‘accès à la nationalité française’ (55 €).; 2 photos d’identité récentes, tête nue, format réglementaire, avec nom, prénom(s), date de naissance au dos.; Photocopie recto-verso du titre de séjour en cours de validité (si hors UE).; Photocopie de toutes les pages écrites ou tamponnées du passeport, ou carte d’identité nationale (si UE sans passeport).; Copie intégrale de l’acte de naissance du demandeur, mentionnant noms et prénoms des parents, traduit par traducteur agréé si en langue étrangère, légalisé/apostillé si requis.; Actes de naissance ou mariage des parents (si possible).; Copie intégrale de l’acte de naissance du frère/sœur français, indiquant filiation.; Si nés des mêmes parents : Copie livret de famille des parents (original présenté à l’entretien).; Si un seul parent commun : Copie intégrale acte de naissance parent commun.; Preuve nationalité française frère/sœur : Certificat de nationalité française, ou acte de naissance avec mention acquisition nationalité (art. 21-7 ou 21-11 code civil), ou déclaration enregistrée.; Certificats de scolarité couvrant sans interruption période obligatoire (6-16 ans) : certificats, bulletins scolaires, attestations établissements.; Justificatif de domicile récent : attestation CAF, facture électricité/gaz/téléphone fixe, quittance loyer.; Justificatifs résidence habituelle France depuis 6 ans : attestation CAF, relevé de carrière, contrats d’apprentissage, certificats travail, attestations stage.; Pour conjoint marié : Copie titre de séjour ou justificatif résidence France (si UE).; Pour enfants mineurs : Justificatifs résidence France (certificat de scolarité, attestation crèche).; Pour réfugiés/apatrides : Certificats naissance/mariage délivrés par l’OFPRA."
+    ]
+  },
+  {
+    "nom_procedure": "Nationalité par mariage (déclaration)",
+    "pieces_a_fournir": [
+      "Timbre fiscal électronique ‘accès à la nationalité française’ (55 €).; 2 photos d’identité récentes, tête nue, format réglementaire, avec nom, prénom(s), date de naissance au dos.; Photocopie recto-verso du titre de séjour en cours de validité (si hors UE).; Photocopie de toutes les pages écrites ou tamponnées du passeport, ou carte d’identité nationale (si UE sans passeport).; Copie intégrale de l’acte de naissance du demandeur, mentionnant noms et prénoms des parents, traduit par traducteur agréé si en langue étrangère, légalisé/apostillé si requis.; Actes de naissance ou mariage des parents (si l’acte de naissance ne mentionne pas leurs dates de naissance).; Copie intégrale de l’acte de mariage (<3 mois, transcription si célébré à l’étranger).; Acte(s) de mariage antérieur(s), jugement(s) de divorce/séparation/répudiation, si applicable.; Actes de naissance des enfants majeurs/mineurs nés avant/après mariage, légalisés/apostillés si requis, ou jugement d’adoption si adopté.; Preuve nationalité française conjoint : Copie intégrale acte de naissance (si né en France de parents nés en France), ou acte de naissance avec mention acquisition nationalité, ou ampliation de décret/déclaration, ou certificat de nationalité française (<6 mois).; Justificatif de domicile commun : attestation CAF, facture électricité/gaz/téléphone fixe, bail conjoint, quittance loyer aux deux noms, compte joint.; Justificatifs communauté de vie ≥4 ans : actes de naissance enfants communs, attestation CAF, avis d’imposition commun.; Si <5 ans mariage : Justificatifs résidence régulière France ≥3 ans (titres de séjour, certificats scolarité, avis d’imposition, contrats travail).; Extrait de casier judiciaire de chaque pays de résidence ≥6 mois sur 10 ans (sauf réfugiés/apatrides, traduit par traducteur agréé).; Diplôme français ≥niveau 3 (e.g., brevet des collèges), ou diplôme B1 CECRL, ou attestation test linguistique <2 ans (TCF, TEF, par France Éducation International/CCI Paris), ou attestation ENIC-NARIC pour diplôme francophone (per arrêté 12 mars 2020), ou certificat médical d’incapacité linguistique (per arrêté 17 juillet 2020).; Pour enfants mineurs étrangers : Justificatifs résidence (certificat scolarité, attestation crèche)."
+    ]
+  },
+  {
+    "nom_procedure": "Nationalité - Enfant adopté",
+    "pieces_a_fournir": [
+      "Copie intégrale de l’acte de naissance de l’enfant (<3 mois, traduit si nécessaire).; Jugement d’adoption (plénière ou simple), traduit et légalisé/apostillé si prononcé à l’étranger.; Preuve nationalité française parent adoptif : passeport, CNI, ou certificat de nationalité française (<6 mois).; Justificatif de domicile récent : facture électricité/gaz/téléphone fixe, quittance loyer, attestation CAF.; 2 photos d’identité récentes, tête nue, format réglementaire, avec nom, prénom(s), date de naissance au dos.; Consentement écrit de l’enfant si ≥13 ans (pour adoption simple)."
+    ]
+  },
+  {
+    "nom_procedure": "Nationalité - Enfant recueilli",
+    "pieces_a_fournir": [
+      "Copie intégrale de l’acte de naissance de l’enfant (<3 mois, traduit si nécessaire).; Acte de kafala ou autre document prouvant prise en charge (jugement, attestation autorités).; Preuve nationalité française personne recueillante : passeport, CNI, ou certificat de nationalité française (<6 mois).; Justificatif de domicile récent : facture électricité/gaz/téléphone fixe, quittance loyer, attestation CAF.; Justificatifs prise en charge ≥3 ans : certificats scolarité, attestations frais entretien, preuves vie commune.; 2 photos d’identité récentes, tête nue, format réglementaire, avec nom, prénom(s), date de naissance au dos."
+    ]
+  },
+  {
+    "nom_procedure": "Réintégration dans la nationalité française - Déclaration",
+    "pieces_a_fournir": [
+      "Timbre fiscal électronique ‘accès à la nationalité française’ (55 €).; 2 photos d’identité récentes, tête nue, format réglementaire, avec nom, prénom(s), date de naissance au dos.; Photocopie recto-verso du titre de séjour en cours de validité (si hors UE).; Photocopie passeport ou carte d’identité nationale.; Copie intégrale de l’acte de naissance (<3 mois, traduit si nécessaire).; Justificatif de domicile récent : facture électricité/gaz/téléphone fixe, quittance loyer, attestation CAF.; Preuves ancienne nationalité française : ancien certificat de nationalité, acte de naissance avec mention nationalité, documents administratifs.; Justificatifs perte nationalité : acte de mariage, déclaration renonciation, décret."
+    ]
+  },
+  {
+    "nom_procedure": "Réintégration dans la nationalité française - Décret",
+    "pieces_a_fournir": [
+      "Timbre fiscal électronique ‘accès à la nationalité française’ (55 €).; 2 photos d’identité récentes, tête nue, format réglementaire, avec nom, prénom(s), date de naissance au dos.; Photocopie recto-verso du titre de séjour en cours de validité (si hors UE).; Photocopie passeport ou carte d’identité nationale.; Copie intégrale de l’acte de naissance (<3 mois, traduit si nécessaire).; Justificatif de domicile récent : facture électricité/gaz/téléphone fixe, quittance loyer, attestation CAF.; Preuves ancienne nationalité française : ancien certificat de nationalité, acte de naissance avec mention nationalité, documents administratifs.; Justificatifs perte nationalité : décret, déclaration renonciation.; Justificatifs résidence France ≥5 ans : titres de séjour, certificats scolarité, avis d’imposition, contrats travail.; Diplôme français ≥niveau 3, ou diplôme B1 CECRL, or attestation test linguistique <2 ans (TCF, TEF), or attestation ENIC-NARIC diplôme francophone, or certificat médical incapacité linguistique.; Avis d’imposition/non-imposition (3 dernières années).; Justificatifs ressources : bulletins salaire, contrat travail, attestations professionnelles."
+    ]
+  },
+  {
+    "nom_procedure": "Naturalisation par décret",
+    "pieces_a_fournir": [
+      "Timbre fiscal électronique ‘accès à la nationalité française’ (55 €).; 2 photos d’identité récentes, tête nue, format réglementaire; Photocopie recto-verso du titre de séjour en cours de validité (si hors UE).; Photocopie de toutes les pages écrites ou tamponnées du passeport, ou carte d’identité nationale/certificat de nationalité (si UE).; Copie intégrale de l’acte de naissance, mentionnant filiation, traduit par traducteur agréé si en langue étrangère, légalisé/apostillé si requis.; Copie acte de mariage actuel, ou justificatif identité conjoint si incomplet, ou récépissé PACS/dissolution, si applicable.; Acte(s) de mariage antérieur(s), jugement(s) de divorce/séparation/répudiation, si applicable.; Actes de naissance enfants mineurs, ou jugement d’adoption, ou certificat de nationalité française si enfants français.; Acte de décès conjoint, si applicable.; Copie acte de mariage/naissance/décès parents, ou livret de famille.; Pour réfugiés/apatrides : Certificats naissance/mariage délivrés par l’OFPRA.; Photocopie titre de séjour/carte d’identité conjoint/PACS/concubin, ou document acquisition nationalité française conjoint.; Certificats scolarité enfants mineurs, ou carnet de santé si non scolarisés.; Si regroupement familial : Décision autorisant entrée membres famille.; Si locataire : Contrat location, 3 dernières quittances loyer, facture téléphone/électricité/gaz.; Si propriétaire : Attestation propriété notaire.; Si hébergé : Attestation hébergement, justificatif identité hôte.; Avis d’imposition/non-imposition (3 dernières années, toutes pages).; Bordereau situation fiscale (modèle P 237, <3 mois, 3 dernières années).; Pour salarié : Certificats travail/relevé carrière (3 dernières années), contrat travail, 3 derniers bulletins salaire, bulletins novembre/décembre (3 dernières années).; Pour intérimaire : Relevé mission intérim.; Pour demandeur d’emploi : Carte inscription Pôle Emploi, 3 derniers bordereaux indemnités, justificatifs activité (3 dernières années).; Pour stagiaire formation : Attestation organisme (dates stage), dernier bulletin rémunération, justificatifs activité (3 dernières années).; Pour commerçant/artisan/agriculteur/gérant : Extrait immatriculation registre commerce/métiers, attestation comptable ressources, bordereau fiscal société.; Pour micro-entrepreneur : Extrait immatriculation, justificatifs ressources (3 dernières années), déclarations URSSAF (12 derniers mois).; Pour profession libérale : Inscription ordre professionnel, justificatifs ressources (3 dernières années).; Pour étudiant : Certificat scolarité/carte inscription (année en cours, 5 dernières années), attestation bourse si boursier, ou titre de séjour/avis d’imposition parents, ou justificatifs versements financiers parents à l’étranger.; Pour artiste/intermittent : Récapitulatif annuel congés spectacles, attestations annuelles Pôle Emploi (3 dernières années).; Pour handicapé/invalide : Décision CDAPH (taux invalidité), attestation travail structure protégée, carte invalidité, bordereau pension/allocation invalidité.; Pour retraité : Titre pension, dernier bordereau versement.; Pour autres revenus : Actes propriété, déclaration nature/origine/évaluation patrimoine, attestation bancaire revenus patrimoine, bordereaux CAF/MSA (allocations familiales, APL, PAJE, RSA).; Extrait casier judiciaire pays résidence ≥6 mois sur 10 ans (sauf réfugiés/apatrides, traduit).; Pour anciens combattants/légionnaires : État des services, décorations/citations.; Diplôme français ≥niveau 3 (e.g., brevet des collèges), ou diplôme B1 CECRL, or attestation test linguistique <2 ans (TCF, TEF, par France Éducation International/CCI Paris), or attestation ENIC-NARIC diplôme francophone (per arrêté 12 mars 2020), or certificat médical incapacité linguistique (per arrêté 17 juillet 2020)."
+    ]
+  },
+  {
+    "nom_procedure": "Nationalité - Enfant né en France",
+    "pieces_a_fournir": [
+      "Copie intégrale de l’acte de naissance de l’enfant (<3 mois, indiquant lieu de naissance en France).; Justificatif de domicile récent : facture électricité/gaz/téléphone fixe, quittance loyer, attestation CAF.; Justificatifs de résidence en France ≥5 ans depuis 11 ans : certificats de scolarité, attestations d’inscription à des activités, contrats de travail parents, avis d’imposition parents.; Photocopie pièce d’identité parents (passeport, carte d’identité, titre de séjour).; 2 photos d’identité récentes, tête nue, format réglementaire, avec nom, prénom(s), date de naissance au dos.; Si demande avant 18 ans : Consentement écrit de l’enfant (si ≥13 ans) ou des parents (si <16 ans)."
+    ]
+  },
+  {
+    "nom_procedure": "Naturalisation pour services exceptionnels rendus à la France",
+    "pieces_a_fournir": [
+      "Timbre fiscal électronique ‘accès à la nationalité française’ (55 €).; 2 photos d’identité récentes...; Photocopie recto-verso du titre de séjour en cours de validité...; Photocopie de toutes les pages écrites ou tamponnées du passeport...; Copie intégrale de l’acte de naissance...; Justificatif de domicile récent...; Preuves de services exceptionnels...; Diplôme français ≥niveau 3...; Avis d’imposition/non-imposition (dernière année).; Justificatifs ressources...; Déclaration sur l’honneur de respect des principes régissant la République française.; Extrait casier judiciaire pays résidence ≥6 mois sur 10 ans..."
+    ]
+  },
+  {
+    "nom_procedure": "Naturalisation pour réfugiés/statutaires apatrides",
+    "pieces_a_fournir": [
+      "Timbre fiscal électronique ‘accès à la nationalité française’ (55 €).; 2 photos d’identité récentes...; Photocopie recto-verso du titre de séjour...; Photocopie de toutes les pages écrites ou tamponnées du passeport...; Certificat de statut de réfugié ou apatride...; Certificats de naissance/mariage délivrés par l’OFPRA...; Justificatif de domicile récent...; Justificatifs résidence France ≥3 ans...; Diplôme français ≥niveau 3...; Avis d’imposition/non-imposition (dernière année).; Justificatifs ressources...; Déclaration sur l’honneur de respect des principes régissant la République française."
+    ]
+  }
+]

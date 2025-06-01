@@ -1,0 +1,129 @@
+{
+    "questions": [
+      {
+        "question_id": "Q0b_currentPermit",
+        "label": "Quel est le titre de séjour actuellement en votre possession ?",
+        "type": "select",
+        "options": [ ... ] 
+      },
+      {
+        "question_id": "Q1_nationality",
+        "label": "Quelle est votre nationalité ?",
+        "type": "select",
+        "options": [ ... ]
+      },
+      {
+        "question_id": "Q2_yearsResidence",
+        "label": "Depuis combien d'années résidez-vous en France ?",
+        "type": "number",
+        "minimum": 0
+      },
+      {
+        "question_id": "Q_motifPrincipal",
+        "label": "Quel est le principal motif de votre demande ?",
+        "type": "checkbox",
+        "options": [
+          { "value": "famille", "label": "Famille (mariage, enfant, regroupement)" },
+          { "value": "travail", "label": "Travail (CDI, CDD, saisonnier, détachement)" },
+          { "value": "etudes", "label": "Études / Stagiaire / Chercheur" },
+          { "value": "invest", "label": "Entrepreneur / Talent" },
+          { "value": "visiteur", "label": "Visiteur (sans activité)" }
+        ]
+      },
+      {
+        "question_id": "Q5b_housingSituation",
+        "label": "Quel est votre statut de logement ?",
+        "type": "select",
+        "options": [ ... ]
+      },
+      {
+        "question_id": "Q6_specialSituations",
+        "label": "Cochez les situations particulières qui vous concernent (facultatif) :",
+        "type": "checkbox",
+        "options": [ ... ]
+      },
+      {
+        "question_id": "Q_langA2",
+        "label": "Disposez-vous d’un certificat de niveau A2 en langue française (ou supérieur) ?",
+        "type": "radio",
+        "options": [
+          { "value": true, "label": "Oui, j’ai une attestation officielle (test, diplôme, etc.)" },
+          { "value": false, "label": "Non" }
+        ]
+      }
+    ],
+    "panels": [
+      {
+        "panel_id": "P_travail",
+        "visible_if": [{ "fact": "motifPrincipal", "contains": "travail" }],
+        "questions": [
+          {
+            "id": "T1_contrat",
+            "label": "Quel est votre type de contrat de travail ?",
+            "type": "select",
+            "options": [
+              { "value": "CDI", "label": "CDI" },
+              { "value": "CDD", "label": "CDD" },
+              { "value": "detache", "label": "Détaché ICT" },
+              { "value": "saisonnier", "label": "Saisonnier" }
+            ]
+          },
+          {
+            "id": "T2_autoris",
+            "label": "Disposez-vous d’une autorisation de travail ?",
+            "type": "radio",
+            "options": [
+              { "value": true, "label": "Oui" },
+              { "value": false, "label": "Non" }
+            ]
+          },
+          {
+            "id": "T3_salary",
+            "label": "Quel est votre salaire brut mensuel (en €) ?",
+            "type": "number",
+            "minimum": 0
+          }
+        ]
+      },
+      {
+        "panel_id": "P_etudes",
+        "visible_if": [{ "fact": "motifPrincipal", "contains": "etudes" }],
+        "questions": [ ... ]
+      },
+      {
+        "panel_id": "P_famille",
+        "visible_if": [{ "fact": "motifPrincipal", "contains": "famille" }],
+        "questions": [ ... ]
+      },
+      {
+        "panel_id": "P_invest",
+        "visible_if": [{ "fact": "motifPrincipal", "contains": "invest" }],
+        "questions": [ ... ]
+      },
+      {
+        "panel_id": "P_visiteur",
+        "visible_if": [
+          { "fact": "motifPrincipal", "contains": "visiteur" },
+          { "fact": "motifPrincipal", "not_contains": "travail" }
+        ],
+        "questions": [
+          {
+            "id": "V1_resources",
+            "label": "Quel est le montant de vos ressources mensuelles ?",
+            "type": "select",
+            "options": [
+              { "value": "moins_1200", "label": "<1200 €" },
+              { "value": "1200_1426", "label": "1200-1426 €" },
+              { "value": "plus_1426", "label": ">1426 €" }
+            ]
+          },
+          {
+            "id": "V2_housing",
+            "label": "Quel est votre statut de logement ?",
+            "type": "select",
+            "options": [ ... ]
+          }
+        ]
+      }
+    ]
+  }

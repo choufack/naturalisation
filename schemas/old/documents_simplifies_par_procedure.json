@@ -1,0 +1,679 @@
+[
+  {
+    "procedure": "Carte de résident - Regroupement familial",
+    "documents": [
+      "Jugement ou ordonnance de protection (si disponible)",
+      "Acte de décès du conjoint",
+      "Preuves de communauté de vie (contrat de bail aux deux noms, facture EDF/gaz/eau/téléphone/internet aux deux noms, relevé bancaire commun)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Attestation de l’hôtelier (si résidant en foyer ou hôtel social)",
+      "Attestation d’hébergement (datée et signée par l’hébergeant)",
+      "Taxe sur le titre de séjour (montant selon arrêté en vigueur)",
+      "Acte de naissance (copie intégrale, avec mentions récentes)",
+      "Justificatif de domicile de l’hébergeant (si l’adresse n’est pas à jour sur la carte d’identité)",
+      "Taxe d’habitation (de l’année en cours)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années, ou plus de 3 ans hors UE/6 ans hors France si titulaire d’une carte Résident longue durée-UE)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas) ou Attestation consulaire (avec photo, si passeport non disponible)",
+      "Quittance de loyer (récente)",
+      "Facture du dernier mois (foyer ou hôtel social)",
+      "Extrait d’acte de mariage (copie intégrale récente)",
+      "Copie de la carte d’identité ou carte de séjour de l’hébergeant",
+      "Justificatifs de 3 ans de résidence (certificats de scolarité, avis d’imposition des 3 dernières années, contrats de travail, bulletins de salaire, attestations de carte de séjour)",
+      "Déclaration conjointe de vie commune (signée par les deux conjoints)",
+      "Certificats médicaux (constatant les violences subies)",
+      "Droit de visa de régularisation (200 €, payable en timbre fiscal)",
+      "Photos d’identité (5 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos pour la première demande, 3 photos pour le renouvellement)",
+      "Dépôt de plainte (copie du récépissé)",
+      "Droit de timbre (sauf exemptions prévues par la loi)",
+      "Certificat médical OFII (remis à la délivrance du titre)",
+      "Visa de long séjour pour regroupement familial (délivré par le consulat de France dans le pays d’origine)",
+      "Copie de la carte de résident de l’étranger rejoint"
+    ]
+  },
+  {
+    "procedure": "Carte de résident - Regroupement familial (Algériens)",
+    "documents": [
+      "Jugement ou ordonnance de protection (si disponible)",
+      "Acte de décès du conjoint",
+      "Preuves de communauté de vie (contrat de bail aux deux noms, facture EDF/gaz/eau/téléphone/internet aux deux noms, relevé bancaire commun)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Attestation de l’hôtelier (si résidant en foyer ou hôtel social)",
+      "Attestation d’hébergement (datée et signée par l’hébergeant)",
+      "Acte de naissance (copie intégrale)",
+      "Taxe sur le titre de séjour (montant selon arrêté en vigueur)",
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Justificatif de domicile de l’hébergeant (si l’adresse n’est pas à jour sur la carte d’identité)",
+      "Taxe d’habitation (de l’année en cours)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Quittance de loyer (récente)",
+      "Facture du dernier mois (foyer ou hôtel social)",
+      "Copie de la carte d’identité ou carte de séjour de l’hébergeant",
+      "Déclaration conjointe de vie commune (signée par les deux conjoints)",
+      "Certificats médicaux (constatant les violences subies)",
+      "Passeport (photocopies des pages état civil et validité) ou Attestation consulaire (avec photo, si passeport non disponible)",
+      "Dépôt de plainte (copie du récépissé)",
+      "Certificat de résidence 10 ans de l’étranger rejoint",
+      "Droit de timbre (sauf exemptions prévues par la loi)",
+      "Certificat médical OFII (remis à la délivrance du titre)",
+      "Visa de long séjour pour regroupement familial (délivré par le consulat de France dans le pays d’origine)"
+    ]
+  },
+  {
+    "procedure": "Carte de séjour temporaire - Vie privée et familiale (Regroupement familial)",
+    "documents": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Copie de la carte d’identité ou carte de séjour de l’hébergeant",
+      "Acte de décès du conjoint",
+      "Taxe d’habitation (de l’année en cours)",
+      "Document officiel autorisant le regroupement familial (délivré par les autorités compétentes)",
+      "Copie de la carte de séjour de la personne rejointe",
+      "Carte de séjour temporaire en cours ou VLS-TS validé (photocopie recto-verso)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Déclaration conjointe de vie commune (signée par les deux conjoints)",
+      "Preuves de communauté de vie (contrat de bail aux deux noms, facture EDF/gaz/eau/téléphone/internet aux deux noms, relevé bancaire commun)",
+      "Acte de mariage (copie intégrale)",
+      "Certificats médicaux (constatant les violences subies)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Passeport (photocopies des pages état civil et validité) ou Attestation consulaire (avec photo, si passeport non disponible)",
+      "Quittance de loyer (récente)",
+      "Attestation d’hébergement (datée et signée par l’hébergeant)",
+      "Dépôt de plainte (copie du récépissé)",
+      "Taxe sur le titre de séjour (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "Certificat de résidence algérien 1 an - Regroupement familial",
+    "documents": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Taxe de renouvellement (montant selon arrêté en vigueur)",
+      "Taxe d’habitation (de l’année en cours)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Preuves de communauté de vie (contrat de bail aux deux noms, facture EDF/gaz/eau/téléphone/internet aux deux noms, relevé bancaire commun)",
+      "Certificats médicaux (constatant les violences subies)",
+      "Contrat de bail (récent)",
+      "Passeport (photocopies des pages état civil et validité) ou Attestation consulaire (avec photo, si passeport non disponible)",
+      "Attestation d’hébergement (datée et signée par l’hébergeant)",
+      "Quittance de loyer (récente)",
+      "Dépôt de plainte (copie du récépissé)",
+      "Copie de la carte d’identité ou carte de séjour de l’hébergeant"
+    ]
+  },
+  {
+    "procedure": "Carte de séjour temporaire - Recherche d’emploi/création d’entreprise (Étudiant)",
+    "documents": [
+      "Droit de timbre (sauf exemptions prévues par la loi)",
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Étude de marché (justifiant la viabilité du projet)",
+      "Business plan (détaillé avec projections financières)",
+      "Statuts de l’entreprise (si déjà créée)",
+      "Copie de la carte de séjour étudiant ou VLS-TS validé (photocopie recto-verso)",
+      "Passeport (photocopies des pages état civil et validité)",
+      "Diplôme (master, CGE niveau I, licence professionnelle) ou Attestation de réussite (délivrée par l’établissement)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Attestation d’hébergement (datée et signée par l’hébergeant)",
+      "Quittance de loyer (récente)",
+      "Attestation de sécurité sociale ou Assurance privée (valide pour l’année en cours)",
+      "Taxe sur le titre (montant selon arrêté en vigueur)",
+      "Copie de la carte d’identité ou carte de séjour de l’hébergeant"
+    ]
+  },
+  {
+    "procedure": "Autorisation provisoire de séjour - Recherche d’emploi (Étudiant, accords bilatéraux)",
+    "documents": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Business plan (détaillé avec projections financières)",
+      "Attestation de sécurité sociale (valide pour l’année en cours)",
+      "Statuts de l’entreprise (si déjà créée)",
+      "Copie de la carte de séjour étudiant ou VLS-TS validé (photocopie recto-verso)",
+      "Diplôme reconnu (selon accords bilatéraux) ou Attestation de réussite (délivrée par l’établissement)",
+      "Passeport (photocopies des pages état civil et validité) ou Attestation consulaire (avec photo, si passeport non disponible)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Attestation d’hébergement (datée et signée par l’hébergeant)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "Carte de séjour temporaire - Recherche d’emploi/création d’entreprise (Chercheur)",
+    "documents": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Copie de la carte de séjour chercheur ou VLS-TS validé (photocopie recto-verso)",
+      "Business plan (détaillé avec projections financières)",
+      "Attestation de l’établissement de recherche (confirmant l’achèvement des recherches)",
+      "Attestation de sécurité sociale (valide pour l’année en cours)",
+      "Statuts de l’entreprise (si déjà créée)",
+      "Passeport (photocopies des pages état civil et validité)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Attestation d’hébergement (datée et signée par l’hébergeant)",
+      "Quittance de loyer (récente)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "Carte de résident de longue durée - UE",
+    "documents": [
+      "Acte de naissance (copie intégrale, avec mentions récentes)",
+      "Certificat médical OFII (remis à la délivrance du titre)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Taxe d’habitation (de l’année en cours)",
+      "Ressources stables et suffisantes (bulletins de paie des 3 dernières années, avis d’imposition, attestation bancaire)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Certification de niveau A2 en français (diplôme ou test reconnu, sauf si plus de 65 ans)",
+      "Justificatifs de 5 ans de séjour ininterrompu (certificats de scolarité, avis d’imposition des 5 dernières années, contrats de travail)",
+      "Assurance-maladie (carte ou attestation de sécurité sociale valide)",
+      "Déclaration de respect des principes de la République (signée)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors UE ou 6 ans hors France sur les 10 dernières années)",
+      "Photos d’identité (5 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos pour la première demande, 3 photos pour le renouvellement)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "Carte de séjour temporaire - Étranger titulaire statut longue durée-UE autre État membre",
+    "documents": [
+      "Inscription URSSAF (attestation d’inscription)",
+      "Acte de naissance (copie intégrale, avec mentions récentes)",
+      "Certification de niveau A2 en français (diplôme ou test reconnu)",
+      "Certificat médical OFII (remis à la délivrance du titre)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Immatriculation K/Kbis (extrait récent)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Autorisation de travail (formulaire CERFA 15186*03)",
+      "Déclaration de respect des principes de la République (signée)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Photos d’identité (5 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos pour la première demande, 3 photos pour le renouvellement)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "Carte de résident permanent",
+    "documents": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Taxe d’habitation (de l’année en cours)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Preuves de mariage (acte de mariage, copie intégrale récente)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France ou 3 ans hors UE/6 ans hors France sur les 10 dernières années)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "Carte de résident - Ancien combattant (Unité combattante française)",
+    "documents": [
+      "Acte de naissance (copie intégrale, avec mentions récentes)",
+      "Carte du combattant (délivrée par l’ONAC)",
+      "Certification de niveau A2 en français (diplôme ou test reconnu)",
+      "Certificat médical OFII (remis à la délivrance du titre)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Livret militaire (copie attestant du service dans une unité combattante française)",
+      "Déclaration de respect des principes de la République (signée)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Photos d’identité (5 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos pour la première demande, 3 photos pour le renouvellement)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "Carte de résident - Ancien combattant (FFI)",
+    "documents": [
+      "Acte de naissance (copie intégrale, avec mentions récentes)",
+      "Justificatif de blessure (certificat médical ou rapport militaire, si applicable)",
+      "Carte du combattant (délivrée par l’ONAC)",
+      "Certification de niveau A2 en français (diplôme ou test reconnu)",
+      "Certificat médical OFII (remis à la délivrance du titre)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Déclaration de respect des principes de la République (signée)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Photos d’identité (5 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos pour la première demande, 3 photos pour le renouvellement)",
+      "Taxe (montant selon arrêté en vigueur)",
+      "Certificat de démobilisation (délivré par la Commission d’incorporation)"
+    ]
+  },
+  {
+    "procedure": "Carte de résident - Ancien combattant (Unités alliées)",
+    "documents": [
+      "Acte de naissance (copie intégrale, avec mentions récentes)",
+      "Carte du combattant (délivrée par l’ONAC)",
+      "Certification de niveau A2 en français (diplôme ou test reconnu)",
+      "Certificat médical OFII (remis à la délivrance du titre)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Livret militaire (copie attestant du service dans une unité alliée)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Déclaration de respect des principes de la République (signée)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Photos d’identité (5 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos pour la première demande, 3 photos pour le renouvellement)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "Carte de résident - Ascendant à charge enfant français (Général)",
+    "documents": [
+      "Avis d’imposition des 3 dernières années de l’enfant (prouvant sa capacité financière)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Attestation d’hébergement (datée et signée par l’hébergeant)",
+      "Déclaration de respect des principes de la République (signée)",
+      "Attestation de non-pension (de l’ascendant, prouvant l’absence de ressources propres)",
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Acte de naissance (copie intégrale, avec mentions récentes)",
+      "Acte de naissance de l’enfant ou Livret de famille (avec mention des parents)",
+      "Carte nationale d’identité ou Certificat de nationalité française (de moins de 6 mois) de l’enfant",
+      "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Quittance de loyer (récente)",
+      "Déclaration sur l’honneur (attestant l’absence d’autres soutiens financiers)",
+      "Certification de niveau A2 en français (diplôme ou test reconnu, sauf certains pays)",
+      "Taxe (montant selon arrêté en vigueur)",
+      "Certificat médical OFII (remis à la délivrance du titre)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Bulletins de salaire de l’enfant (3 derniers mois)",
+      "Relevés bancaires (montrant des virements réguliers de l’enfant vers l’ascendant)",
+      "Attestation consulaire sur la situation familiale (délivrée par le consulat du pays d’origine)"
+    ]
+  },
+  {
+    "procedure": "Carte de résident - Ascendant à charge enfant français (Algériens)",
+    "documents": [
+      "Carte nationale d’identité ou Certificat de nationalité française (de l’enfant)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Déclaration de respect des principes de la République (signée)",
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Acte de naissance (copie intégrale, avec mentions récentes)",
+      "Acte de naissance de l’enfant ou Livret de famille (avec mention des parents)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Certificat fiscal du foyer de l’enfant (prouvant la prise en charge)",
+      "Quittance de loyer (récente)",
+      "Déclaration sur l’honneur (attestant l’absence d’autres soutiens financiers)",
+      "Attestation consulaire (sur la situation familiale, délivrée par le consulat algérien)",
+      "Taxe (montant selon arrêté en vigueur)",
+      "Certificat médical OFII (remis à la délivrance du titre)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Bulletins de salaire de l’enfant (3 derniers mois)",
+      "Relevés bancaires de l’ascendant (montrant l’absence de ressources propres)",
+      "Relevés bancaires de l’enfant (montrant des virements réguliers vers l’ascendant)",
+      "Avis d’imposition de l’enfant (prouvant sa capacité financière)"
+    ]
+  },
+  {
+    "procedure": "Carte de résident - Ascendant à charge enfant français (Tunisiens)",
+    "documents": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Acte de naissance (copie intégrale, avec mentions récentes)",
+      "Acte de naissance de l’enfant ou Livret de famille (avec mention des parents)",
+      "Certificat médical OFII (remis à la délivrance du titre)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Documents d’état civil (actes de naissance de l’ascendant et de l’enfant)",
+      "Décision judiciaire (attribuant la garde ou fixant une pension alimentaire, si applicable)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)",
+      "Carte nationale d’identité ou Certificat de nationalité française (de l’enfant)",
+      "Preuves de contribution (pension alimentaire versée, achats pour l’enfant)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Déclaration de respect des principes de la République (signée)",
+      "Quittance de loyer (récente)",
+      "Taxe (montant selon arrêté en vigueur)",
+      "Certificat de scolarité ou Attestation de crèche (prouvant la résidence de l’enfant en France)"
+    ]
+  },
+  {
+    "procedure": "Certificat de résidence algérien 10 ans - Conjoint de Français",
+    "documents": [
+      "Carte nationale d’identité ou Certificat de nationalité française (du conjoint français)",
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Acte de naissance (copie intégrale, avec mentions récentes)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Preuves de communauté de vie (contrat de bail aux deux noms, facture EDF/gaz/eau/téléphone/internet aux deux noms, relevé bancaire commun)",
+      "Certificats médicaux (constatant les violences subies)",
+      "Acte de mariage (copie intégrale récente)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Dépôt de plainte (copie du récépissé)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "Certificat de résidence algérien 10 ans - Parent d’enfant français",
+    "documents": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Acte de naissance (copie intégrale, avec mentions récentes)",
+      "Acte de naissance de l’enfant ou Livret de famille (avec mention des parents)",
+      "Certificat de scolarité (prouvant la résidence de l’enfant en France)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Pension alimentaire (relevés bancaires prouvant le versement) ou Frais scolaires (factures de scolarité ou frais liés à l’enfant)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "Certificat de résidence algérien 10 ans - Enfant de Français (>21 ans, à charge)",
+    "documents": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Acte de naissance (copie intégrale, avec mentions récentes)",
+      "Relevés bancaires (montrant des virements réguliers prouvant la dépendance financière)",
+      "Attestations de soutien (délivrées par le parent français)",
+      "Acte de naissance de l’enfant ou Livret de famille (avec mention des parents)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "Certificat de résidence algérien 10 ans - Rente accident travail/maladie professionnelle",
+    "documents": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Acte de naissance (copie intégrale, avec mentions récentes)",
+      "Bordereaux de paiement (prouvant la perception de la rente)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Attestation de rente (délivrée par la sécurité sociale ou l’organisme payeur)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "Certificat de résidence algérien 10 ans - Résidence depuis âge 10 ans",
+    "documents": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Acte de naissance (copie intégrale, avec mentions récentes)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Justificatifs de résidence depuis l’âge de 10 ans (certificats de scolarité, contrats de travail, avis d’imposition)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "Certificat de résidence algérien 10 ans - 10 ans/15 ans présence régulière",
+    "documents": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Acte de naissance (copie intégrale, avec mentions récentes)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)",
+      "Photocopies des titres de séjour (tous titres sauf étudiant, sur 10 ou 15 ans selon le cas)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Taxe (montant selon arrêté en vigueur)",
+      "Justificatifs de 10 ou 15 ans de résidence (certificats de scolarité, contrats de travail, avis d’imposition)"
+    ]
+  },
+  {
+    "procedure": "Certificat de résidence algérien 10 ans - 5 ans vie privée et familiale",
+    "documents": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Acte de naissance (copie intégrale, avec mentions récentes)",
+      "Photocopies des certificats de vie privée et familiale sur 5 ans",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "Certificat de résidence algérien 10 ans - Ressortissant francophone 10 ans présence",
+    "documents": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Acte de naissance (copie intégrale, avec mentions récentes)",
+      "Preuve de nationalité d’un pays francophone (passeport ou acte de naissance de pays francophone comme Maroc, Tunisie, etc.)",
+      "Justificatifs de 10 ans de présence (certificats de scolarité, contrats de travail, avis d’imposition)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "VLS-TS - Étudiant recherche emploi/création entreprise",
+    "documents": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Diplôme (master, CGE, licence professionnelle) ou Attestation de réussite (délivrée par l’établissement)",
+      "VLS-TS validé ou carte de séjour étudiant (photocopie recto-verso)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Attestation de sécurité sociale (valide pour l’année en cours)",
+      "Business plan (détaillé avec projections financières)",
+      "Statuts de l’entreprise (si déjà créée)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "VLS-TS - Étudiant accords bilatéraux",
+    "documents": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "VLS-TS validé ou carte de séjour étudiant (photocopie recto-verso)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Business plan (détaillé avec projections financières)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Diplôme d’enseignement supérieur reconnu (selon accords bilatéraux)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "VLS-TS - Chercheur recherche emploi/création entreprise",
+    "documents": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Confirmation de l’achèvement des recherches (attestation délivrée par l’établissement de recherche)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "VLS-TS validé ou carte de séjour chercheur (photocopie recto-verso)",
+      "Business plan (détaillé avec projections financières)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "VLS-TS - Étudiant algérien",
+    "documents": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "VLS-TS étudiant (photocopie recto-verso)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Attestation de sécurité sociale (valide pour l’année en cours)",
+      "Ressources financières (minimum 615 €/mois, attestation bancaire ou justificatif de bourse)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Certificat d’inscription (dans un établissement public ou privé reconnu)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "VLS-TS - Salarié",
+    "documents": [
+      "Bulletins de paie (3 derniers mois)",
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Déclaration de situation nominative (DSN) ou Attestation d’activité sur 12 mois",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Autorisation de travail (formulaire CERFA 15187*02)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "VLS-TS - Travailleur temporaire",
+    "documents": [
+      "Bulletins de paie (3 derniers mois)",
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)",
+      "Contrats de travail (copies des contrats saisonniers)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Déclaration de détachement (si travailleur détaché)",
+      "Contrat de bail (daté de moins de 6 mois)",
+      "Quittance de loyer (récente)",
+      "Autorisation de travail (formulaire CERFA 15186*03)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ]
+  },
+  {
+    "procedure": "Naturalisation - Par décret",
+    "documents": [
+      "Justificatif de domicile (facture récente de moins de 3 mois : EDF, gaz, eau, téléphone, internet)",
+      "Taxe de dossier (montant selon arrêté en vigueur)",
+      "Acte de naissance (copie intégrale avec filiation, de moins de 3 mois ou avec mentions récentes)",
+      "Preuves de vie commune (contrat de bail aux deux noms, facture commune, relevé bancaire commun)",
+      "Certificat de résidence (attestant la durée de séjour en France)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 6 mois consécutifs hors France sur les 5 dernières années)",
+      "Assurance maladie (attestation de couverture valide)",
+      "Acte de mariage (copie intégrale récente)",
+      "Photos d’identité (4 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom et prénom au dos)",
+      "Livret militaire ou attestation de service dans l’armée française",
+      "Carte nationale d’identité ou Certificat de nationalité française (du conjoint)",
+      "Contrat d’intégration républicaine (CIR) ou justificatif de suivi (si applicable)",
+      "Attestation de participation à la Journée de défense et citoyenneté (JDC) ou dispense (si applicable)",
+      "Passeport (photocopies des pages état civil et validité) ou Carte de résident (photocopie recto-verso)",
+      "Justificatif de prise en charge (pension alimentaire ou relevés bancaires)",
+      "Justificatifs de 5 ans de résidence continue (contrats de travail, avis d’imposition, certificats de scolarité)",
+      "Déclaration de nationalité (formulaire CERFA 12752*03 rempli et signé)",
+      "Acte de naissance de l’enfant (avec filiation)",
+      "Certificat de nationalité française (de l’enfant)",
+      "Diplôme ou attestation de niveau B1 en français (DELF B1, TCF, ou équivalent)"
+    ]
+  },
+  {
+    "procedure": "Naturalisation - Par mariage",
+    "documents": [
+      "Justificatif de domicile (facture récente de moins de 3 mois : EDF, gaz, eau, téléphone, internet)",
+      "Taxe de dossier (montant selon arrêté en vigueur)",
+      "Certificat de résidence (attestant la durée de séjour en France)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 6 mois consécutifs hors France sur les 4 dernières années)",
+      "Contrat d’intégration républicaine (CIR) ou justificatif de suivi (si applicable)",
+      "Attestation de participation à la Journée de défense et citoyenneté (JDC) ou dispense (si applicable)",
+      "Acte de mariage (copie intégrale récente, datant de moins de 3 mois)",
+      "Carte nationale d’identité ou Certificat de nationalité française (du conjoint français)",
+      "Passeport (photocopies des pages état civil et validité) ou Carte de résident (photocopie recto-verso)",
+      "Preuves de vie commune (contrat de bail aux deux noms, facture commune, relevé bancaire commun sur 4 ans)",
+      "Assurance maladie (attestation de couverture valide)",
+      "Diplôme ou attestation de niveau A2 en français (DELF A2, TCF, ou équivalent)",
+      "Acte de naissance (copie intégrale avec filiation, de moins de 3 mois ou avec mentions récentes)",
+      "Photos d’identité (4 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom et prénom au dos)",
+      "Justificatifs de 4 ans de résidence continue depuis le mariage (contrats de travail, avis d’imposition, certificats de scolarité)",
+      "Déclaration de nationalité (formulaire CERFA 12752*03 rempli et signé)"
+    ]
+  },
+  {
+    "procedure": "Naturalisation - Par ascension (ascendant de Français)",
+    "documents": [
+      "Justificatif de domicile (facture récente de moins de 3 mois : EDF, gaz, eau, téléphone, internet)",
+      "Taxe de dossier (montant selon arrêté en vigueur)",
+      "Certificat de résidence (attestant la durée de séjour en France)",
+      "Preuve de dépendance financière (pension alimentaire ou relevés bancaires)",
+      "Contrat d’intégration républicaine (CIR) ou justificatif de suivi (si applicable)",
+      "Déclaration sur l’honneur (attestant une absence de plus de 6 mois consécutifs hors France sur les 5 dernières années)",
+      "Attestation de participation à la Journée de défense et citoyenneté (JDC) ou dispense (si applicable)",
+      "Passeport (photocopies des pages état civil et validité) ou Carte de résident (photocopie recto-verso)",
+      "Certificat de nationalité française (de l’enfant)",
+      "Assurance maladie (attestation de couverture valide)",
+      "Acte de naissance de l’enfant (avec filiation)",
+      "Diplôme ou attestation de niveau A2 en français (DELF A2, TCF, ou équivalent)",
+      "Acte de naissance (copie intégrale avec filiation, de moins de 3 mois ou avec mentions récentes)",
+      "Justificatifs de 5 ans de résidence continue (contrats de travail, avis d’imposition, certificats de scolarité)",
+      "Photos d’identité (4 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom et prénom au dos)",
+      "Déclaration de nationalité (formulaire CERFA 12752*03 rempli et signé)"
+    ]
+  },
+  {
+    "procedure": "Naturalisation - Jus soli (né-e en France)",
+    "documents": [
+      "Justificatif de domicile (facture récente de moins de 3 mois : EDF, gaz, eau, téléphone, internet)",
+      "Taxe de dossier (montant selon arrêté en vigueur)",
+      "Certificat de résidence (attestant la durée de séjour en France)",
+      "Déclaration de nationalité signée par le demandeur majeur (formulaire CERFA 12753*03)",
+      "Passeport (photocopies des pages état civil et validité) ou Carte de résident (photocopie recto-verso)",
+      "Pièce d’identité du ou des parents signataires",
+      "Assurance maladie (attestation de couverture valide)",
+      "Justificatifs de 5 ans de résidence continue en France depuis l’âge de 11 ans (certificats de scolarité, attestations d’activité sportive/culturelle, fiches de paie des parents, avis d’imposition)",
+      "Acte de naissance (copie intégrale avec filiation, de moins de 3 mois ou avec mentions récentes)",
+      "Photos d’identité (4 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom et prénom au dos)",
+      "Déclaration de nationalité signée par les parents ou tuteur légal (formulaire CERFA 12753*03)",
+      "Déclaration de nationalité (formulaire CERFA 12752*03 rempli et signé)"
+    ]
+  },
+  {
+    "procedure": "Naturalisation - Réintégration",
+    "documents": [
+      "Justificatif de domicile (facture récente de moins de 3 mois : EDF, gaz, eau, téléphone, internet)",
+      "Taxe de dossier (montant selon arrêté en vigueur)",
+      "Certificat de résidence (attestant la durée de séjour en France)",
+      "Passeport (photocopies des pages état civil et validité) ou Carte de résident (photocopie recto-verso)",
+      "Assurance maladie (attestation de couverture valide)",
+      "Acte de naissance (copie intégrale avec filiation, de moins de 3 mois ou avec mentions récentes)",
+      "Justificatifs de liens manifestes avec la France (contrat de travail, avis d’imposition, propriété immobilière, famille proche française)",
+      "Preuves des anciens documents de nationalité française (certificat de nationalité, décret de naturalisation, passeport ou carte d’identité expirés)",
+      "Photos d’identité (4 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom et prénom au dos)",
+      "Déclaration de nationalité (formulaire CERFA 12752*03 rempli et signé)"
+    ]
+  },
+  {
+    "procedure": "Naturalisation - Adoption ou Recueil",
+    "documents": [
+      "Justificatif de domicile (facture récente de moins de 3 mois : EDF, gaz, eau, téléphone, internet)",
+      "Taxe de dossier (montant selon arrêté en vigueur)",
+      "Certificat de résidence (attestant la durée de séjour en France)",
+      "Pièce d’identité des parents adoptifs français",
+      "Justificatifs de prise en charge matérielle et affective (attestations CAF, factures, attestations d’établissement scolaire)",
+      "Acte de naissance mis à jour après adoption",
+      "Passeport (photocopies des pages état civil et validité) ou Carte de résident (photocopie recto-verso)",
+      "Assurance maladie (attestation de couverture valide)",
+      "Décision d’autorité parentale ou jugement de tutelle (reconnaissant le recueil en France depuis au moins 3 ans)",
+      "Acte de naissance (copie intégrale avec filiation, de moins de 3 mois ou avec mentions récentes)",
+      "Photos d’identité (4 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom et prénom au dos)",
+      "Jugement d’adoption plénière (copie intégrale et traduction certifiée le cas échéant)",
+      "Déclaration de nationalité (formulaire CERFA 12752*03 rempli et signé)"
+    ]
+  },
+  {
+    "procedure": "Naturalisation - Séjour 5 ans",
+    "documents": [
+      "Justificatif de domicile (facture récente de moins de 3 mois : EDF, gaz, eau, téléphone, internet)",
+      "Taxe de dossier (montant selon arrêté en vigueur)",
+      "Certificat de résidence (attestant la durée de séjour en France)",
+      "Diplôme ou attestation de niveau B1 en français (DELF B1, TCF, TEF ou équivalent)",
+      "Déclaration sur l’honneur d’absence hors France de plus de 6 mois consécutifs durant cette période",
+      "Dernier avis d’imposition",
+      "Contrats de travail en cours",
+      "Passeport (photocopies des pages état civil et validité) ou Carte de résident (photocopie recto-verso)",
+      "Assurance maladie (attestation de couverture valide)",
+      "Trois derniers bulletins de salaire",
+      "Acte de naissance (copie intégrale avec filiation, de moins de 3 mois ou avec mentions récentes)",
+      "Justificatifs de séjour régulier et ininterrompu depuis au moins 5 ans (contrats de travail successifs, avis d’imposition, quittances de loyer)",
+      "Photos d’identité (4 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom et prénom au dos)",
+      "Déclaration de nationalité (formulaire CERFA 12752*03 rempli et signé)"
+    ]
+  }
+]

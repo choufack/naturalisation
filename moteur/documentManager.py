@@ -1,8 +1,9 @@
 import json
 
 class DocumentManager:
-    def __init__(self, json_file_path="documents.json"):
+    def __init__(self, json_file_path="../schemas/documents_complet.json"):
         self.documents = self._load_documents(json_file_path)
+        print(f"Taille : {len(self.documents)}")
 
     def _load_documents(self, json_file_path):
         # Simulation du chargement depuis un fichier JSON
@@ -37,6 +38,7 @@ class DocumentManager:
 
     def get_documents(self, eligibility, profil):
         if eligibility not in self.documents:
+            print(f"Erreur : Éligibilité '{eligibility}' non trouvée dans documents.json")
             return []
         docs = self.documents[eligibility]["communs"].copy()
         for key, conditions in self.documents[eligibility]["conditions"].items():

@@ -1,0 +1,527 @@
+{
+  "procedures": [
+    {
+      "name": "Carte de séjour - Vie privée et familiale - Conjoint de Français",
+      "eligibility_criteria": [
+        "Être marié à un citoyen français.",
+        "Le conjoint français doit avoir été français au jour du mariage et avoir conservé la nationalité française.",
+        "La communauté de vie (matérielle et sentimentale) doit être effective (peut avoir cessé en cas de décès ou de violences conjugales).",
+        "Ne pas vivre en situation de polygamie en France.",
+        "Si mariage célébré à l'étranger, il doit être transcrit sur les registres de l'état civil du consulat de France.",
+        "Si entrée avec VLS-TS, demande de carte pluriannuelle possible dès la 2e année de séjour.",
+        "Si entrée avec visa court séjour, carte d’un an possible si mariage en France et vie commune effective d’au moins 6 mois."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Vie privée et familiale - Pacs avec Français",
+      "eligibility_criteria": [
+        "Avoir conclu un Pacs avec un citoyen français.",
+        "Prouver la réalité de la relation avec le partenaire.",
+        "Justifier d’au moins 1 an de vie commune en France (sauf exceptions)."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Vie privée et familiale - Parent d’enfant français mineur",
+      "eligibility_criteria": [
+        "Être père ou mère d’un enfant français mineur résidant en France.",
+        "Contribuer effectivement à l’entretien et l’éducation de l’enfant depuis la naissance ou ≥2 ans.",
+        "Ne pas vivre en état de polygamie.",
+        "Peut être accordée même en situation irrégulière."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Vie privée et familiale - Membre de famille d’un résident longue durée-UE",
+      "eligibility_criteria": [
+        "Conjoint d’un titulaire de carte ‘résident de longue durée – UE’.",
+        "Avoir résidé légalement avec le résident longue durée-UE dans un autre pays membre.",
+        "Disposer d’une assurance maladie.",
+        "Disposer de ressources stables et suffisantes ou être pris en charge.",
+        "Ne pas vivre en situation de polygamie.",
+        "Demande dans les 3 mois suivant l’entrée en France."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Vie privée et familiale - Jeune adulte entré par regroupement familial",
+      "eligibility_criteria": [
+        "Être entré en France mineur par regroupement familial.",
+        "Demande possible à 18 ans (ou 16 ans pour travailler)."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Vie privée et familiale - Jeune né ou entré mineur",
+      "eligibility_criteria": [
+        "Entré en France avant 13 ans avec un parent titulaire d’un titre de séjour.",
+        "Ou Tunisien entré avant 10 ans.",
+        "Ou confié à l’Aide sociale à l’enfance avant 16 ans.",
+        "Ou né en France avec résidence ≥8 ans et scolarité ≥5 ans après 10 ans.",
+        "Ou accompagnant un parent avec carte ‘résident longue durée – UE’ ou ‘passeport talent’.",
+        "Ou parent ayant le statut d’apatride ou la protection subsidiaire."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Vie privée et familiale - Pension d’accident du travail",
+      "eligibility_criteria": [
+        "Percevoir une pension d’accident du travail ou maladie professionnelle d’un organisme français.",
+        "Taux d’incapacité permanente ≥20%."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Vie privée et familiale - Travail solidaire",
+      "eligibility_criteria": [
+        "Être hébergé par un organisme d’accueil communautaire agréé.",
+        "Avoir accompli 3 ans d’activité ininterrompue dans cet organisme.",
+        "Démontrer le caractère réel et sérieux de l’activité et des projets d’intégration."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Vie privée et familiale - Raisons humanitaires ou exceptionnelles",
+      "eligibility_criteria": [
+        "Justifier de considérations humanitaires ou raisons exceptionnelles.",
+        "Peut inclure durée de présence, emploi antérieur, qualifications, services rendus."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Vie privée et familiale - Victime de violence domestique ou mariage forcé",
+      "eligibility_criteria": [
+        "Bénéficier d’une ordonnance de protection pour violences.",
+        "Ou être menacé de mariage forcé avec ordonnance de protection."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Vie privée et familiale - Victime de traite, proxénétisme ou logement indigne",
+      "eligibility_criteria": [
+        "Avoir déposé plainte ou témoigné contre des personnes poursuivies pour proxénétisme ou traite des êtres humains.",
+        "Ne plus être en contact avec les personnes accusées.",
+        "Ne pas constituer une menace pour l’ordre public.",
+        "Ou avoir déposé plainte pour conditions de logement indignes."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Salarié",
+      "eligibility_criteria": [
+        "Étranger non européen venant travailler comme salarié (CDI).",
+        "Posséder une autorisation de travail.",
+        "Détenir un VLS-TS mention ‘salarié’ pour première demande.",
+        "Ne pas avoir fait l’objet d’une OQTF non respectée.",
+        "Ne pas avoir commis de faux et usage de faux documents.",
+        "Ne pas avoir commis de délits graves/crimes.",
+        "Ne pas avoir commis d’actes de violence contre élus, agents publics ou agents de sécurité."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Travailleur temporaire",
+      "eligibility_criteria": [
+        "Étranger non européen venant travailler comme salarié (CDD).",
+        "Posséder une autorisation de travail.",
+        "Détenir un VLS-TS mention ‘travailleur temporaire’ pour première demande.",
+        "Ne not avoir fait l’objet d’une OQTF non respectée.",
+        "Ne pas avoir commis de faux et usage de faux documents.",
+        "Ne pas avoir commis de délits graves/crimes.",
+        "Ne pas avoir commis d’actes de violence contre élus, agents publics ou agents de sécurité."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Entrepreneur/Profession libérale",
+      "eligibility_criteria": [
+        "Exercer une activité commerciale, artisanale ou libérale à titre principal pour >3 mois.",
+        "Inscription au guichet unique des formalités des entreprises.",
+        "Activité économiquement viable, procurant ≥1801,80 €/mois.",
+        "Activité correspondant aux qualifications/expérience.",
+        "Ne pas avoir fait l’objet d’une OQTF non respectée, de faux, délits graves, ou violences contre élus/agents."
+      ]
+    },
+    {
+      "name": "Carte de séjour pluriannuelle - Générale",
+      "eligibility_criteria": [
+        "Avoir détenu une carte de séjour temporaire ou VLS-TS.",
+        "Continuer à remplir les conditions de la carte précédente.",
+        "Prouver l’assiduité/sérieux aux formations du contrat d’intégration républicaine (si soumis).",
+        "S’engager à respecter les principes de la République.",
+        "Ne pas avoir fait l’objet d’une OQTF non respectée, de faux, délits graves, ou violences.",
+        "Ne pas constituer une menace pour l’ordre public."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent - Salarié qualifié",
+      "eligibility_criteria": [
+        "Avoir un Mastère Spécialisé/Master of Science (CGE) ou diplôme équivalent master en France.",
+        "Contrat de travail >3 mois, rémunération brute annuelle ≥43243 €."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent - Recrutement entreprise innovante",
+      "eligibility_criteria": [
+        "Recruté par entreprise innovante (reconnue Ministère Économie).",
+        "Emploi lié au projet de recherche/développement.",
+        "Contrat travail, rémunération ≥43243 €."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent - Carte bleue européenne",
+      "eligibility_criteria": [
+        "Travailleur hautement qualifié.",
+        "Diplôme ≥3 ans ou 5 ans d’expérience équivalente.",
+        "Contrat travail ≥1 an.",
+        "Rémunération ≥53836,50 €.",
+        "Ou 18 mois carte bleue européenne autre État membre."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent - Salarié en mission",
+      "eligibility_criteria": [
+        "Salarié entreprise étrangère pour mission salariée France.",
+        "≥3 mois d’ancienneté dans le groupe.",
+        "Contrat travail avec entreprise France.",
+        "Rémunération ≥38918,88 €."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent - Chercheur",
+      "eligibility_criteria": [
+        "Diplôme ≥master.",
+        "Activité de recherche ou enseignement supérieur.",
+        "Convention d’accueil d’un organisme agréé.",
+        "Convention indique statut, objet, durée, mobilité UE (si applicable)."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent - Création d’entreprise",
+      "eligibility_criteria": [
+        "Diplôme ≥master ou 5 ans d’expérience professionnelle comparable.",
+        "Projet réel et sérieux de création d’entreprise (commerciale, artisanale, industrielle).",
+        "Investissement ≥30000 € (fonds propres/empruntés).",
+        "Ressources ≥SMIC temps plein."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent - Projet innovant",
+      "eligibility_criteria": [
+        "Projet économique innovant reconnu par un organisme public.",
+        "Ressources ≥SMIC temps plein."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent - Investisseur",
+      "eligibility_criteria": [
+        "Investissement via entreprise gérée personnellement ou avec ≥30% capital, ou intérêt durable ≥10%.",
+        "Créer/sauvegarder emploi en 4 ans.",
+        "Investissement ≥300000 €."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent - Mandataire social",
+      "eligibility_criteria": [
+        "Occuper fonction de représentant légal en France.",
+        "≥3 mois expérience dans entreprise du groupe.",
+        "Rémunération ≥64864,80 €."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent - Profession artistique et culturelle",
+      "eligibility_criteria": [
+        "Artiste-interprète ou auteur d’œuvre littéraire/artistique.",
+        "Justifier d’un seuil de rémunération fixé par décret."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent - Personne de renommée internationale",
+      "eligibility_criteria": [
+        "Réputation nationale/internationale dans domaine reconnu.",
+        "Activité dans ce domaine en France.",
+        "Ressources ≥SMIC temps plein."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent (famille)",
+      "eligibility_criteria": [
+        "Être époux (>18 ans) ou enfant majeur du couple titulaire de la carte.",
+        "Ou enfant 16-18 ans souhaitant travailler.",
+        "Ou famille carte bleue européenne (entrée récente)."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Travailleur saisonnier",
+      "eligibility_criteria": [
+        "Étranger non européen.",
+        "Travaux saisonniers ≤6 mois/an.",
+        "Maintien résidence hors France.",
+        "Contrat saisonnier ≥3 mois, approuvé.",
+        "Visa long séjour ‘travailleur saisonnier’."
+      ]
+    },
+    {
+      "name": "APS - Parent d’enfant malade",
+      "eligibility_criteria": [
+        "Parent étranger non européen.",
+        "Enfant résidant France nécessite soins indispensables.",
+        "Pas d’accès aux soins dans pays d’origine.",
+        "Parent assume entretien/éducation.",
+        "Pas de menace à l’ordre public.",
+        "Possible en situation irrégulière."
+      ]
+    },
+    {
+      "name": "APS - Mission de volontariat",
+      "eligibility_criteria": [
+        "Mission de volontariat à caractère social/humanitaire.",
+        "Organisation reconnue d’utilité publique.",
+        "Visa long séjour requis.",
+        "Contrat signé avant entrée.",
+        "Engagement écrit quitter France à la fin."
+      ]
+    },
+    {
+      "name": "Carte de résident - Époux de Français",
+      "eligibility_criteria": [
+        "Marié à un Français ≥3 ans (≥1 an si Tunisien).",
+        "Communauté de vie effective.",
+        "Époux français conserve nationalité française.",
+        "Mariage à l’étranger transcrit registres état civil français.",
+        "Ne pas représenter menace ordre public.",
+        "Ne pas vivre en polygamie.",
+        "Ne pas être condamné pour violence sur mineur (mutilation/infirmité permanente).",
+        "Intégration républicaine (engagement principes République, français A2, sauf >65 ans)."
+      ]
+    },
+    {
+      "name": "Carte de résident longue durée - UE",
+      "eligibility_criteria": [
+        "Étranger non européen.",
+        "Résidence légale continue France ≥5 ans avec certains titres (VLS-TS, visiteur, vie privée/familiale, salarié, entrepreneur, passeport talent hors mission, résident).",
+        "Séjour ininterrompu (absences limitées autorisées).",
+        "Si réfugié/protection subsidiaire : 5 ans dès dépôt demande asile.",
+        "Si Carte bleue européenne : 5 ans UE, dont 2 ans France avant demande.",
+        "Assurance maladie.",
+        "Ressources suffisantes, stables, régulières (≥SMIC brut/mois, hors certaines prestations).",
+        "Intégration républicaine (engagement principes République, français A2, sauf >65 ans)."
+      ]
+    },
+    {
+      "name": "Carte de résident au titre du regroupement familial",
+      "eligibility_criteria": [
+        "Être entré en France via procédure de regroupement familial (art. L. 314-9 1° CESEDA).",
+        "Résidence non interrompue en France ≥3 ans (sauf accords bilatéraux).",
+        "Ne pas vivre en état de polygamie.",
+        "Pour conjoint : communauté de vie effective avec l’étranger rejoint."
+      ]
+    },
+    {
+      "name": "Certificat de résidence pour Algérien de 10 ans - Regroupement familial",
+      "eligibility_criteria": [
+        "Être Algérien entré en France via regroupement familial (art. 7 bis d) accord franco-algérien).",
+        "Ne pas vivre en état de polygamie.",
+        "Pour conjoint : communauté de vie effective avec l’étranger rejoint."
+      ]
+    },
+    {
+      "name": "Carte de résident permanent",
+      "eligibility_criteria": [
+        "Être non algérian (art. L. 314-14 CESEDA, code Agdref 1599).",
+        "Avoir été titulaire d’une première carte de résident (sur demande), ou deux cartes de résident consécutives (automatique), ou être âgé >60 ans avec carte de résident (automatique).",
+        "Intégration républicaine (si non vérifiée précédemment : engagement principes République, français A2, sauf >65 ans).",
+        "Ne pas avoir séjourné >3 ans consécutifs hors France (ou >6 ans hors UE pour résident longue durée-UE)."
+      ]
+    },
+    {
+      "name": "Carte de résident pour ancien combattant",
+      "eligibility_criteria": [
+        "Étranger non européen ayant servi dans une unité combattante de l’armée française, ou dans les Forces Françaises de l’Intérieur (FFI), ou dans une unité combattante alliée en France, ou ayant résidé en France et combattu dans une armée alliée (art. L. 314-11 4° à 6° CESEDA, codes Agdref 1506, 1507, 1508).",
+        "Posséder une carte du combattant.",
+        "Intégration républicaine : engagement principes République, français A2 (sauf >65 ans)."
+      ]
+    },
+    {
+      "name": "Carte de résident pour ascendant à charge d’un enfant français",
+      "eligibility_criteria": [
+        "Être ascendant direct (parent, grand-parent) d’un enfant français résidant en France (art. L. 314-11 2° CESEDA).",
+        "Être à la charge de l’enfant français (et son conjoint le cas échéant).",
+        "Ne pas disposer de ressources suffisantes propres.",
+        "Absence d’autres enfants pouvant accueillir dans pays d’origine.",
+        "Intégration républicaine : engagement principes République, français A2 (sauf >65 ans, ou Tunisiens/Marocains pour premier titre)."
+      ]
+    },
+    {
+      "name": "Carte de séjour temporaire - Recherche d’emploi ou création d’entreprise - Étudiant",
+      "eligibility_criteria": [
+        "Être titulaire d’un VLS-TS ou carte de séjour étudiant (art. L. 313-8 CESEDA, code Agdref 1235).",
+        "Avoir obtenu un diplôme au moins équivalent au master, licence professionnelle, ou niveau I labellisé par Conférence grandes écoles.",
+        "Projet de recherche d’emploi ou création d’entreprise dans domaine correspondant à la formation."
+      ]
+    },
+    {
+      "name": "Carte de séjour temporaire - Recherche d’emploi ou création d’entreprise - Chercheur",
+      "eligibility_criteria": [
+        "Être titulaire d’un VLS-TS ou carte de séjour chercheur (art. L. 313-8 CESEDA, code Agdref 1236).",
+        "Avoir achevé travaux de recherche.",
+        "Projet de recherche d’emploi ou création d’entreprise dans domaine correspondant aux recherches."
+      ]
+    },
+    {
+      "name": "Autorisation provisoire de séjour - Recherche d’emploi (accords bilatéraux)",
+      "eligibility_criteria": [
+        "Étranger non européen bénéficiant d’un accord bilatéral (code Agdref 1111).",
+        "Titulaire d’un VLS-TS ou carte de séjour étudiant.",
+        "Avoir obtenu un diplôme délivré par un établissement d’enseignement supérieur conformément à l’accord applicable.",
+        "Projet de recherche d’emploi ou création d’entreprise dans domaine correspondant à la formation."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Salarié détaché ICT",
+      "eligibility_criteria": [
+        "Étranger non européen (hors Algériens).",
+        "Visa de long séjour ou VLS-TS mention ‘salarié détaché ICT’.",
+        "Occuper poste encadrement supérieur ou expertise.",
+        "Contrat de travail avec entreprise étrangère.",
+        "≥6 mois ancienneté dans le groupe.",
+        "Ressources ≥1801,80 €/mois brut.",
+        "Entreprises employeur/mission dans même groupe.",
+        "Diplômes correspondant à fonctions cadre/expert.",
+        "Si profession réglementée : remplir conditions."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Visiteur",
+      "eligibility_criteria": [
+        "Étranger non européen, non algérien.",
+        "Séjour >3 mois sans travailler.",
+        "Détenir un VLS-TS mention ‘visiteur’.",
+        "S’engager à ne pas travailler.",
+        "Ressources financières ≥17115,69 €/an.",
+        "Assurance maladie couvrant séjour.",
+        "Ne pas avoir OQTF non respectée, faux, délits graves, violences contre élus/agents."
+      ]
+    },
+    {
+      "name": "Certificat de résidence pour Algérien d’1 ou 2 ans - Étudiant",
+      "eligibility_criteria": [
+        "Être ressortissant algérien (accord franco-algérien, art. 9).",
+        "Être inscrit dans un établissement d’enseignement supérieur en France.",
+        "Disposer de ressources suffisantes (≥615 €/mois, hors aides sociales).",
+        "Posséder une assurance maladie couvrant le séjour.",
+        "Détenir un visa de long séjour étudiant."
+      ]
+    },
+    {
+      "name": "Carte de séjour - Retraité",
+      "eligibility_criteria": [
+        "Étranger non européen, non algérien.",
+        "Avoir résidé en France avec carte de résident (résident, longue durée-UE, ordinaire/privilégiée).",
+        "Résidence principale hors France (ou en cours).",
+        "Pension retraite régime base français (hors complémentaires Arrco)."
+      ]
+    },
+    {
+      "name": "Déclaration de nationalité - Ascendant de Français",
+      "eligibility_criteria": [
+        "Être ascendant direct (parent, grand-parent, arrière-grand-parent) d’un Français.",
+        "Résider habituellement en France depuis ≥25 ans à la souscription.",
+        "Résidence régulière (titre de séjour si hors UE, ou justificatifs si UE).",
+        "Ne pas avoir été condamné pour crimes/délits contre la Nation ou terrorisme.",
+        "Ne pas être sous mesure d’expulsion ou interdiction du territoire."
+      ]
+    },
+    {
+      "name": "Déclaration de nationalité - Frère/Sœur de Français",
+      "eligibility_criteria": [
+        "Être frère ou sœur d’un citoyen français.",
+        "Avoir suivi scolarité obligatoire en France (6 à 16 ans) dans établissements sous contrat avec l’État.",
+        "Résider habituellement en France depuis l’âge de 6 ans.",
+        "Ne pas avoir été condamné pour crimes/délits contre la Nation ou terrorisme.",
+        "Ne pas être sous mesure d’expulsion ou interdiction du territoire."
+      ]
+    },
+    {
+      "name": "Nationalité par mariage (déclaration)",
+      "eligibility_criteria": [
+        "Être marié à un citoyen français depuis ≥4 ans (ou ≥5 ans si <3 ans résidence régulière France).",
+        "Communauté de vie affective et matérielle effective depuis le mariage.",
+        "Conjoint français conserve nationalité française.",
+        "Maîtriser le français au niveau B1 (oral et écrit).",
+        "Ne pas avoir été condamné pour crimes/délits contre la Nation ou terrorisme.",
+        "Ne pas être sous mesure d’expulsion ou interdiction du territoire."
+      ]
+    },
+    {
+      "name": "Nationalité - Enfant adopté",
+      "eligibility_criteria": [
+        "Être adopté par un citoyen français (adoption plénière ou simple).",
+        "Résider habituellement avec le parent adoptif français.",
+        "Si adoption simple : Consentement de l’enfant si ≥13 ans.",
+        "Ne pas avoir été condamné pour crimes/délits contre la Nation ou terrorisme.",
+        "Ne pas être sous mesure d’expulsion ou interdiction du territoire."
+      ]
+    },
+    {
+      "name": "Nationalité - Enfant recueilli",
+      "eligibility_criteria": [
+        "Être mineur recueilli par un citoyen français (e.g., kafala, prise en charge effective).",
+        "Résider habituellement avec le citoyen français depuis ≥3 ans.",
+        "Ne pas avoir été condamné pour crimes/délits contre la Nation ou terrorisme.",
+        "Ne pas être sous mesure d’expulsion ou interdiction du territoire."
+      ]
+    },
+    {
+      "name": "Réintégration dans la nationalité française - Déclaration",
+      "eligibility_criteria": [
+        "Avoir perdu la nationalité française (e.g., par mariage, renonciation).",
+        "Résider habituellement en France.",
+        "Prouver lien antérieur avec la France (e.g., ancienne nationalité, résidence prolongée).",
+        "Ne pas avoir été condamné pour crimes/délits contre la Nation ou terrorisme.",
+        "Ne pas être sous mesure d’expulsion ou interdiction du territoire."
+      ]
+    },
+    {
+      "name": "Réintégration dans la nationalité française - Décret",
+      "eligibility_criteria": [
+        "Avoir perdu la nationalité française (e.g., par décret, renonciation).",
+        "Résider habituellement en France ≥5 ans (or less if exceptional contribution).",
+        "Maîtriser le français au niveau B1.",
+        "Ne pas avoir été condamné pour crimes/délits contre la Nation, terrorisme, or sentences ≥6 months without suspension.",
+        "Ne pas être sous mesure d’expulsion ou interdiction du territoire."
+      ]
+    },
+    {
+      "name": "Naturalisation par décret",
+      "eligibility_criteria": [
+        "Être majeur.",
+        "Résider habituellement en France ≥5 ans (or ≥2 ans if graduated from French higher education, or no duration condition if exceptional contribution).",
+        "Ressources stables et suffisantes.",
+        "Maîtriser le français au niveau B1 (oral et écrit).",
+        "Adhérer aux valeurs de la République.",
+        "Ne pas avoir été condamné pour crimes/délits contre la Nation, terrorisme, or sentences ≥6 months without suspension.",
+        "Ne pas être sous mesure d’expulsion ou interdiction du territoire."
+      ]
+    },
+    {
+      "name": "Nationalité - Enfant né en France",
+      "eligibility_criteria": [
+        "Être né en France de parents étrangers.",
+        "Résider habituellement en France à la majorité (18 ans).",
+        "Avoir résidé en France ≥5 ans (continus ou discontinus) depuis l’âge de 11 ans.",
+        "Demande possible dès 17 ans (prend effet à 18 ans), ou dès 16 ans par parents, or dès 13 ans if child expresses will.",
+        "Ne pas avoir été condamné pour crimes/délits contre la Nation or terrorisme.",
+        "Ne pas être sous mesure d’expulsion or interdiction du territoire."
+      ]
+    },
+    {
+      "name": "Naturalisation pour services exceptionnels rendus à la France",
+      "eligibility_criteria": [
+        "Avoir rendu des services exceptionnels à la France.",
+        "Résider habituellement en France (no minimum duration required).",
+        "Maîtriser le français au niveau B1 (oral et écrit).",
+        "Adhérer aux valeurs de la République.",
+        "Ne pas avoir été condamné pour crimes/délits contre la Nation."
+      ]
+    },
+    {
+      "name": "Naturalisation pour réfugiés/statutaires apatrides",
+      "eligibility_criteria": [
+        "Être reconnu réfugié ou apatride par l’OFPRA ou la CNDA.",
+        "Résider habituellement en France ≥3 ans.",
+        "Maîtriser le français au niveau B1.",
+        "Adhérer aux valeurs de la République.",
+        "Ne pas avoir été condamné pour crimes/délits contre la Nation."
+      ]
+    }
+  ]
+}

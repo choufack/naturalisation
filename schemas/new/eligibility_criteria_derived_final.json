@@ -1,0 +1,394 @@
+{
+  "procedures": [
+    {
+      "name": "Déclaration de nationalité - Ascendant de Français",
+      "eligibility_criteria": [
+        "mainPath == 'ascendant'",
+        "ascendant_link in ['parent', 'grandparent']",
+        "residenceBracket == 'born' or residenceBracket == '>10'"
+      ]
+    },
+    {
+      "name": "Déclaration de nationalité - Frère/Sœur de Français",
+      "eligibility_criteria": [
+        "mainPath == 'sibling'",
+        "schoolingFR == True",
+        "residenceBracket == 'born' or residenceBracket == '>10'"
+      ]
+    },
+    {
+      "name": "Nationalité par mariage (déclaration)",
+      "eligibility_criteria": [
+        "mainPath == 'mariage'",
+        "marriage4y == True",
+        "communityLife == True",
+        "frenchA2 == True"
+      ]
+    },
+    {
+      "name": "Nationalité - Enfant adopté",
+      "eligibility_criteria": [
+        "mainPath == 'adoption'",
+        "adoptionPleniere == True"
+      ]
+    },
+    {
+      "name": "Nationalité - Enfant recueilli",
+      "eligibility_criteria": [
+        "mainPath == 'adoption'",
+        "recueil3ans == True"
+      ]
+    },
+    {
+      "name": "Réintégration dans la nationalité française - Déclaration",
+      "eligibility_criteria": [
+        "mainPath == 'reintegration'",
+        "strongLinks == True"
+      ]
+    },
+    {
+      "name": "Réintégration dans la nationalité française - Décret",
+      "eligibility_criteria": [
+        "mainPath == 'reintegration'",
+        "residenceBracket in ['5-10', '>10', 'born']",
+        "frenchA2 == True",
+        "cleanRecord == True"
+      ]
+    },
+    {
+      "name": "Naturalisation par décret",
+      "eligibility_criteria": [
+        "mainPath == 'naturalisation'",
+        "residenceBracket in ['5-10', '>10', 'born']",
+        "frenchA2 == True",
+        "cleanRecord == True",
+        "longAbsence == False",
+        "stableIncome5y == True"
+      ]
+    },
+    {
+      "name": "Nationalité - Enfant né en France",
+      "eligibility_criteria": [
+        "mainPath == 'jus_soli'",
+        "res5since11 == True",
+        "ageBracket == '>=18'",
+        "residenceBracket == 'born'"
+      ]
+    },
+    {
+      "name": "Naturalisation pour réfugiés/statutaires apatrides",
+      "eligibility_criteria": [
+        "'refugie' in specialSituations",
+        "yearsResidence in ['3-5', '>5']",
+        "frenchA2 == True"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Vie privée et familiale - Conjoint de Français",
+      "eligibility_criteria": [
+        "'famille' in motifPrincipal",
+        "family_link == 'mariage'",
+        "family_yearsMarriage >= 1",
+        "family_community == True"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Vie privée et familiale - Pacs avec Français",
+      "eligibility_criteria": [
+        "'famille' in motifPrincipal",
+        "family_link == 'pacs'",
+        "family_yearsMarriage >= 1",
+        "family_community == True"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Vie privée et familiale - Parent d’enfant français mineur",
+      "eligibility_criteria": [
+        "'famille' in motifPrincipal",
+        "family_link == 'parentEnfFr'",
+        "hasMinorChildren == True"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Vie privée et familiale - Jeune né ou entré mineur",
+      "eligibility_criteria": [
+        "mainPath == 'jus_soli'",
+        "res5since11 == True",
+        "ageBracket in ['<18', '>=18']",
+        "nationality != 'FR'"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Vie privée et familiale - Membre de famille d’un résident longue durée-UE",
+      "eligibility_criteria": [
+        "'famille' in motifPrincipal",
+        "family_link == 'famUE'",
+        "family_community == True",
+        "currentPermit == 'resident_10ans'"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Vie privée et familiale - Jeune adulte entré par regroupement familial",
+      "eligibility_criteria": [
+        "'famille' in motifPrincipal",
+        "family_link == 'regroup'",
+        "ageBracket == '>=18'"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Vie privée et familiale - Raisons humanitaires ou exceptionnelles",
+      "eligibility_criteria": [
+        "'autre' in motifPrincipal",
+        "yearsResidence in ['3-5', '>5']"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Vie privée et familiale - Victime de traite, proxénétisme ou logement indigne",
+      "eligibility_criteria": [
+        "'victimeTraite' in specialSituations",
+        "cleanRecord == True"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Salarié",
+      "eligibility_criteria": [
+        "'travail' in motifPrincipal",
+        "work_contract == 'CDI'",
+        "work_permit == True",
+        "cleanRecord == True"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Travailleur temporaire",
+      "eligibility_criteria": [
+        "'travail' in motifPrincipal",
+        "work_contract == 'CDD'",
+        "work_permit == True",
+        "cleanRecord == True"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Entrepreneur/Profession libérale",
+      "eligibility_criteria": [
+        "'invest' in motifPrincipal",
+        "invest_registered == True",
+        "invest_hasBP == True",
+        "invest_funds >= 1801.80"
+      ]
+    },
+    {
+      "name": "Carte de séjour pluriannuelle - Générale",
+      "eligibility_criteria": [
+        "currentPermit.startswith('csp_')",
+        "pluri_integrationOK == True"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Visiteur",
+      "eligibility_criteria": [
+        "'visiteur' in motifPrincipal",
+        "visitor_resources in ['1200_1426', 'plus_1426']"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent - Salarié qualifié",
+      "eligibility_criteria": [
+        "'travail' in motifPrincipal",
+        "studies_degree in ['master', 'doctorat']",
+        "work_salary >= 3603.58"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent - Recrutement entreprise innovante",
+      "eligibility_criteria": [
+        "'travail' in motifPrincipal",
+        "work_salary >= 3603.58"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent - Carte bleue européenne",
+      "eligibility_criteria": [
+        "'travail' in motifPrincipal",
+        "studies_degree in ['licence', 'master', 'doctorat']",
+        "work_salary >= 4486.38"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent - Salarié en mission",
+      "eligibility_criteria": [
+        "'travail' in motifPrincipal",
+        "work_contract == 'detache'",
+        "work_salary >= 3243.24"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent - Chercheur",
+      "eligibility_criteria": [
+        "'etudes' in motifPrincipal",
+        "studies_status == 'chercheur'",
+        "studies_degree in ['master', 'doctorat']"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent - Création d’entreprise",
+      "eligibility_criteria": [
+        "'invest' in motifPrincipal",
+        "invest_funds >= 30000",
+        "studies_degree in ['master', 'doctorat']"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent - Projet innovant",
+      "eligibility_criteria": [
+        "'invest' in motifPrincipal",
+        "invest_hasBP == True"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent - Investisseur",
+      "eligibility_criteria": [
+        "'invest' in motifPrincipal",
+        "invest_funds >= 300000"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent - Mandataire social",
+      "eligibility_criteria": [
+        "'travail' in motifPrincipal",
+        "work_salary >= 5405.40"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Passeport talent (famille)",
+      "eligibility_criteria": [
+        "'famille' in motifPrincipal",
+        "family_link == 'mariage'"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Travailleur saisonnier",
+      "eligibility_criteria": [
+        "'travail' in motifPrincipal",
+        "work_contract == 'saisonnier'",
+        "work_permit == True"
+      ]
+    },
+    {
+      "name": "APS - Parent d’enfant malade",
+      "eligibility_criteria": [
+        "'parentMalade' in specialSituations",
+        "hasMinorChildren == True"
+      ]
+    },
+    {
+      "name": "APS - Mission de volontariat",
+      "eligibility_criteria": [
+        "'volontaire' in specialSituations"
+      ]
+    },
+    {
+      "name": "Carte de résident - Époux de Français",
+      "eligibility_criteria": [
+        "'famille' in motifPrincipal",
+        "family_link == 'mariage'",
+        "family_yearsMarriage >= 3",
+        "family_community == True",
+        "resident_integrationOK == True",
+        "resident_languageA2 == True"
+      ]
+    },
+    {
+      "name": "Carte de résident longue durée - UE",
+      "eligibility_criteria": [
+        "yearsResidence == '>5'",
+        "resident_integrationOK == True",
+        "resident_languageA2 == True"
+      ]
+    },
+    {
+      "name": "Carte de résident au titre du regroupement familial",
+      "eligibility_criteria": [
+        "'famille' in motifPrincipal",
+        "family_link == 'regroup'",
+        "yearsResidence in ['3-5', '>5']",
+        "family_community == True"
+      ]
+    },
+    {
+      "name": "Certificat de résidence pour Algérien de 10 ans - Regroupement familial",
+      "eligibility_criteria": [
+        "nationality == 'DZ'",
+        "family_link == 'regroup'",
+        "family_community == True"
+      ]
+    },
+    {
+      "name": "Carte de résident permanent",
+      "eligibility_criteria": [
+        "currentPermit in ['resident_10ans', 'resident_permanent']",
+        "resident_integrationOK == True",
+        "resident_longAbsence == False"
+      ]
+    },
+    {
+      "name": "Carte de résident pour ancien combattant",
+      "eligibility_criteria": [
+        "'ancienCombattant' in specialSituations",
+        "resident_integrationOK == True",
+        "resident_languageA2 == True"
+      ]
+    },
+    {
+      "name": "Carte de résident pour ascendant à charge d’un enfant français",
+      "eligibility_criteria": [
+        "mainPath == 'ascendant'",
+        "ascendant_link in ['parent', 'grandparent']",
+        "resident_integrationOK == True",
+        "resident_languageA2 == True"
+      ]
+    },
+    {
+      "name": "Carte de séjour temporaire - Recherche d’emploi ou création d’entreprise - Étudiant",
+      "eligibility_criteria": [
+        "currentPermit in ['vls_etudiant', 'cs_etudiant']",
+        "studies_degree in ['master', 'doctorat']"
+      ]
+    },
+    {
+      "name": "Carte de séjour temporaire - Recherche d’emploi ou création d’entreprise - Chercheur",
+      "eligibility_criteria": [
+        "currentPermit == 'vls_chercheur'",
+        "studies_status == 'chercheur'"
+      ]
+    },
+    {
+      "name": "Autorisation provisoire de séjour - Recherche d’emploi (accords bilatéraux)",
+      "eligibility_criteria": [
+        "bilateralAgreement == True",
+        "currentPermit in ['vls_etudiant', 'cs_etudiant']"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Salarié détaché ICT",
+      "eligibility_criteria": [
+        "'travail' in motifPrincipal",
+        "work_contract == 'detache'",
+        "work_salary >= 1801.80"
+      ]
+    },
+    {
+      "name": "Certificat de résidence pour Algérien d’1 ou 2 ans - Étudiant",
+      "eligibility_criteria": [
+        "nationality == 'DZ'",
+        "'etudes' in motifPrincipal",
+        "studies_status == 'etudiant'"
+      ]
+    },
+    {
+      "name": "Carte de séjour - Retraité",
+      "eligibility_criteria": [
+        "currentPermit in ['resident_10ans', 'resident_permanent']"
+      ]
+    }
+  ]
+}

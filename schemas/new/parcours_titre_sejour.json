@@ -1,0 +1,405 @@
+{
+  "pivots": [
+    {
+      "question_id": "Q1_nationality",
+      "label": "Quelle est votre nationalité?",
+      "type": "select",
+      "options": [
+        { "value": "FR", "label": "Français-e" },
+        { "value": "DZ", "label": "Algérien-ne" },
+        { "value": "MA", "label": "Marocain-e" },
+        { "value": "TN", "label": "Tunisien-ne" },
+        { "value": "SN", "label": "Sénégalais-e" },
+        { "value": "CM", "label": "Camerounais-e" },
+        { "value": "OTHER", "label": "Autre nationalité" },
+        { "value": "STATELESS", "label": "Apatride" }
+      ],
+      "fact": "nationality"
+    },
+    {
+      "question_id": "Q2_currentPermit",
+      "label": "Quel titre de séjour détenez-vous actuellement?",
+      "type": "select",
+      "options": [
+        { "value": "none", "label": "Aucun (première demande)" },
+        { "value": "vls_etudiant", "label": "VLS-TS Étudiant" },
+        { "value": "vls_salarie", "label": "VLS-TS Salarié" },
+        { "value": "vls_saisonnier", "label": "VLS-TS Travailleur saisonnier" },
+        { "value": "vls_chercheur", "label": "VLS-TS Chercheur" },
+        { "value": "vls_vpf", "label": "VLS-TS Vie privée & familiale" },
+        { "value": "vls_entrepreneur", "label": "VLS-TS Entrepreneur / libéral" },
+        { "value": "vls_passeport_talent", "label": "VLS-TS Passeport talent" },
+        { "value": "cs_etudiant", "label": "Carte de séjour Étudiant" },
+        { "value": "cs_salarie", "label": "Carte de séjour Salarié" },
+        { "value": "cs_saisonnier", "label": "Carte de séjour Travailleur saisonnier" },
+        { "value": "cs_vpf", "label": "Carte de séjour Vie privée & familiale" },
+        { "value": "cs_stagiaire", "label": "Carte de séjour Stagiaire" },
+        { "value": "cs_entrepreneur", "label": "Carte de séjour Entrepreneur / libéral" },
+        { "value": "cs_au_pair", "label": "Carte de séjour Jeune au pair" },
+        { "value": "cs_visiteur", "label": "Carte de séjour Visiteur" },
+        { "value": "csp_salarie", "label": "Carte pluriannuelle Salarié" },
+        { "value": "csp_etudiant", "label": "Carte pluriannuelle Étudiant" },
+        { "value": "csp_vpf", "label": "Carte pluriannuelle VPF" },
+        { "value": "resident_10ans", "label": "Carte résident 10 ans" },
+        { "value": "resident_permanent", "label": "Carte résident permanent" },
+        { "value": "certif_alg_1an", "label": "Certificat algérien 1 an" },
+        { "value": "certif_alg_10ans", "label": "Certificat algérien 10 ans" },
+        { "value": "other", "label": "Autre titre" }
+      ],
+      "fact": "currentPermit"
+    },
+    {
+      "question_id": "Q3_yearsResidence",
+      "label": "Depuis combien d'années résidez-vous régulièrement en France?",
+      "type": "select",
+      "options": [
+        { "value": "<1", "label": "Moins d'1 an" },
+        { "value": "1-3", "label": "1 à 3 ans" },
+        { "value": "3-5", "label": "3 à 5 ans" },
+        { "value": ">5", "label": "Plus de 5 ans" }
+      ],
+      "fact": "yearsResidence"
+    },
+    {
+      "question_id": "Q4_motifs",
+      "label": "Quels sont vos motifs principaux de séjour?",
+      "type": "checkbox",
+      "options": [
+        { "value": "famille", "label": "Famille (mariage, PACS, enfants...)" },
+        { "value": "travail", "label": "Travail (CDI, CDD, saisonnier...)" },
+        { "value": "etudes", "label": "Études / stage / recherche" },
+        { "value": "invest", "label": "Création / investissement" },
+        { "value": "visiteur", "label": "Visiteur (ressources propres)" },
+        { "value": "autre", "label": "Autre motif" }
+      ],
+      "fact": "motifPrincipal"
+    },
+    {
+      "question_id": "Q5_housing",
+      "label": "Quel est votre statut de logement?",
+      "type": "select",
+      "options": [
+        { "value": "locataire", "label": "Locataire" },
+        { "value": "proprietaire", "label": "Propriétaire" },
+        { "value": "heberge", "label": "Hébergé-e gratuitement" },
+        { "value": "foyer", "label": "Foyer / résidence sociale" },
+        { "value": "sans_domicile", "label": "Sans domicile fixe" },
+        { "value": "autre", "label": "Autre situation" }
+      ],
+      "fact": "housingSituation"
+    },
+    {
+      "question_id": "Q6_specialSituations",
+      "label": "Avez-vous une situation particulière?",
+      "type": "checkbox",
+      "options": [
+        { "value": "auPair", "label": "Jeune au pair" },
+        { "value": "volontaire", "label": "Volontaire / service civique" },
+        { "value": "medical", "label": "Soins médicaux / humanitaire" },
+        { "value": "victimeTraite", "label": "Victime de traite/proxénétisme" },
+        { "value": "ancienCombattant", "label": "Ancien combattant / FFI" },
+        { "value": "refugie", "label": "Réfugié-e / protection subsidiaire" },
+        { "value": "parentMalade", "label": "Parent d'un enfant malade" },
+        { "value": "etrangerEnfance", "label": "Arrivé-e mineur-e & scolarisé-e" },
+        { "value": "handicap", "label": "Personne en situation de handicap" },
+        { "value": "aucune", "label": "Aucune de ces situations" }
+      ],
+      "fact": "specialSituations"
+    }
+  ],
+  "panels": [
+    {
+      "panel_id": "P_famille",
+      "visible_if": [
+        { "fact": "motifPrincipal", "contains": "famille" }
+      ],
+      "questions": [
+        {
+          "question_id": "F1_link",
+          "label": "Quel lien familial avez-vous?",
+          "type": "select",
+          "options": [
+            { "value": "mariage", "label": "Mariage avec un-e Français-e" },
+            { "value": "pacs", "label": "PACS avec un-e Français-e" },
+            { "value": "parentEnfFr", "label": "Parent d'un enfant français" },
+            { "value": "regroup", "label": "Regroupement familial" },
+            { "value": "famUE", "label": "Famille d'un citoyen UE/EEE" },
+            { "value": "autre", "label": "Autre lien familial" }
+          ],
+          "fact": "family.link"
+        },
+        {
+          "question_id": "F2_yearsMarriage",
+          "label": "Depuis combien d'années êtes-vous marié-e/pacsé-e?",
+          "type": "number",
+          "minimum": 0,
+          "visible_if": [
+            { "fact": "family.link", "in": ["mariage", "pacs"] }
+          ],
+          "fact": "family.yearsMarriage"
+        },
+        {
+          "question_id": "F3_community",
+          "label": "Vie commune ininterrompue?",
+          "type": "radio",
+          "options": [
+            { "value": true, "label": "Oui" },
+            { "value": false, "label": "Non" }
+          ],
+          "visible_if": [
+            { "fact": "family.link", "in": ["mariage", "pacs", "regroup"] }
+          ],
+          "fact": "family.community"
+        }
+      ]
+    },
+    {
+      "panel_id": "P_travail",
+      "visible_if": [
+        { "fact": "motifPrincipal", "contains": "travail" }
+      ],
+      "questions": [
+        {
+          "question_id": "T1_contract",
+          "label": "Quel type de contrat?",
+          "type": "select",
+          "options": [
+            { "value": "CDI", "label": "CDI" },
+            { "value": "CDD", "label": "CDD" },
+            { "value": "detache", "label": "Détaché intra-groupe (ICT)" },
+            { "value": "saisonnier", "label": "Travail saisonnier" },
+            { "value": "autre", "label": "Autre" }
+          ],
+          "fact": "work.contract"
+        },
+        {
+          "question_id": "T2_permit",
+          "label": "Autorisation de travail obtenue?",
+          "type": "radio",
+          "options": [
+            { "value": true, "label": "Oui" },
+            { "value": false, "label": "Non" }
+          ],
+          "fact": "work.permit"
+        },
+        {
+          "question_id": "T3_salary",
+          "label": "Salaire brut mensuel (€)",
+          "type": "number",
+          "minimum": 0,
+          "visible_if": [
+            { "fact": "work.contract", "in": ["CDI", "CDD"] }
+          ],
+          "fact": "work.salary"
+        }
+      ]
+    },
+    {
+      "panel_id": "P_etudes",
+      "visible_if": [
+        { "fact": "motifPrincipal", "contains": "etudes" }
+      ],
+      "questions": [
+        {
+          "question_id": "E1_status",
+          "label": "Votre statut actuel?",
+          "type": "select",
+          "options": [
+            { "value": "etudiant", "label": "Étudiant-e" },
+            { "value": "stagiaire", "label": "Stagiaire" },
+            { "value": "chercheur", "label": "Chercheur-e" },
+            { "value": "autre", "label": "Autre" }
+          ],
+          "fact": "studies.status"
+        },
+        {
+          "question_id": "E2_diploma",
+          "label": "Diplôme visé ou obtenu",
+          "type": "select",
+          "options": [
+            { "value": "licence", "label": "Licence" },
+            { "value": "master", "label": "Master" },
+            { "value": "doctorat", "label": "Doctorat" },
+            { "value": "autre", "label": "Autre" }
+          ],
+          "visible_if": [
+            { "fact": "studies.status", "eq": "etudiant" }
+          ],
+          "fact": "studies.degree"
+        }
+      ]
+    },
+    {
+      "panel_id": "P_invest",
+      "visible_if": [
+        { "fact": "motifPrincipal", "contains": "invest" }
+      ],
+      "questions": [
+        {
+          "question_id": "I1_registered",
+          "label": "Entreprise immatriculée?",
+          "type": "radio",
+          "options": [
+            { "value": true, "label": "Oui (Kbis/URSSAF)" },
+            { "value": false, "label": "Non" }
+          ],
+          "fact": "invest.registered"
+        },
+        {
+          "question_id": "I2_bp",
+          "label": "Business-plan disponible?",
+          "type": "radio",
+          "options": [
+            { "value": true, "label": "Oui" },
+            { "value": false, "label": "Non" }
+          ],
+          "fact": "invest.hasBP"
+        },
+        {
+          "question_id": "I3_funds",
+          "label": "Montant des fonds propres (€)",
+          "type": "number",
+          "minimum": 0,
+          "fact": "invest.funds"
+        }
+      ]
+    },
+    {
+      "panel_id": "P_visiteur",
+      "visible_if": [
+        { "fact": "motifPrincipal", "contains": "visiteur" },
+        { "fact": "motifPrincipal", "not_contains": "travail" }
+      ],
+      "questions": [
+        {
+          "question_id": "V1_resources",
+          "label": "Ressources mensuelles (€)",
+          "type": "select",
+          "options": [
+            { "value": "moins_1200", "label": "<1200 €" },
+            { "value": "1200_1426", "label": "1200-1426 €" },
+            { "value": "plus_1426", "label": ">1426 €" },
+            { "value": "autre", "label": "Autre montant" }
+          ],
+          "fact": "visitor.resources"
+        }
+      ]
+    },
+    {
+      "panel_id": "P_pluriannuelle",
+      "visible_if": [
+        { "fact": "currentPermit", "starts_with": "csp_" }
+      ],
+      "questions": [
+        {
+          "question_id": "P1_CIR",
+          "label": "Avez-vous suivi le Contrat d'Intégration Républicaine (CIR)?",
+          "type": "radio",
+          "options": [
+            { "value": true, "label": "Oui" },
+            { "value": false, "label": "Non" }
+          ],
+          "fact": "pluri.integrationOK"
+        }
+      ]
+    },
+    {
+      "panel_id": "P_bilateral",
+      "visible_if": [
+        { "fact": "nationality", "in": ["DZ", "MA", "TN", "SN", "CM", "LB", "PM"] }
+      ],
+      "questions": [
+        {
+          "question_id": "B1_agreement",
+          "label": "Bénéficiez-vous d'un accord bilatéral avec la France?",
+          "type": "radio",
+          "options": [
+            { "value": true, "label": "Oui" },
+            { "value": false, "label": "Non" }
+          ],
+          "fact": "bilateralAgreement"
+        }
+      ]
+    },
+    {
+      "panel_id": "P_certifAlg1",
+      "visible_if": [
+        { "fact": "nationality", "eq": "DZ" }
+      ],
+      "questions": [
+        {
+          "question_id": "C1_reason",
+          "label": "Motif du certificat 1 an",
+          "type": "select",
+          "options": [
+            { "value": "mariage", "label": "Conjoint·e de Français·e" },
+            { "value": "parent", "label": "Parent d'un enfant français" },
+            { "value": "sante", "label": "Soins médicaux" },
+            { "value": "viePriv", "label": "Vie privée & familiale" },
+            { "value": "autre", "label": "Autre motif" }
+          ],
+          "fact": "alg1.reason"
+        }
+      ]
+    },
+    {
+      "panel_id": "P_certifAlg10",
+      "visible_if": [
+        { "fact": "nationality", "eq": "DZ" }
+      ],
+      "questions": [
+        {
+          "question_id": "C10_type",
+          "label": "Type du certificat 10 ans",
+          "type": "select",
+          "options": [
+            { "value": "res10", "label": "10 ans de résidence régulière" },
+            { "value": "famVie", "label": "5 ans vie privée & familiale" },
+            { "value": "francophone", "label": "Ressortissant francophone" },
+            { "value": "rente", "label": "Rente accident du travail" },
+            { "value": "autre", "label": "Autre type" }
+          ],
+          "fact": "alg10.type"
+        }
+      ]
+    },
+    {
+      "panel_id": "P_residentLong",
+      "visible_if": [
+        { "fact": "currentPermit", "in": ["resident_10ans", "resident_Id_ue", "resident_permanent"] }
+      ],
+      "questions": [
+        {
+          "question_id": "R1_CIR",
+          "label": "Avez-vous suivi le Contrat d'Intégration Républicaine (CIR)?",
+          "type": "radio",
+          "options": [
+            { "value": true, "label": "Oui" },
+            { "value": false, "label": "Non" }
+          ],
+          "fact": "resident.integrationOK"
+        },
+        {
+          "question_id": "R2_absence",
+          "label": "Absence > 3 ans hors France durant validité?",
+          "type": "radio",
+          "options": [
+            { "value": true, "label": "Oui" },
+            { "value": false, "label": "Non" }
+          ],
+          "fact": "resident.longAbsence"
+        },
+        {
+          "question_id": "R3_frA2",
+          "label": "Possédez-vous une attestation de français de niveau **A2** minimum?",
+          "type": "radio",
+          "options": [
+            { "value": true, "label": "Oui" },
+            { "value": false, "label": "Non" }
+          ],
+          "fact": "resident.languageA2"
+        }
+      ]
+    }
+  ]
+}

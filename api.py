@@ -3,6 +3,7 @@ import uuid
 from typing import Dict, Any
 from flask import Blueprint, jsonify, request, current_app
 from moteur.moteur_eligibilite import MoteurEligibilite, Profil, flatten_keys
+from utils.form_cleaner import clean_form_data
 # from utils.helpers import flatten_keys  # Assurez-vous que cette fonction est définie
 # from utils.constants import JSON_PATH  # Chemin vers le fichier questions.json
 
@@ -62,7 +63,9 @@ def eligibilite_direct():
 
     # Aplatir les clés et calculer l'éligibilité
     answers = flatten_keys(payload)
-    print(answers)  # Debugging output
+    answers = clean_form_data(answers)
+    
+    print(f"\n\n {answers} \n\n")
     results = calculer_eligibilite(answers)
     print(f"results: {results}")  # Debugging output
     return jsonify({"results": results}), 200
@@ -111,17 +114,53 @@ def profil_eligibility(profile_id: str):
 ###############################################################################
 # Fonction utilitaire pour calculer l'éligibilité
 ###############################################################################
-def calculer_eligibilite(answers: Dict[str, Any]) -> list:
-    """Calcule l'éligibilité en fonction des réponses fournies."""
+
+# Charger les fichiers JSON
+with open('./schemas/new/documents_with_codes.json', 'r', encoding='utf-8') as f:
+    documents_data = json.load(f)
+
+with open('./schemas/new/required_documents_with_codes.json', 'r', encoding='utf-8') as f:
+    procedures_data = json.load(f)
+
+with open('./schemas/new/procedures.json', 'r', encoding='utf-8') as f:
+    procedure_names_data = json.load(f)
+
+# Créer un dictionnaire pour mapper les codes de documents à leurs descriptions
+doc_map = {doc['code']: doc['description'] for doc in documents_data['documents']}
+
+# Créer un dictionnaire pour mapper les identifiants de procédures aux documents requis
+proc_doc_map = {proc['id']: proc['required_documents'] for proc in procedures_data['procedures']}
+
+# Créer un dictionnaire pour mapper les identifiants de procédures à leurs noms
+proc_name_map = {proc['id']: proc['name'] for proc in procedure_names_data['procedures']}
+
+def calculer_eligibilite(answers: Dict[str, Any]) -> Dict[str, Any]:
+    """Calcule l'éligibilité en fonction des réponses fournies et retourne les procédures éligibles avec leurs documents."""
     moteur = MoteurEligibilite()
     moteur.reset()
 
-    
     # Déclarer un seul fait Profil avec toutes les réponses
     moteur.declare(Profil(**answers))
 
     # Exécuter le moteur
     moteur.run()
 
-    # Récupérer les résultats
-    return [fact["eligibilite"] for fact in moteur.facts.values() if "eligibilite" in fact]
+    # Récupérer les éligibilités
+    eligible_ids = [fact["eligibilite"] for fact in moteur.facts.values() if "eligibilite" in fact]
+    print(eligible_ids)
+    # Construire le résultat avec id, nom et documents requis
+    eligible_procedures = []
+    for proc_id in eligible_ids:
+        if proc_id in proc_doc_map and proc_id in proc_name_map:
+            required_docs = [
+                {"code": code, "description": doc_map[code]}
+                for code in proc_doc_map[proc_id]
+                if code in doc_map
+            ]
+            eligible_procedures.append({
+                "id": proc_id,
+                "name": proc_name_map[proc_id],
+                "required_documents": required_docs
+            })
+
+    return eligible_procedures

@@ -1,0 +1,224 @@
+{
+  "procedures": [
+    {
+      "id": "P001",
+      "name": "Carte de séjour - Vie privée et familiale - Conjoint de Français"
+    },
+    {
+      "id": "P002",
+      "name": "Carte de séjour - Vie privée et familiale - Pacs avec Français"
+    },
+    {
+      "id": "P003",
+      "name": "Carte de séjour - Vie privée et familiale - Parent d’enfant français mineur"
+    },
+    {
+      "id": "P004",
+      "name": "Carte de séjour - Vie privée et familiale - Membre de famille d’un résident longue durée-UE"
+    },
+    {
+      "id": "P005",
+      "name": "Carte de séjour - Vie privée et familiale - Jeune adulte entré par regroupement familial"
+    },
+    {
+      "id": "P006",
+      "name": "Carte de séjour - Vie privée et familiale - Jeune né ou entré mineur"
+    },
+    {
+      "id": "P007",
+      "name": "Carte de séjour - Vie privée et familiale - Pension d’accident du travail"
+    },
+    {
+      "id": "P008",
+      "name": "Carte de séjour - Vie privée et familiale - Travail solidaire"
+    },
+    {
+      "id": "P009",
+      "name": "Carte de séjour - Vie privée et familiale - Raisons humanitaires ou exceptionnelles"
+    },
+    {
+      "id": "P010",
+      "name": "Carte de séjour - Vie privée et familiale - Victime de violence domestique ou mariage forcé"
+    },
+    {
+      "id": "P011",
+      "name": "Carte de séjour - Vie privée et familiale - Victime de traite, proxénétisme ou logement indigne"
+    },
+    {
+      "id": "P012",
+      "name": "Carte de séjour - Salarié"
+    },
+    {
+      "id": "P013",
+      "name": "Carte de séjour - Travailleur temporaire"
+    },
+    {
+      "id": "P014",
+      "name": "Carte de séjour - Entrepreneur/Profession libérale"
+    },
+    {
+      "id": "P015",
+      "name": "Carte de séjour pluriannuelle - Générale"
+    },
+    {
+      "id": "P016",
+      "name": "Carte de séjour - Passeport talent - Salarié qualifié"
+    },
+    {
+      "id": "P017",
+      "name": "Carte de séjour - Passeport talent - Recrutement entreprise innovante"
+    },
+    {
+      "id": "P018",
+      "name": "Carte de séjour - Passeport talent - Carte bleue européenne"
+    },
+    {
+      "id": "P019",
+      "name": "Carte de séjour - Passeport talent - Salarié en mission"
+    },
+    {
+      "id": "P020",
+      "name": "Carte de séjour - Passeport talent - Chercheur"
+    },
+    {
+      "id": "P021",
+      "name": "Carte de séjour - Passeport talent - Création d’entreprise"
+    },
+    {
+      "id": "P022",
+      "name": "Carte de séjour - Passeport talent - Projet innovant"
+    },
+    {
+      "id": "P023",
+      "name": "Carte de séjour - Passeport talent - Investisseur"
+    },
+    {
+      "id": "P024",
+      "name": "Carte de séjour - Passeport talent - Mandataire social"
+    },
+    {
+      "id": "P025",
+      "name": "Carte de séjour - Passeport talent - Profession artistique et culturelle"
+    },
+    {
+      "id": "P026",
+      "name": "Carte de séjour - Passeport talent - Personne de renommée internationale"
+    },
+    {
+      "id": "P027",
+      "name": "Carte de séjour - Passeport talent (famille)"
+    },
+    {
+      "id": "P028",
+      "name": "Carte de séjour - Travailleur saisonnier"
+    },
+    {
+      "id": "P029",
+      "name": "APS - Parent d’enfant malade"
+    },
+    {
+      "id": "P030",
+      "name": "APS - Mission de volontariat"
+    },
+    {
+      "id": "P031",
+      "name": "Carte de résident - Époux de Français"
+    },
+    {
+      "id": "P032",
+      "name": "Carte de résident longue durée - UE"
+    },
+    {
+      "id": "P033",
+      "name": "Carte de résident au titre du regroupement familial"
+    },
+    {
+      "id": "P034",
+      "name": "Certificat de résidence pour Algérien de 10 ans - Regroupement familial"
+    },
+    {
+      "id": "P035",
+      "name": "Carte de résident permanent"
+    },
+    {
+      "id": "P036",
+      "name": "Carte de résident pour ancien combattant"
+    },
+    {
+      "id": "P037",
+      "name": "Carte de résident pour ascendant à charge d’un enfant français"
+    },
+    {
+      "id": "P038",
+      "name": "Carte de séjour temporaire - Recherche d’emploi ou création d’entreprise - Étudiant"
+    },
+    {
+      "id": "P039",
+      "name": "Carte de séjour temporaire - Recherche d’emploi ou création d’entreprise - Chercheur"
+    },
+    {
+      "id": "P040",
+      "name": "Autorisation provisoire de séjour - Recherche d’emploi (accords bilatéraux)"
+    },
+    {
+      "id": "P041",
+      "name": "Carte de séjour - Salarié détaché ICT"
+    },
+    {
+      "id": "P042",
+      "name": "Carte de séjour - Visiteur"
+    },
+    {
+      "id": "P043",
+      "name": "Certificat de résidence pour Algérien d’1 ou 2 ans - Étudiant"
+    },
+    {
+      "id": "P044",
+      "name": "Carte de séjour - Retraité"
+    },
+    {
+      "id": "P045",
+      "name": "Déclaration de nationalité - Ascendant de Français"
+    },
+    {
+      "id": "P046",
+      "name": "Déclaration de nationality - Frère/Sœur de Français"
+    },
+    {
+      "id": "P047",
+      "name": "Nationalité par mariage (déclaration)"
+    },
+    {
+      "id": "P048",
+      "name": "Nationalité - Enfant adopté"
+    },
+    {
+      "id": "P049",
+      "name": "Nationalité - Enfant recueilli"
+    },
+    {
+      "id": "P050",
+      "name": "Réintégration dans la nationalité française - Déclaration"
+    },
+    {
+      "id": "P051",
+      "name": "Réintégration dans la nationalité française - Décret"
+    },
+    {
+      "id": "P052",
+      "name": "Naturalisation par décret"
+    },
+    {
+      "id": "P053",
+      "name": "Nationalité - Enfant né en France"
+    },
+    {
+      "id": "P054",
+      "name": "Naturalisation pour services exceptionnels rendus à la France"
+    },
+    {
+      "id": "P055",
+      "name": "Naturalisation pour réfugiés/statutaires apatrides"
+    }
+  ]
+}

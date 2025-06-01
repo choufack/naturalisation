@@ -1,0 +1,1835 @@
+{
+  "Carte de résident - Regroupement familial": {
+    "communs": [
+      "Photos d’identité (5 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos pour la première demande, 3 photos pour le renouvellement)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Taxe sur le titre de séjour (montant selon arrêté en vigueur)",
+      "Droit de timbre (sauf exemptions prévues par la loi)",
+      "Certificat médical OFII (remis à la délivrance du titre)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Acte de naissance (copie intégrale, avec mentions récentes)",
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas) ou Attestation consulaire (avec photo, si passeport non disponible)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "proprietaire",
+          "docs": [
+            "Taxe d’habitation (de l’année en cours)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "foyer",
+          "docs": [
+            "Attestation de l’hôtelier (si résidant en foyer ou hôtel social)",
+            "Facture du dernier mois (foyer ou hôtel social)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "heberge",
+          "docs": [
+            "Attestation d’hébergement (datée et signée par l’hébergeant)",
+            "Copie de la carte d’identité ou carte de séjour de l’hébergeant",
+            "Justificatif de domicile de l’hébergeant (si l’adresse n’est pas à jour sur la carte d’identité)"
+          ]
+        },
+        {
+          "key": "family_link",
+          "value": "mariage",
+          "docs": [
+            "Déclaration conjointe de vie commune (signée par les deux conjoints)",
+            "Extrait d’acte de mariage (copie intégrale récente)",
+            "Justificatifs de 3 ans de résidence (certificats de scolarité, avis d’imposition des 3 dernières années, contrats de travail, bulletins de salaire, attestations de carte de séjour)",
+            "Preuves de communauté de vie (contrat de bail aux deux noms, facture EDF/gaz/eau/téléphone/internet aux deux noms, relevé bancaire commun)"
+          ]
+        },
+        {
+          "key": "family_link",
+          "value": "regroup",
+          "docs": [
+            "Visa de long séjour pour regroupement familial (délivré par le consulat de France dans le pays d’origine)",
+            "Copie de la carte de résident de l’étranger rejoint"
+          ]
+        },
+        {
+          "key": "specialSituations",
+          "contains": "violenceConjugale",
+          "docs": [
+            "Dépôt de plainte (copie du récépissé)",
+            "Certificats médicaux (constatant les violences subies)",
+            "Jugement ou ordonnance de protection (si disponible)"
+          ]
+        },
+        {
+          "key": "deces_conjoint",
+          "value": true,
+          "docs": [
+            "Acte de décès du conjoint"
+          ]
+        },
+        {
+          "key": "irregularStatus",
+          "value": true,
+          "docs": [
+            "Droit de visa de régularisation (200 €, payable en timbre fiscal)"
+          ]
+        },
+        {
+          "key": "yearsResidence",
+          "value": ">=10",
+          "docs": [
+            "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années, ou plus de 3 ans hors UE/6 ans hors France si titulaire d’une carte Résident longue durée-UE)"
+          ]
+        }
+      ]
+    }
+  },
+  "Carte de résident - Regroupement familial (Algériens)": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Taxe sur le titre de séjour (montant selon arrêté en vigueur)",
+      "Droit de timbre (sauf exemptions prévues par la loi)",
+      "Certificat médical OFII (remis à la délivrance du titre)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Acte de naissance (copie intégrale)",
+            "Passeport (photocopies des pages état civil et validité) ou Attestation consulaire (avec photo, si passeport non disponible)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "proprietaire",
+          "docs": [
+            "Taxe d’habitation (de l’année en cours)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "foyer",
+          "docs": [
+            "Attestation de l’hôtelier (si résidant en foyer ou hôtel social)",
+            "Facture du dernier mois (foyer ou hôtel social)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "heberge",
+          "docs": [
+            "Attestation d’hébergement (datée et signée par l’hébergeant)",
+            "Copie de la carte d’identité ou carte de séjour de l’hébergeant",
+            "Justificatif de domicile de l’hébergeant (si l’adresse n’est pas à jour sur la carte d’identité)"
+          ]
+        },
+        {
+          "key": "family_link",
+          "value": "mariage",
+          "docs": [
+            "Déclaration conjointe de vie commune (signée par les deux conjoints)",
+            "Preuves de communauté de vie (contrat de bail aux deux noms, facture EDF/gaz/eau/téléphone/internet aux deux noms, relevé bancaire commun)"
+          ]
+        },
+        {
+          "key": "family_link",
+          "value": "regroup",
+          "docs": [
+            "Visa de long séjour pour regroupement familial (délivré par le consulat de France dans le pays d’origine)",
+            "Certificat de résidence 10 ans de l’étranger rejoint"
+          ]
+        },
+        {
+          "key": "specialSituations",
+          "contains": "violenceConjugale",
+          "docs": [
+            "Dépôt de plainte (copie du récépissé)",
+            "Certificats médicaux (constatant les violences subies)",
+            "Jugement ou ordonnance de protection (si disponible)"
+          ]
+        },
+        {
+          "key": "deces_conjoint",
+          "value": true,
+          "docs": [
+            "Acte de décès du conjoint"
+          ]
+        },
+        {
+          "key": "yearsResidence",
+          "value": ">=10",
+          "docs": [
+            "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)"
+          ]
+        }
+      ]
+    }
+  },
+  "Carte de séjour temporaire - Vie privée et familiale (Regroupement familial)": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Taxe sur le titre de séjour (montant selon arrêté en vigueur)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Passeport (photocopies des pages état civil et validité) ou Attestation consulaire (avec photo, si passeport non disponible)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "proprietaire",
+          "docs": [
+            "Taxe d’habitation (de l’année en cours)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "heberge",
+          "docs": [
+            "Attestation d’hébergement (datée et signée par l’hébergeant)",
+            "Copie de la carte d’identité ou carte de séjour de l’hébergeant"
+          ]
+        },
+        {
+          "key": "family_link",
+          "value": "mariage",
+          "docs": [
+            "Déclaration conjointe de vie commune (signée par les deux conjoints)",
+            "Acte de mariage (copie intégrale)",
+            "Preuves de communauté de vie (contrat de bail aux deux noms, facture EDF/gaz/eau/téléphone/internet aux deux noms, relevé bancaire commun)"
+          ]
+        },
+        {
+          "key": "family_link",
+          "value": "regroup",
+          "docs": [
+            "Document officiel autorisant le regroupement familial (délivré par les autorités compétentes)",
+            "Copie de la carte de séjour de la personne rejointe"
+          ]
+        },
+        {
+          "key": "specialSituations",
+          "contains": "violenceConjugale",
+          "docs": [
+            "Dépôt de plainte (copie du récépissé)",
+            "Certificats médicaux (constatant les violences subies)"
+          ]
+        },
+        {
+          "key": "deces_conjoint",
+          "value": true,
+          "docs": [
+            "Acte de décès du conjoint"
+          ]
+        },
+        {
+          "key": "currentPermit",
+          "value": "vls_vpf",
+          "docs": [
+            "Carte de séjour temporaire en cours ou VLS-TS validé (photocopie recto-verso)"
+          ]
+        }
+      ]
+    }
+  },
+  "Certificat de résidence algérien 1 an - Regroupement familial": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Taxe de renouvellement (montant selon arrêté en vigueur)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Passeport (photocopies des pages état civil et validité) ou Attestation consulaire (avec photo, si passeport non disponible)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (récent)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "proprietaire",
+          "docs": [
+            "Taxe d’habitation (de l’année en cours)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "heberge",
+          "docs": [
+            "Attestation d’hébergement (datée et signée par l’hébergeant)",
+            "Copie de la carte d’identité ou carte de séjour de l’hébergeant"
+          ]
+        },
+        {
+          "key": "family_link",
+          "value": "mariage",
+          "docs": [
+            "Preuves de communauté de vie (contrat de bail aux deux noms, facture EDF/gaz/eau/téléphone/internet aux deux noms, relevé bancaire commun)"
+          ]
+        },
+        {
+          "key": "specialSituations",
+          "contains": "violenceConjugale",
+          "docs": [
+            "Dépôt de plainte (copie du récépissé)",
+            "Certificats médicaux (constatant les violences subies)"
+          ]
+        },
+        {
+          "key": "yearsResidence",
+          "value": ">=10",
+          "docs": [
+            "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)"
+          ]
+        }
+      ]
+    }
+  },
+  "Carte de séjour temporaire - Recherche d’emploi/création d’entreprise (Étudiant)": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Taxe sur le titre (montant selon arrêté en vigueur)",
+      "Droit de timbre (sauf exemptions prévues par la loi)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Passeport (photocopies des pages état civil et validité)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "heberge",
+          "docs": [
+            "Attestation d’hébergement (datée et signée par l’hébergeant)",
+            "Copie de la carte d’identité ou carte de séjour de l’hébergeant"
+          ]
+        },
+        {
+          "key": "studies_status",
+          "value": "etudiant",
+          "docs": [
+            "Copie de la carte de séjour étudiant ou VLS-TS validé (photocopie recto-verso)",
+            "Diplôme (master, CGE niveau I, licence professionnelle) ou Attestation de réussite (délivrée par l’établissement)",
+            "Attestation de sécurité sociale ou Assurance privée (valide pour l’année en cours)"
+          ]
+        },
+        {
+          "key": "invest_hasBP",
+          "value": true,
+          "docs": [
+            "Business plan (détaillé avec projections financières)",
+            "Statuts de l’entreprise (si déjà créée)",
+            "Étude de marché (justifiant la viabilité du projet)"
+          ]
+        }
+      ]
+    }
+  },
+  "Autorisation provisoire de séjour - Recherche d’emploi (Étudiant, accords bilatéraux)": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Passeport (photocopies des pages état civil et validité) ou Attestation consulaire (avec photo, si passeport non disponible)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "heberge",
+          "docs": [
+            "Attestation d’hébergement (datée et signée par l’hébergeant)"
+          ]
+        },
+        {
+          "key": "studies_status",
+          "value": "etudiant",
+          "docs": [
+            "Copie de la carte de séjour étudiant ou VLS-TS validé (photocopie recto-verso)",
+            "Diplôme reconnu (selon accords bilatéraux) ou Attestation de réussite (délivrée par l’établissement)",
+            "Attestation de sécurité sociale (valide pour l’année en cours)"
+          ]
+        },
+        {
+          "key": "invest_hasBP",
+          "value": true,
+          "docs": [
+            "Business plan (détaillé avec projections financières)",
+            "Statuts de l’entreprise (si déjà créée)"
+          ]
+        }
+      ]
+    }
+  },
+  "Carte de séjour temporaire - Recherche d’emploi/création d’entreprise (Chercheur)": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Passeport (photocopies des pages état civil et validité)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "heberge",
+          "docs": [
+            "Attestation d’hébergement (datée et signée par l’hébergeant)"
+          ]
+        },
+        {
+          "key": "studies_status",
+          "value": "chercheur",
+          "docs": [
+            "Copie de la carte de séjour chercheur ou VLS-TS validé (photocopie recto-verso)",
+            "Attestation de l’établissement de recherche (confirmant l’achèvement des recherches)",
+            "Attestation de sécurité sociale (valide pour l’année en cours)"
+          ]
+        },
+        {
+          "key": "invest_hasBP",
+          "value": true,
+          "docs": [
+            "Business plan (détaillé avec projections financières)",
+            "Statuts de l’entreprise (si déjà créée)"
+          ]
+        }
+      ]
+    }
+  },
+  "Carte de résident de longue durée - UE": {
+    "communs": [
+      "Photos d’identité (5 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos pour la première demande, 3 photos pour le renouvellement)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Taxe (montant selon arrêté en vigueur)",
+      "Certificat médical OFII (remis à la délivrance du titre)",
+      "Déclaration de respect des principes de la République (signée)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Acte de naissance (copie intégrale, avec mentions récentes)",
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "proprietaire",
+          "docs": [
+            "Taxe d’habitation (de l’année en cours)"
+          ]
+        },
+        {
+          "key": "yearsResidence",
+          "value": ">=5",
+          "docs": [
+            "Justificatifs de 5 ans de séjour ininterrompu (certificats de scolarité, avis d’imposition des 5 dernières années, contrats de travail)",
+            "Ressources stables et suffisantes (bulletins de paie des 3 dernières années, avis d’imposition, attestation bancaire)",
+            "Assurance-maladie (carte ou attestation de sécurité sociale valide)",
+            "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors UE ou 6 ans hors France sur les 10 dernières années)"
+          ]
+        },
+        {
+          "key": "resident_languageA2",
+          "value": true,
+          "docs": [
+            "Certification de niveau A2 en français (diplôme ou test reconnu, sauf si plus de 65 ans)"
+          ]
+        }
+      ]
+    }
+  },
+  "Carte de séjour temporaire - Étranger titulaire statut longue durée-UE autre État membre": {
+    "communs": [
+      "Photos d’identité (5 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos pour la première demande, 3 photos pour le renouvellement)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Taxe (montant selon arrêté en vigueur)",
+      "Certificat médical OFII (remis à la délivrance du titre)",
+      "Déclaration de respect des principes de la République (signée)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Acte de naissance (copie intégrale, avec mentions récentes)",
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "work_contract",
+          "value": "CDI",
+          "docs": [
+            "Autorisation de travail (formulaire CERFA 15186*03)"
+          ]
+        },
+        {
+          "key": "invest_registered",
+          "value": true,
+          "docs": [
+            "Immatriculation K/Kbis (extrait récent)",
+            "Inscription URSSAF (attestation d’inscription)"
+          ]
+        },
+        {
+          "key": "resident_languageA2",
+          "value": true,
+          "docs": [
+            "Certification de niveau A2 en français (diplôme ou test reconnu)"
+          ]
+        }
+      ]
+    }
+  },
+  "Carte de résident permanent": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "proprietaire",
+          "docs": [
+            "Taxe d’habitation (de l’année en cours)"
+          ]
+        },
+        {
+          "key": "family_link",
+          "value": "mariage",
+          "docs": [
+            "Preuves de mariage (acte de mariage, copie intégrale récente)"
+          ]
+        },
+        {
+          "key": "yearsResidence",
+          "value": ">=10",
+          "docs": [
+            "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France ou 3 ans hors UE/6 ans hors France sur les 10 dernières années)"
+          ]
+        }
+      ]
+    }
+  },
+  "Carte de résident - Ancien combattant (Unité combattante française)": {
+    "communs": [
+      "Photos d’identité (5 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos pour la première demande, 3 photos pour le renouvellement)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Taxe (montant selon arrêté en vigueur)",
+      "Certificat médical OFII (remis à la délivrance du titre)",
+      "Déclaration de respect des principes de la République (signée)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Acte de naissance (copie intégrale, avec mentions récentes)",
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "specialSituations",
+          "contains": "ancienCombattant",
+          "docs": [
+            "Carte du combattant (délivrée par l’ONAC)",
+            "Livret militaire (copie attestant du service dans une unité combattante française)"
+          ]
+        },
+        {
+          "key": "resident_languageA2",
+          "value": true,
+          "docs": [
+            "Certification de niveau A2 en français (diplôme ou test reconnu)"
+          ]
+        },
+        {
+          "key": "yearsResidence",
+          "value": ">=10",
+          "docs": [
+            "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)"
+          ]
+        }
+      ]
+    }
+  },
+  "Carte de résident - Ancien combattant (FFI)": {
+    "communs": [
+      "Photos d’identité (5 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos pour la première demande, 3 photos pour le renouvellement)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Taxe (montant selon arrêté en vigueur)",
+      "Certificat médical OFII (remis à la délivrance du titre)",
+      "Déclaration de respect des principes de la République (signée)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Acte de naissance (copie intégrale, avec mentions récentes)",
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "specialSituations",
+          "contains": "ancienCombattant",
+          "docs": [
+            "Carte du combattant (délivrée par l’ONAC)",
+            "Certificat de démobilisation (délivré par la Commission d’incorporation)",
+            "Justificatif de blessure (certificat médical ou rapport militaire, si applicable)"
+          ]
+        },
+        {
+          "key": "resident_languageA2",
+          "value": true,
+          "docs": [
+            "Certification de niveau A2 en français (diplôme ou test reconnu)"
+          ]
+        },
+        {
+          "key": "yearsResidence",
+          "value": ">=10",
+          "docs": [
+            "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)"
+          ]
+        }
+      ]
+    }
+  },
+  "Carte de résident - Ancien combattant (Unités alliées)": {
+    "communs": [
+      "Photos d’identité (5 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos pour la première demande, 3 photos pour le renouvellement)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Taxe (montant selon arrêté en vigueur)",
+      "Certificat médical OFII (remis à la délivrance du titre)",
+      "Déclaration de respect des principes de la République (signée)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Acte de naissance (copie intégrale, avec mentions récentes)",
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "specialSituations",
+          "contains": "ancienCombattant",
+          "docs": [
+            "Carte du combattant (délivrée par l’ONAC)",
+            "Livret militaire (copie attestant du service dans une unité alliée)"
+          ]
+        },
+        {
+          "key": "resident_languageA2",
+          "value": true,
+          "docs": [
+            "Certification de niveau A2 en français (diplôme ou test reconnu)"
+          ]
+        },
+        {
+          "key": "yearsResidence",
+          "value": ">=10",
+          "docs": [
+            "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)"
+          ]
+        }
+      ]
+    }
+  },
+  "Carte de résident - Ascendant à charge enfant français (Général)": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Taxe (montant selon arrêté en vigueur)",
+      "Certificat médical OFII (remis à la délivrance du titre)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Acte de naissance (copie intégrale, avec mentions récentes)",
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "heberge",
+          "docs": [
+            "Attestation d’hébergement (datée et signée par l’hébergeant)"
+          ]
+        },
+        {
+          "key": "family_link",
+          "value": "parentEnfFr",
+          "docs": [
+            "Carte nationale d’identité ou Certificat de nationalité française (de moins de 6 mois) de l’enfant",
+            "Acte de naissance de l’enfant ou Livret de famille (avec mention des parents)",
+            "Avis d’imposition des 3 dernières années de l’enfant (prouvant sa capacité financière)",
+            "Bulletins de salaire de l’enfant (3 derniers mois)",
+            "Attestation de non-pension (de l’ascendant, prouvant l’absence de ressources propres)",
+            "Relevés bancaires (montrant des virements réguliers de l’enfant vers l’ascendant)",
+            "Attestation consulaire sur la situation familiale (délivrée par le consulat du pays d’origine)",
+            "Déclaration sur l’honneur (attestant l’absence d’autres soutiens financiers)"
+          ]
+        },
+        {
+          "key": "nationality",
+          "value": "not_in",
+          "list": [
+            "DZ",
+            "TN"
+          ],
+          "docs": [
+            "Déclaration de respect des principes de la République (signée)",
+            "Certification de niveau A2 en français (diplôme ou test reconnu, sauf certains pays)"
+          ]
+        },
+        {
+          "key": "yearsResidence",
+          "value": ">=10",
+          "docs": [
+            "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)"
+          ]
+        }
+      ]
+    }
+  },
+  "Carte de résident - Ascendant à charge enfant français (Algériens)": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Taxe (montant selon arrêté en vigueur)",
+      "Certificat médical OFII (remis à la délivrance du titre)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Acte de naissance (copie intégrale, avec mentions récentes)",
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "family_link",
+          "value": "parentEnfFr",
+          "docs": [
+            "Carte nationale d’identité ou Certificat de nationalité française (de l’enfant)",
+            "Acte de naissance de l’enfant ou Livret de famille (avec mention des parents)",
+            "Avis d’imposition de l’enfant (prouvant sa capacité financière)",
+            "Bulletins de salaire de l’enfant (3 derniers mois)",
+            "Relevés bancaires de l’ascendant (montrant l’absence de ressources propres)",
+            "Relevés bancaires de l’enfant (montrant des virements réguliers vers l’ascendant)",
+            "Attestation consulaire (sur la situation familiale, délivrée par le consulat algérien)",
+            "Déclaration sur l’honneur (attestant l’absence d’autres soutiens financiers)",
+            "Certificat fiscal du foyer de l’enfant (prouvant la prise en charge)"
+          ]
+        },
+        {
+          "key": "nationality",
+          "value": "DZ",
+          "docs": [
+            "Déclaration de respect des principes de la République (signée)"
+          ]
+        },
+        {
+          "key": "yearsResidence",
+          "value": ">=10",
+          "docs": [
+            "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)"
+          ]
+        }
+      ]
+    }
+  },
+  "Carte de résident - Ascendant à charge enfant français (Tunisiens)": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Taxe (montant selon arrêté en vigueur)",
+      "Certificat médical OFII (remis à la délivrance du titre)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Acte de naissance (copie intégrale, avec mentions récentes)",
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "family_link",
+          "value": "parentEnfFr",
+          "docs": [
+            "Certificat de scolarité ou Attestation de crèche (prouvant la résidence de l’enfant en France)",
+            "Carte nationale d’identité ou Certificat de nationalité française (de l’enfant)",
+            "Acte de naissance de l’enfant ou Livret de famille (avec mention des parents)",
+            "Documents d’état civil (actes de naissance de l’ascendant et de l’enfant)",
+            "Décision judiciaire (attribuant la garde ou fixant une pension alimentaire, si applicable)",
+            "Preuves de contribution (pension alimentaire versée, achats pour l’enfant)"
+          ]
+        },
+        {
+          "key": "nationality",
+          "value": "TN",
+          "docs": [
+            "Déclaration de respect des principes de la République (signée)"
+          ]
+        },
+        {
+          "key": "yearsResidence",
+          "value": ">=10",
+          "docs": [
+            "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)"
+          ]
+        }
+      ]
+    }
+  },
+  "Certificat de résidence algérien 10 ans - Conjoint de Français": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Acte de naissance (copie intégrale, avec mentions récentes)",
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "family_link",
+          "value": "mariage",
+          "docs": [
+            "Acte de mariage (copie intégrale récente)",
+            "Preuves de communauté de vie (contrat de bail aux deux noms, facture EDF/gaz/eau/téléphone/internet aux deux noms, relevé bancaire commun)",
+            "Carte nationale d’identité ou Certificat de nationalité française (du conjoint français)"
+          ]
+        },
+        {
+          "key": "specialSituations",
+          "contains": "violenceConjugale",
+          "docs": [
+            "Dépôt de plainte (copie du récépissé)",
+            "Certificats médicaux (constatant les violences subies)"
+          ]
+        },
+        {
+          "key": "yearsResidence",
+          "value": ">=10",
+          "docs": [
+            "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)"
+          ]
+        }
+      ]
+    }
+  },
+  "Certificat de résidence algérien 10 ans - Parent d’enfant français": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Acte de naissance (copie intégrale, avec mentions récentes)",
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "family_link",
+          "value": "parentEnfFr",
+          "docs": [
+            "Acte de naissance de l’enfant ou Livret de famille (avec mention des parents)",
+            "Pension alimentaire (relevés bancaires prouvant le versement) ou Frais scolaires (factures de scolarité ou frais liés à l’enfant)",
+            "Certificat de scolarité (prouvant la résidence de l’enfant en France)"
+          ]
+        },
+        {
+          "key": "yearsResidence",
+          "value": ">=10",
+          "docs": [
+            "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)"
+          ]
+        }
+      ]
+    }
+  },
+  "Certificat de résidence algérien 10 ans - Enfant de Français (>21 ans, à charge)": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Acte de naissance (copie intégrale, avec mentions récentes)",
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "family_link",
+          "value": "parentEnfFr",
+          "docs": [
+            "Acte de naissance de l’enfant ou Livret de famille (avec mention des parents)",
+            "Relevés bancaires (montrant des virements réguliers prouvant la dépendance financière)",
+            "Attestations de soutien (délivrées par le parent français)"
+          ]
+        },
+        {
+          "key": "yearsResidence",
+          "value": ">=10",
+          "docs": [
+            "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)"
+          ]
+        }
+      ]
+    }
+  },
+  "Certificat de résidence algérien 10 ans - Rente accident travail/maladie professionnelle": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Acte de naissance (copie intégrale, avec mentions récentes)",
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "work_accident_pension",
+          "value": true,
+          "docs": [
+            "Attestation de rente (délivrée par la sécurité sociale ou l’organisme payeur)",
+            "Bordereaux de paiement (prouvant la perception de la rente)"
+          ]
+        },
+        {
+          "key": "yearsResidence",
+          "value": ">=10",
+          "docs": [
+            "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)"
+          ]
+        }
+      ]
+    }
+  },
+  "Certificat de résidence algérien 10 ans - Résidence depuis âge 10 ans": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Acte de naissance (copie intégrale, avec mentions récentes)",
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "yearsResidence",
+          "value": ">=10",
+          "docs": [
+            "Justificatifs de résidence depuis l’âge de 10 ans (certificats de scolarité, contrats de travail, avis d’imposition)",
+            "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)"
+          ]
+        }
+      ]
+    }
+  },
+  "Certificat de résidence algérien 10 ans - 10 ans/15 ans présence régulière": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Acte de naissance (copie intégrale, avec mentions récentes)",
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "yearsResidence",
+          "value": ">=10",
+          "docs": [
+            "Photocopies des titres de séjour (tous titres sauf étudiant, sur 10 ou 15 ans selon le cas)",
+            "Justificatifs de 10 ou 15 ans de résidence (certificats de scolarité, contrats de travail, avis d’imposition)",
+            "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)"
+          ]
+        }
+      ]
+    }
+  },
+  "Certificat de résidence algérien 10 ans - 5 ans vie privée et familiale": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Acte de naissance (copie intégrale, avec mentions récentes)",
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "family_link",
+          "value": "regroup",
+          "docs": [
+            "Photocopies des certificats de vie privée et familiale sur 5 ans"
+          ]
+        },
+        {
+          "key": "yearsResidence",
+          "value": ">=10",
+          "docs": [
+            "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)"
+          ]
+        }
+      ]
+    }
+  },
+  "Certificat de résidence algérien 10 ans - Ressortissant francophone 10 ans présence": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)",
+      "Taxe (montant selon arrêté en vigueur)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Acte de naissance (copie intégrale, avec mentions récentes)",
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "yearsResidence",
+          "value": ">=10",
+          "docs": [
+            "Justificatifs de 10 ans de présence (certificats de scolarité, contrats de travail, avis d’imposition)",
+            "Preuve de nationalité d’un pays francophone (passeport ou acte de naissance de pays francophone comme Maroc, Tunisie, etc.)",
+            "Déclaration sur l’honneur (attestant une absence de plus de 3 ans consécutifs hors France sur les 10 dernières années)"
+          ]
+        }
+      ]
+    }
+  },
+  "VLS-TS - Étudiant recherche emploi/création entreprise": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Taxe (montant selon arrêté en vigueur)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "studies_status",
+          "value": "etudiant",
+          "docs": [
+            "VLS-TS validé ou carte de séjour étudiant (photocopie recto-verso)",
+            "Diplôme (master, CGE, licence professionnelle) ou Attestation de réussite (délivrée par l’établissement)",
+            "Attestation de sécurité sociale (valide pour l’année en cours)"
+          ]
+        },
+        {
+          "key": "invest_hasBP",
+          "value": true,
+          "docs": [
+            "Business plan (détaillé avec projections financières)",
+            "Statuts de l’entreprise (si déjà créée)"
+          ]
+        }
+      ]
+    }
+  },
+  "VLS-TS - Étudiant accords bilatéraux": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Taxe (montant selon arrêté en vigueur)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "studies_status",
+          "value": "etudiant",
+          "docs": [
+            "VLS-TS validé ou carte de séjour étudiant (photocopie recto-verso)",
+            "Diplôme d’enseignement supérieur reconnu (selon accords bilatéraux)"
+          ]
+        },
+        {
+          "key": "invest_hasBP",
+          "value": true,
+          "docs": [
+            "Business plan (détaillé avec projections financières)"
+          ]
+        }
+      ]
+    }
+  },
+  "VLS-TS - Chercheur recherche emploi/création entreprise": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Taxe (montant selon arrêté en vigueur)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "studies_status",
+          "value": "chercheur",
+          "docs": [
+            "VLS-TS validé ou carte de séjour chercheur (photocopie recto-verso)",
+            "Confirmation de l’achèvement des recherches (attestation délivrée par l’établissement de recherche)"
+          ]
+        },
+        {
+          "key": "invest_hasBP",
+          "value": true,
+          "docs": [
+            "Business plan (détaillé avec projections financières)"
+          ]
+        }
+      ]
+    }
+  },
+  "VLS-TS - Étudiant algérien": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Taxe (montant selon arrêté en vigueur)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "studies_status",
+          "value": "etudiant",
+          "docs": [
+            "VLS-TS étudiant (photocopie recto-verso)",
+            "Certificat d’inscription (dans un établissement public ou privé reconnu)",
+            "Ressources financières (minimum 615 €/mois, attestation bancaire ou justificatif de bourse)",
+            "Attestation de sécurité sociale (valide pour l’année en cours)"
+          ]
+        }
+      ]
+    }
+  },
+  "VLS-TS - Salarié": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Taxe (montant selon arrêté en vigueur)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "work_contract",
+          "value": "CDI",
+          "docs": [
+            "Autorisation de travail (formulaire CERFA 15187*02)",
+            "Déclaration de situation nominative (DSN) ou Attestation d’activité sur 12 mois",
+            "Bulletins de paie (3 derniers mois)"
+          ]
+        },
+        {
+          "key": "work_contract",
+          "value": "CDD",
+          "docs": [
+            "Autorisation de travail (formulaire CERFA 15187*02)",
+            "Déclaration de situation nominative (DSN) ou Attestation d’activité sur 12 mois",
+            "Bulletins de paie (3 derniers mois)"
+          ]
+        }
+      ]
+    }
+  },
+  "VLS-TS - Travailleur temporaire": {
+    "communs": [
+      "Photos d’identité (3 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom, prénom et date de naissance au dos)",
+      "Taxe (montant selon arrêté en vigueur)",
+      "Attestation sur l’honneur de non-polygamie (si le pays d’origine autorise la polygamie)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "currentPermit",
+          "value": "none",
+          "docs": [
+            "Passeport (photocopies des pages état civil, validité, cachets d’entrée et visas)"
+          ]
+        },
+        {
+          "key": "housingSituation",
+          "value": "locataire",
+          "docs": [
+            "Contrat de bail (daté de moins de 6 mois)",
+            "Quittance de loyer (récente)"
+          ]
+        },
+        {
+          "key": "work_contract",
+          "value": "saisonnier",
+          "docs": [
+            "Autorisation de travail (formulaire CERFA 15186*03)",
+            "Déclaration de détachement (si travailleur détaché)",
+            "Contrats de travail (copies des contrats saisonniers)",
+            "Bulletins de paie (3 derniers mois)"
+          ]
+        }
+      ]
+    }
+  },
+  "Naturalisation - Par décret": {
+    "communs": [
+      "Photos d’identité (4 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom et prénom au dos)",
+      "Acte de naissance (copie intégrale avec filiation, de moins de 3 mois ou avec mentions récentes)",
+      "Passeport (photocopies des pages état civil et validité) ou Carte de résident (photocopie recto-verso)",
+      "Certificat de résidence (attestant la durée de séjour en France)",
+      "Justificatif de domicile (facture récente de moins de 3 mois : EDF, gaz, eau, téléphone, internet)",
+      "Déclaration de nationalité (formulaire CERFA 12752*03 rempli et signé)",
+      "Taxe de dossier (montant selon arrêté en vigueur)",
+      "Assurance maladie (attestation de couverture valide)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "yearsResidence",
+          "value": ">=5",
+          "docs": [
+            "Justificatifs de 5 ans de résidence continue (contrats de travail, avis d’imposition, certificats de scolarité)",
+            "Déclaration sur l’honneur (attestant une absence de plus de 6 mois consécutifs hors France sur les 5 dernières années)"
+          ]
+        },
+        {
+          "key": "languageLevel",
+          "value": "B1",
+          "docs": [
+            "Diplôme ou attestation de niveau B1 en français (DELF B1, TCF, ou équivalent)"
+          ]
+        },
+        {
+          "key": "integration",
+          "value": true,
+          "docs": [
+            "Attestation de participation à la Journée de défense et citoyenneté (JDC) ou dispense (si applicable)",
+            "Contrat d’intégration républicaine (CIR) ou justificatif de suivi (si applicable)"
+          ]
+        },
+        {
+          "key": "specialSituations",
+          "contains": "conjointFrancais",
+          "docs": [
+            "Acte de mariage (copie intégrale récente)",
+            "Carte nationale d’identité ou Certificat de nationalité française (du conjoint)",
+            "Preuves de vie commune (contrat de bail aux deux noms, facture commune, relevé bancaire commun)"
+          ]
+        },
+        {
+          "key": "specialSituations",
+          "contains": "parentEnfFr",
+          "docs": [
+            "Acte de naissance de l’enfant (avec filiation)",
+            "Certificat de nationalité française (de l’enfant)",
+            "Justificatif de prise en charge (pension alimentaire ou relevés bancaires)"
+          ]
+        },
+        {
+          "key": "specialSituations",
+          "contains": "serviceMilitaire",
+          "docs": [
+            "Livret militaire ou attestation de service dans l’armée française"
+          ]
+        }
+      ]
+    }
+  },
+  "Naturalisation - Par mariage": {
+    "communs": [
+      "Photos d’identité (4 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom et prénom au dos)",
+      "Acte de naissance (copie intégrale avec filiation, de moins de 3 mois ou avec mentions récentes)",
+      "Passeport (photocopies des pages état civil et validité) ou Carte de résident (photocopie recto-verso)",
+      "Certificat de résidence (attestant la durée de séjour en France)",
+      "Justificatif de domicile (facture récente de moins de 3 mois : EDF, gaz, eau, téléphone, internet)",
+      "Déclaration de nationalité (formulaire CERFA 12752*03 rempli et signé)",
+      "Taxe de dossier (montant selon arrêté en vigueur)",
+      "Assurance maladie (attestation de couverture valide)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "yearsResidence",
+          "value": ">=4",
+          "docs": [
+            "Justificatifs de 4 ans de résidence continue depuis le mariage (contrats de travail, avis d’imposition, certificats de scolarité)",
+            "Déclaration sur l’honneur (attestant une absence de plus de 6 mois consécutifs hors France sur les 4 dernières années)"
+          ]
+        },
+        {
+          "key": "languageLevel",
+          "value": "A2",
+          "docs": [
+            "Diplôme ou attestation de niveau A2 en français (DELF A2, TCF, ou équivalent)"
+          ]
+        },
+        {
+          "key": "integration",
+          "value": true,
+          "docs": [
+            "Attestation de participation à la Journée de défense et citoyenneté (JDC) ou dispense (si applicable)",
+            "Contrat d’intégration républicaine (CIR) ou justificatif de suivi (si applicable)"
+          ]
+        },
+        {
+          "key": "family_link",
+          "value": "mariage",
+          "docs": [
+            "Acte de mariage (copie intégrale récente, datant de moins de 3 mois)",
+            "Carte nationale d’identité ou Certificat de nationalité française (du conjoint français)",
+            "Preuves de vie commune (contrat de bail aux deux noms, facture commune, relevé bancaire commun sur 4 ans)"
+          ]
+        }
+      ]
+    }
+  },
+  "Naturalisation - Par ascension (ascendant de Français)": {
+    "communs": [
+      "Photos d’identité (4 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom et prénom au dos)",
+      "Acte de naissance (copie intégrale avec filiation, de moins de 3 mois ou avec mentions récentes)",
+      "Passeport (photocopies des pages état civil et validité) ou Carte de résident (photocopie recto-verso)",
+      "Certificat de résidence (attestant la durée de séjour en France)",
+      "Justificatif de domicile (facture récente de moins de 3 mois : EDF, gaz, eau, téléphone, internet)",
+      "Déclaration de nationalité (formulaire CERFA 12752*03 rempli et signé)",
+      "Taxe de dossier (montant selon arrêté en vigueur)",
+      "Assurance maladie (attestation de couverture valide)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "yearsResidence",
+          "value": ">=5",
+          "docs": [
+            "Justificatifs de 5 ans de résidence continue (contrats de travail, avis d’imposition, certificats de scolarité)",
+            "Déclaration sur l’honneur (attestant une absence de plus de 6 mois consécutifs hors France sur les 5 dernières années)"
+          ]
+        },
+        {
+          "key": "languageLevel",
+          "value": "A2",
+          "docs": [
+            "Diplôme ou attestation de niveau A2 en français (DELF A2, TCF, ou équivalent)"
+          ]
+        },
+        {
+          "key": "integration",
+          "value": true,
+          "docs": [
+            "Attestation de participation à la Journée de défense et citoyenneté (JDC) ou dispense (si applicable)",
+            "Contrat d’intégration républicaine (CIR) ou justificatif de suivi (si applicable)"
+          ]
+        },
+        {
+          "key": "family_link",
+          "value": "parentEnfFr",
+          "docs": [
+            "Acte de naissance de l’enfant (avec filiation)",
+            "Certificat de nationalité française (de l’enfant)",
+            "Preuve de dépendance financière (pension alimentaire ou relevés bancaires)"
+          ]
+        }
+      ]
+    }
+  },
+  "Naturalisation - Jus soli (né-e en France)": {
+    "communs": [
+      "Photos d’identité (4 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom et prénom au dos)",
+      "Acte de naissance (copie intégrale avec filiation, de moins de 3 mois ou avec mentions récentes)",
+      "Passeport (photocopies des pages état civil et validité) ou Carte de résident (photocopie recto-verso)",
+      "Certificat de résidence (attestant la durée de séjour en France)",
+      "Justificatif de domicile (facture récente de moins de 3 mois : EDF, gaz, eau, téléphone, internet)",
+      "Déclaration de nationalité (formulaire CERFA 12752*03 rempli et signé)",
+      "Taxe de dossier (montant selon arrêté en vigueur)",
+      "Assurance maladie (attestation de couverture valide)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "res5since11",
+          "value": true,
+          "docs": [
+            "Justificatifs de 5 ans de résidence continue en France depuis l’âge de 11 ans (certificats de scolarité, attestations d’activité sportive/culturelle, fiches de paie des parents, avis d’imposition)"
+          ]
+        },
+        {
+          "key": "ageBracket",
+          "value": "<18",
+          "docs": [
+            "Déclaration de nationalité signée par les parents ou tuteur légal (formulaire CERFA 12753*03)",
+            "Pièce d’identité du ou des parents signataires"
+          ]
+        },
+        {
+          "key": "ageBracket",
+          "value": ">=18",
+          "docs": [
+            "Déclaration de nationalité signée par le demandeur majeur (formulaire CERFA 12753*03)"
+          ]
+        }
+      ]
+    }
+  },
+  "Naturalisation - Réintégration": {
+    "communs": [
+      "Photos d’identité (4 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom et prénom au dos)",
+      "Acte de naissance (copie intégrale avec filiation, de moins de 3 mois ou avec mentions récentes)",
+      "Passeport (photocopies des pages état civil et validité) ou Carte de résident (photocopie recto-verso)",
+      "Certificat de résidence (attestant la durée de séjour en France)",
+      "Justificatif de domicile (facture récente de moins de 3 mois : EDF, gaz, eau, téléphone, internet)",
+      "Déclaration de nationalité (formulaire CERFA 12752*03 rempli et signé)",
+      "Taxe de dossier (montant selon arrêté en vigueur)",
+      "Assurance maladie (attestation de couverture valide)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "strongLinks",
+          "value": true,
+          "docs": [
+            "Preuves des anciens documents de nationalité française (certificat de nationalité, décret de naturalisation, passeport ou carte d’identité expirés)",
+            "Justificatifs de liens manifestes avec la France (contrat de travail, avis d’imposition, propriété immobilière, famille proche française)"
+          ]
+        }
+      ]
+    }
+  },
+  "Naturalisation - Adoption ou Recueil": {
+    "communs": [
+      "Photos d’identité (4 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom et prénom au dos)",
+      "Acte de naissance (copie intégrale avec filiation, de moins de 3 mois ou avec mentions récentes)",
+      "Passeport (photocopies des pages état civil et validité) ou Carte de résident (photocopie recto-verso)",
+      "Certificat de résidence (attestant la durée de séjour en France)",
+      "Justificatif de domicile (facture récente de moins de 3 mois : EDF, gaz, eau, téléphone, internet)",
+      "Déclaration de nationalité (formulaire CERFA 12752*03 rempli et signé)",
+      "Taxe de dossier (montant selon arrêté en vigueur)",
+      "Assurance maladie (attestation de couverture valide)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "adoptionPleniere",
+          "value": true,
+          "docs": [
+            "Jugement d’adoption plénière (copie intégrale et traduction certifiée le cas échéant)",
+            "Acte de naissance mis à jour après adoption",
+            "Pièce d’identité des parents adoptifs français"
+          ]
+        },
+        {
+          "key": "recueil3ans",
+          "value": true,
+          "docs": [
+            "Décision d’autorité parentale ou jugement de tutelle (reconnaissant le recueil en France depuis au moins 3 ans)",
+            "Justificatifs de prise en charge matérielle et affective (attestations CAF, factures, attestations d’établissement scolaire)"
+          ]
+        }
+      ]
+    }
+  },
+  "Naturalisation - Séjour 5 ans": {
+    "communs": [
+      "Photos d’identité (4 photos, 35mm x 45mm, tête nue, récentes, fond clair, nom et prénom au dos)",
+      "Acte de naissance (copie intégrale avec filiation, de moins de 3 mois ou avec mentions récentes)",
+      "Passeport (photocopies des pages état civil et validité) ou Carte de résident (photocopie recto-verso)",
+      "Certificat de résidence (attestant la durée de séjour en France)",
+      "Justificatif de domicile (facture récente de moins de 3 mois : EDF, gaz, eau, téléphone, internet)",
+      "Déclaration de nationalité (formulaire CERFA 12752*03 rempli et signé)",
+      "Taxe de dossier (montant selon arrêté en vigueur)",
+      "Assurance maladie (attestation de couverture valide)"
+    ],
+    "specifiques": {
+      "conditions": [
+        {
+          "key": "residenceBracket",
+          "value": "5-10",
+          "docs": [
+            "Justificatifs de séjour régulier et ininterrompu depuis au moins 5 ans (contrats de travail successifs, avis d’imposition, quittances de loyer)",
+            "Déclaration sur l’honneur d’absence hors France de plus de 6 mois consécutifs durant cette période"
+          ]
+        },
+        {
+          "key": "languageLevel",
+          "value": "B1",
+          "docs": [
+            "Diplôme ou attestation de niveau B1 en français (DELF B1, TCF, TEF ou équivalent)"
+          ]
+        },
+        {
+          "key": "stableIncome",
+          "value": true,
+          "docs": [
+            "Contrats de travail en cours",
+            "Trois derniers bulletins de salaire",
+            "Dernier avis d’imposition"
+          ]
+        }
+      ]
+    }
+  }
+}
