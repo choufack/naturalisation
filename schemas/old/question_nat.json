@@ -1,7 +1,7 @@
 {
     "pivots": [
       {
-        "question_id": "NO_nationality",
+        "question_id": "NO_nationality_sim",
         "label": "Quelle est votre nationalité?",
         "type": "select",
         "options": [
@@ -18,7 +18,7 @@
           { "value": "OTHER", "label": "Autre nationalité" },
           { "value": "STATELESS", "label": "Apatride" }
         ],
-        "fact": "nationality"
+        "fact": "nationality_sim"
       },
       {
         "question_id": "N1_situation",
