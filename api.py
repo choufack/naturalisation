@@ -14,6 +14,25 @@ TITLE_JSON_PATH = "schemas/question_titre.json"
 # Création du Blueprint pour l'API
 api_eligibility = Blueprint("api", __name__)
 
+with open('./schemas/new/documents_with_codes.json', 'r', encoding='utf-8') as f:
+    documents_data = json.load(f)
+
+with open('./schemas/new/required_documents_with_codes.json', 'r', encoding='utf-8') as f:
+    procedures_data = json.load(f)
+
+with open('./schemas/new/procedures.json', 'r', encoding='utf-8') as f:
+    procedure_names_data = json.load(f)
+
+# Créer un dictionnaire pour mapper les codes de documents à leurs descriptions
+doc_map = {doc['code']: doc['description'] for doc in documents_data['documents']}
+
+# Créer un dictionnaire pour mapper les identifiants de procédures aux documents requis
+proc_doc_map = {proc['id']: proc['required_documents'] for proc in procedures_data['procedures']}
+
+# Créer un dictionnaire pour mapper les identifiants de procédures à leurs noms
+proc_name_map = {proc['id']: proc['name'] for proc in procedure_names_data['procedures']}
+
+
 # Stockage en mémoire pour les profils (thread-safe grâce au GIL)
 PROFILES: Dict[str, Dict[str, Any]] = {}
 
@@ -70,6 +89,18 @@ def eligibilite_direct():
     print(f"results: {results}")  # Debugging output
     return jsonify({"results": results}), 200
 
+
+@api_eligibility.route("/eligibilite/<string:id>/docs", methods=["GET"])
+def get_documents(id: str):
+    """Renvoie les documents requis pour une procédure donnée."""
+    if id not in proc_doc_map:
+        return jsonify({"error": "Procédure introuvable"}), 404
+
+    required_docs = proc_doc_map[id]
+    documents = [{"code": code, "description": doc_map[code]} for code in required_docs if code in doc_map]
+    
+    return jsonify({"procedure_id": id, "documents": documents}), 200
+
 ###############################################################################
 # 3) Création d’un profil
 ###############################################################################
@@ -116,23 +147,7 @@ def profil_eligibility(profile_id: str):
 ###############################################################################
 
 # Charger les fichiers JSON
-with open('./schemas/new/documents_with_codes.json', 'r', encoding='utf-8') as f:
-    documents_data = json.load(f)
 
-with open('./schemas/new/required_documents_with_codes.json', 'r', encoding='utf-8') as f:
-    procedures_data = json.load(f)
-
-with open('./schemas/new/procedures.json', 'r', encoding='utf-8') as f:
-    procedure_names_data = json.load(f)
-
-# Créer un dictionnaire pour mapper les codes de documents à leurs descriptions
-doc_map = {doc['code']: doc['description'] for doc in documents_data['documents']}
-
-# Créer un dictionnaire pour mapper les identifiants de procédures aux documents requis
-proc_doc_map = {proc['id']: proc['required_documents'] for proc in procedures_data['procedures']}
-
-# Créer un dictionnaire pour mapper les identifiants de procédures à leurs noms
-proc_name_map = {proc['id']: proc['name'] for proc in procedure_names_data['procedures']}
 
 def calculer_eligibilite(answers: Dict[str, Any]) -> Dict[str, Any]:
     """Calcule l'éligibilité en fonction des réponses fournies et retourne les procédures éligibles avec leurs documents."""
