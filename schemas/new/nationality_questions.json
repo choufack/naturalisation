@@ -33,14 +33,18 @@
         { "value": "reintegration", "label": "J'ai déjà eu la nationalité française" },
         { "value": "naturalisation", "label": "Résidence longue (naturalisation)" }
       ],
-      "fact": "mainPath"
+      "fact": "mainPath",
+      "visible_if": [
+        { "fact": "nationality", "eq": "STATELESS" }
+      ]
     },
     {
       "question_id": "N2_residenceYears",
-      "label": "Depuis combien d'années résidez-vous de façon continue en France?",
+      "label": "Depuis combien d'années résidez-vous de facons reguliere en France ?",
       "type": "select",
       "options": [
-        { "value": "<5", "label": "Moins de 5 ans" },
+        {"value": "<3", "label": "Moins de 3 ans"},
+        { "value": "3-5", "label": "3 à 5 ans" },
         { "value": "5-10", "label": "5 à 10 ans" },
         { "value": ">10", "label": "Plus de 10 ans" },
         { "value": "born", "label": "Toute ma vie (né-e en France)" }
@@ -49,16 +53,18 @@
     },
     {
       "question_id": "N3_lang",
-      "label": "Avez-vous une attestation de langue française de niveau A2 minimum?",
+      "label": "Justificatif de niveau ≥ B1 en français (oral & écrit)",
       "type": "radio",
       "options": [
-        { "value": true, "label": "Oui" },
-        { "value": false, "label": "Non" }
+        {"value": "diplome_fr", "label": "Diplôme français (BEP / CAP / Bac…)"},
+        {"value": "diplome_lang", "label": "Diplôme étranger certifié B1"},
+        {"value": "tcf_tef", "label": "Attestation TCF / TEF < 2 ans"},
+        {"value": "aucun", "label": "Aucun (test à prévoir)"}
       ],
       "visible_if": [
         { "fact": "mainPath", "nin": ["jus_soli", "adoption"] }
       ],
-      "fact": "frenchA2"
+      "fact": "frenchB1"
     },
     {
       "question_id": "N4_casier",
@@ -85,19 +91,6 @@
         { "fact": "mainPath", "eq": "naturalisation" }
       ],
       "fact": "longAbsence"
-    },
-    {
-      "question_id": "N6_housingSituation",
-      "label": "Quel est votre statut de logement?",
-      "type": "select",
-      "options": [
-        { "value": "locataire", "label": "Locataire" },
-        { "value": "proprietaire", "label": "Propriétaire" },
-        { "value": "heberge", "label": "Hébergé-e gratuitement" },
-        { "value": "foyer", "label": "Foyer / résidence sociale" },
-        { "value": "autre", "label": "Autre" }
-      ],
-      "fact": "housingSituation"
     }
   ],
   "panels": [
@@ -107,29 +100,6 @@
         { "fact": "mainPath", "eq": "mariage" }
       ],
       "questions": [
-        {
-          "question_id": "X1_maritalHistory",
-          "label": "Historique matrimonial : divorce, séparation, décès...?",
-          "type": "select",
-          "options": [
-            { "value": "never", "label": "Jamais marié-e" },
-            { "value": "divorce", "label": "Divorcé-e" },
-            { "value": "separation", "label": "Séparé-e" },
-            { "value": "repudiation", "label": "Répudiation" },
-            { "value": "widowed", "label": "Veuf-ve" }
-          ],
-          "fact": "maritalHistory"
-        },
-        {
-          "question_id": "X2_minorChildren",
-          "label": "Avez-vous des enfants mineurs à charge?",
-          "type": "radio",
-          "options": [
-            { "value": true, "label": "Oui" },
-            { "value": false, "label": "Non" }
-          ],
-          "fact": "hasMinorChildren"
-        },
         {
           "question_id": "M1_yearsMarriageOK",
           "label": "Marié-e depuis 4 ans ou plus (5 ans si hors France)?",
@@ -158,29 +128,8 @@
         { "fact": "mainPath", "eq": "ascendant" }
       ],
       "questions": [
-        {
-          "question_id": "X1_maritalHistory",
-          "label": "Historique matrimonial : divorce, séparation, décès...?",
-          "type": "select",
-          "options": [
-            { "value": "never", "label": "Jamais marié-e" },
-            { "value": "divorce", "label": "Divorcé-e" },
-            { "value": "separation", "label": "Séparé-e" },
-            { "value": "repudiation", "label": "Répudiation" },
-            { "value": "widowed", "label": "Veuf-ve" }
-          ],
-          "fact": "maritalHistory"
-        },
-        {
-          "question_id": "X2_minorChildren",
-          "label": "Avez-vous des enfants mineurs à charge?",
-          "type": "radio",
-          "options": [
-            { "value": true, "label": "Oui" },
-            { "value": false, "label": "Non" }
-          ],
-          "fact": "hasMinorChildren"
-        },
+        
+        
         {
           "question_id": "A1_ascendantLink",
           "label": "Quel lien vous unit au Français?",
@@ -199,29 +148,6 @@
         { "fact": "mainPath", "eq": "sibling" }
       ],
       "questions": [
-        {
-          "question_id": "X1_maritalHistory",
-          "label": "Historique matrimonial : divorce, séparation, décès...?",
-          "type": "select",
-          "options": [
-            { "value": "never", "label": "Jamais marié-e" },
-            { "value": "divorce", "label": "Divorcé-e" },
-            { "value": "separation", "label": "Séparé-e" },
-            { "value": "repudiation", "label": "Répudiation" },
-            { "value": "widowed", "label": "Veuf-ve" }
-          ],
-          "fact": "maritalHistory"
-        },
-        {
-          "question_id": "X2_minorChildren",
-          "label": "Avez-vous des enfants mineurs à charge?",
-          "type": "radio",
-          "options": [
-            { "value": true, "label": "Oui" },
-            { "value": false, "label": "Non" }
-          ],
-          "fact": "hasMinorChildren"
-        },
         {
           "question_id": "S1_schoolingFR",
           "label": "Avez-vous suivi une scolarité 6-16 ans en France?",
@@ -314,29 +240,6 @@
         { "fact": "mainPath", "eq": "naturalisation" }
       ],
       "questions": [
-        {
-          "question_id": "X1_maritalHistory",
-          "label": "Historique matrimonial : divorce, séparation, décès...?",
-          "type": "select",
-          "options": [
-            { "value": "never", "label": "Jamais marié-e" },
-            { "value": "divorce", "label": "Divorcé-e" },
-            { "value": "separation", "label": "Séparé-e" },
-            { "value": "repudiation", "label": "Répudiation" },
-            { "value": "widowed", "label": "Veuf-ve" }
-          ],
-          "fact": "maritalHistory"
-        },
-        {
-          "question_id": "X2_minorChildren",
-          "label": "Avez-vous des enfants mineurs à charge?",
-          "type": "radio",
-          "options": [
-            { "value": true, "label": "Oui" },
-            { "value": false, "label": "Non" }
-          ],
-          "fact": "hasMinorChildren"
-        },
         {
           "question_id": "N6_stableIncome",
           "label": "Pouvez-vous justifier de ressources ou d’un emploi stable et suffisant sur les 5 dernières années?",

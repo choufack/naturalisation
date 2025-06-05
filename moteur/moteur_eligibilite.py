@@ -93,6 +93,16 @@ class MoteurEligibilite(KnowledgeEngine):
     )
     def naturalisation_refugie(self):
         self.declare(Fact(eligibilite='P055'))
+        
+    @Rule(
+        Profil(nationality=MATCH.n),
+        TEST(lambda s: s == 'STATELESS'),
+        Profil(yearsResidence=MATCH.y),
+        TEST(lambda y: y != '<3'),
+        # TODO: ajouter condition sur le niveau de langue (prise en compte du message pour lui de faire les cours de langue si qucun justificatif)
+    )
+    def naturalisation_refugie(self):
+        self.declare(Fact(eligibilite='P055'))
 
     # ======================== FAMILLE ========================
     @Rule(
@@ -370,6 +380,17 @@ class MoteurEligibilite(KnowledgeEngine):
     )
     def passeport_talent_investisseur(self):
         self.declare(Fact(eligibilite='P023'))
+        
+    # ======================== AES – Mé8ers en tension ========================
+    # TODO: Ajout des documents
+    @Rule(
+        Profil(yearsResidence=MATCH.y),
+        TEST(lambda y: y in ['3-5', '>5']),
+        Profil(AES_emploiOK=True)
+    )
+    def passeport_talent_investisseur(self):
+        self.declare(Fact(eligibilite='P056'))
+    
 
     # ======================== VISITEUR ========================
     @Rule(

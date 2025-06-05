@@ -522,6 +522,13 @@
         "Adhérer aux valeurs de la République.",
         "Ne pas avoir été condamné pour crimes/délits contre la Nation."
       ]
+    },
+    {
+      "name": "Admission exceptionnelle au séjour - métiers en tension",
+      "eligibility_criteria": [
+        "« ≥3 ans de résidence » contrôlée via Q3_yearsResidence",
+        "12 bulletins de salaire (24 derniers mois) **dans un mé8er en tension**"
+      ]
     }
   ]
 }

@@ -70,6 +70,7 @@
         { "value": "etudes", "label": "Études / stage / recherche" },
         { "value": "invest", "label": "Création / investissement" },
         { "value": "visiteur", "label": "Visiteur (ressources propres)" },
+        { "value": "me8erTension","label": "AES – Mé8ers en tension" },
         { "value": "autre", "label": "Autre motif" }
       ],
       "fact": "motifPrincipal"
@@ -261,6 +262,34 @@
           "type": "number",
           "minimum": 0,
           "fact": "invest.funds"
+        }
+      ]
+    },
+    {
+      "panel_id": "P_AES",
+      "visible_if": [
+        { "fact": "motifPrincipal", "contains": "me8erTension" }
+      ],
+      "questions": [
+        {
+          "question_id": "M1_emploi",
+          "label": "Occupez actuellement un emploi relevant de la liste des métiers en tension?",
+          "type": "radio",
+          "options": [
+            { "value": true, "label": "Oui" },
+            { "value": false, "label": "Non" }
+          ],
+          "fact": "AES.emploiOK"
+        },
+        {
+          "question_id": "M2_bulletins",
+          "label": "J’ai 12 bulletins de salaire (24 derniers mois) **dans un mé8er en tension**",
+          "type": "radio",
+          "options": [
+            { "value": true, "label": "Oui" },
+            { "value": false, "label": "Non" }
+          ],
+          "fact": "AES.bulletinsOK"
         }
       ]
     },
