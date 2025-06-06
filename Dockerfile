@@ -18,8 +18,16 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copier le reste des fichiers du projet
 COPY . .
 
+# Définir les variables d'environnement
+ENV FLASK_APP=app.py
+ENV FLASK_ENV=development
+ENV FLASK_DEBUG=1
+ENV PYTHONUNBUFFERED=1
+ENV FLASK_RUN_HOST=0.0.0.0
+ENV FLASK_RUN_PORT=5000
+
 # Exposer le port sur lequel l'application Flask s'exécute
 EXPOSE 5000
 
 # Commande pour démarrer l'application
-CMD ["python", "app.py"] 
+CMD ["python", "-u", "app.py"] 
