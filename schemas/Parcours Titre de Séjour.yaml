@@ -1,0 +1,313 @@
+```yaml
+############################################################
+# 1. PIVOTS – toujours posés au début
+############################################################
+- question_id: Q1_nationality
+  label: "Quelle est votre nationalité ?"
+  type: select
+  options:
+    - { value: "FR",        label: "Français·e" }
+    - { value: "DZ",        label: "Algérien·ne" }
+    - { value: "MA",        label: "Marocain·e" }
+    - { value: "TN",        label: "Tunisien·ne" }
+    - { value: "SN",        label: "Sénégalais·e" }
+    - { value: "CM",        label: "Camerounais·e" }
+    - { value: "LB",        label: "Libanais·e" }
+    - { value: "IN",        label: "Indien·ne" }
+    - { value: "PM",        label: "Saint-Pierrais·e / Miquelonais·e" }
+    - { value: "OTHER",     label: "Autre nationalité" }
+    - { value: "STATELESS", label: "Apatride" }
+  fact: nationality
+
+- question_id: Q3_yearsResidence
+  label: "Depuis combien d’années résidez-vous régulièrement en France ?"
+  type: select
+  options:
+    - { value: "<1",  label: "Moins d’1 an" }
+    - { value: "1-3", label: "1 à 3 ans" }
+    - { value: "3-5", label: "3 à 5 ans" }
+    - { value: ">5",  label: "Plus de 5 ans" }
+  fact: yearsResidence
+
+- question_id: Q2_currentPermit
+  label: "Quel titre de séjour détenez-vous actuellement ?"
+  type: select
+  options:
+    - { value: "none",                 label: "Aucun (première demande)" }
+    - { value: "vls_etudiant",         label: "VLS-TS Étudiant" }
+    - { value: "vls_salarie",          label: "VLS-TS Salarié" }
+    - { value: "vls_saisonnier",       label: "VLS-TS Travailleur saisonnier" }
+    - { value: "vls_chercheur",        label: "VLS-TS Chercheur" }
+    - { value: "vls_vpf",              label: "VLS-TS Vie privée & familiale" }
+    - { value: "vls_entrepreneur",     label: "VLS-TS Entrepreneur / libéral" }
+    - { value: "vls_passeport_talent", label: "VLS-TS Passeport talent" }
+    - { value: "cs_etudiant",          label: "Carte séjour Étudiant" }
+    - { value: "cs_salarie",           label: "Carte séjour Salarié" }
+    - { value: "cs_saisonnier",        label: "Carte séjour Travailleur saisonnier" }
+    - { value: "cs_vpf",               label: "Carte séjour Vie privée & familiale" }
+    - { value: "cs_stagiaire",         label: "Carte séjour Stagiaire" }
+    - { value: "cs_entrepreneur",      label: "Carte séjour Entrepreneur / libéral" }
+    - { value: "cs_au_pair",           label: "Carte séjour Jeune au pair" }
+    - { value: "cs_visiteur",          label: "Carte séjour Visiteur" }
+    - { value: "csp_salarie",          label: "Carte pluriannuelle Salarié" }
+    - { value: "csp_etudiant",         label: "Carte pluriannuelle Étudiant" }
+    - { value: "csp_vpf",              label: "Carte pluriannuelle VPF" }
+    - { value: "resident_10ans",       label: "Carte résident 10 ans" }
+    - { value: "resident_ld_ue",       label: "Carte résident longue durée UE" }
+    - { value: "resident_permanent",   label: "Carte résident permanent" }
+    - { value: "certif_alg_1an",       label: "Certificat algérien 1 an" }
+    - { value: "certif_alg_10ans",     label: "Certificat algérien 10 ans" }
+    - { value: "other",                label: "Autre titre" }
+  fact: currentPermit
+  visible_if:
+    - { fact: nationality, neq: "FR" }
+
+- question_id: Q4_motifPrincipal
+  label: "Quels sont vos motifs principaux de séjour ?"
+  type: checkbox
+  options:
+    - { value: "famille",      label: "Famille (mariage, enfant, regroupement…)" }
+    - { value: "travail",      label: "Travail (CDI, CDD, saisonnier…)" }
+    - { value: "etudes",       label: "Études / stage / recherche" }
+    - { value: "invest",       label: "Création / investissement" }
+    - { value: "visiteur",     label: "Visiteur (ressources propres)" }
+    - { value: "metierTension",label: "AES – Métiers en tension" }
+    - { value: "autre",        label: "Autre motif" }
+  fact: motifPrincipal
+
+- question_id: Q6_specialSituations
+  label: "Situation particulière (facultatif)"
+  type: checkbox
+  options:
+    - { value: "auPair",           label: "Jeune au pair" }
+    - { value: "volontaire",       label: "Volontaire / service civique" }
+    - { value: "medical",          label: "Soins médicaux / humanitaire" }
+    - { value: "victimeTraite",    label: "Victime de traite / proxénétisme" }
+    - { value: "ancienCombattant", label: "Ancien combattant / FFI" }
+    - { value: "refugie",          label: "Réfugié·e / protection subsidiaire" }
+    - { value: "parentMalade",     label: "Parent d’un enfant malade" }
+    - { value: "etrangerEnfance",  label: "Arrivé·e mineur·e & scolarisé·e" }
+    - { value: "handicap",         label: "Personne en situation de handicap" }
+    - { value: "aucune",           label: "Aucune de ces situations" }
+  fact: specialSituations
+
+############################################################
+# 2. PANELS CONTEXTUELS
+############################################################
+
+# ---------- 2.1 Famille ----------
+- panel_id: P_famille
+  visible_if: [{ fact: motifPrincipal, contains: "famille" }]
+  questions:
+    - question_id: F1_link
+      label: "Quel lien familial avez-vous ?"
+      type: select
+      options:
+        - { value: "mariage",     label: "Mariage avec un·e Français·e" }
+        - { value: "pacs",        label: "PACS avec un·e Français·e" }
+        - { value: "parentEnfFr", label: "Parent d’un enfant français" }
+        - { value: "regroup",     label: "Regroupement familial" }
+        - { value: "famUE",       label: "Famille de citoyen UE/EEE" }
+        - { value: "autre",       label: "Autre lien familial" }
+      fact: family.link
+
+    - question_id: F2_yearsMarriage
+      label: "Depuis combien d’années êtes-vous marié·e / pacsé·e ?"
+      type: number
+      minimum: 0
+      visible_if: [{ fact: family.link, in: ["mariage","pacs"] }]
+      fact: family.yearsMarriage
+
+    - question_id: F3_community
+      label: "Vie commune ininterrompue ?"
+      type: radio
+      options:
+        - { value: true,  label: "Oui" }
+        - { value: false, label: "Non" }
+      visible_if: [{ fact: family.link, in: ["mariage","pacs","regroup"] }]
+      fact: family.community
+
+# ---------- 2.2 Travail ----------
+- panel_id: P_travail
+  visible_if: [{ fact: motifPrincipal, contains: "travail" }]
+  questions:
+    - question_id: T1_contract
+      label: "Quel type de contrat de travail ?"
+      type: select
+      options:
+        - { value: "CDI",        label: "CDI" }
+        - { value: "CDD",        label: "CDD" }
+        - { value: "detache",    label: "Détaché intra-groupe (ICT)" }
+        - { value: "saisonnier", label: "Travail saisonnier" }
+        - { value: "autre",      label: "Autre" }
+      fact: work.contract
+
+    - question_id: T3_salary
+      label: "Quel est votre salaire brut mensuel (€) ?"
+      type: select
+      options:
+        - { value: "0",           label: "Aucun ou non spécifié" }
+        - { value: "<1600",       label: "Moins de 1 600 €" }
+        - { value: "1600-2500",   label: "1 600 € - 2 500 €" }
+        - { value: "2500-3500",   label: "2 500 € - 3 500 €" }
+        - { value: "3500-5000",   label: "3 500 € - 5 000 €" }
+        - { value: ">5000",       label: "Plus de 5 000 €" }
+      visible_if: [{ fact: work.contract, in: ["CDI","CDD"] }]
+      fact: work.salary
+
+# ---------- 2.3 Études / Stagiaire / Chercheur ----------
+- panel_id: P_etudes
+  visible_if: [{ fact: motifPrincipal, contains: "etudes" }]
+  questions:
+    - question_id: E1_status
+      label: "Votre statut actuel ?"
+      type: select
+      options:
+        - { value: "etudiant",  label: "Étudiant·e" }
+        - { value: "stagiaire", label: "Stagiaire" }
+        - { value: "chercheur", label: "Chercheur·e" }
+        - { value: "autre",     label: "Autre" }
+      fact: studies.status
+
+    - question_id: E2_diploma
+      label: "Diplôme visé ou obtenu"
+      type: select
+      options:
+        - { value: "licence",   label: "Licence" }
+        - { value: "master",    label: "Master" }
+        - { value: "doctorat",  label: "Doctorat" }
+        - { value: "autre",     label: "Autre" }
+      visible_if: [{ fact: studies.status, eq: "etudiant" }]
+      fact: studies.degree
+
+# ---------- 2.4 Investisseur / Talent ----------
+- panel_id: P_invest
+  visible_if: [{ fact: motifPrincipal, contains: "invest" }]
+  questions:
+    - question_id: I1_registered
+      label: "Votre entreprise est-elle immatriculée (Kbis/URSSAF) ?"
+      type: radio
+      options:
+        - { value: true,  label: "Oui" }
+        - { value: false, label: "Non" }
+      fact: invest.registered
+
+    - question_id: I2_bp
+      label: "Disposez-vous d’un business-plan viable ?"
+      type: radio
+      options:
+        - { value: true,  label: "Oui" }
+        - { value: false, label: "Non" }
+      fact: invest.hasBP
+
+    - question_id: I3_funds
+      label: "Montant des fonds propres (€)"
+      type: number
+      minimum: 0
+      fact: invest.funds
+
+# ---------- 2.5 AES – Métiers en tension ----------
+- panel_id: P_AES
+  visible_if: [{ fact: motifPrincipal, contains: "metierTension" }]
+  questions:
+    - question_id: M1_bulletins
+      label: "J’ai 12 bulletins de salaire (24 derniers mois) **dans un métier en tension**"
+      type: radio
+      options:
+        - { value: true,  label: "Oui" }
+        - { value: false, label: "Non" }
+      fact: AES.bulletinsOK
+
+    - question_id: M2_profession
+      label: "Dans quel métier en tension travaillez-vous ?"
+      type: select
+      options:
+        - { value: "infirmier",          label: "Infirmier·ère" }
+        - { value: "aide_soignant",      label: "Aide-soignant·e" }
+        - { value: "maçon",              label: "Maçon·ne" }
+        - { value: "charpentier",        label: "Charpentier·ère" }
+        - { value: "électricien",        label: "Électricien·ne" }
+        - { value: "plombier",           label: "Plombier·ère" }
+        - { value: "développeur",        label: "Développeur·euse informatique" }
+        - { value: "technicien_it",      label: "Technicien·ne informatique" }
+        - { value: "cuisinier",          label: "Cuisinier·ère" }
+        - { value: "serveur",            label: "Serveur·euse" }
+        - { value: "ouvrier_agricole",   label: "Ouvrier·ère agricole" }
+        - { value: "mécanicien",         label: "Mécanicien·ne automobile" }
+        - { value: "chauffeur_pl",       label: "Chauffeur·euse poids lourd" }
+        - { value: "autre",              label: "Autre métier en tension" }
+      fact: AES.profession
+
+# ---------- 2.6 Titres spéciaux & accords ----------
+- panel_id: P_titresSpeciaux
+  visible_if:
+    - or:
+        - { fact: nationality, in: ["DZ","MA","TN","SN","CM","LB","PM"] }
+        - { fact: nationality, eq: "DZ" }
+        - { fact: currentPermit, in: ["resident_10ans","resident_ld_ue","resident_permanent"] }
+  questions:
+    - question_id: B1_agreement
+      label: "Bénéficiez-vous d’un accord bilatéral France-* ?"
+      type: radio
+      options:
+        - { value: true,  label: "Oui" }
+        - { value: false, label: "Non" }
+      fact: bilateralAgreement
+      visible_if: [{ fact: nationality, in: ["DZ","MA","TN","SN","CM","LB","PM"] }]
+
+    - question_id: C1_reason
+      label: "Motif du certificat algérien 1 an"
+      type: select
+      options:
+        - { value: "mariage",   label: "Conjoint·e de Français·e" }
+        - { value: "parent",    label: "Parent d’un enfant français" }
+        - { value: "sante",     label: "Soins médicaux" }
+        - { value: "viePriv",   label: "Vie privée & familiale" }
+        - { value: "autre",     label: "Autre motif" }
+      fact: alg1.reason
+      visible_if: [{ fact: nationality, eq: "DZ" }]
+
+    - question_id: C10_type
+      label: "Type de certificat algérien 10 ans"
+      type: select
+      options:
+        - { value: "res10",      label: "10 ans de résidence régulière" }
+        - { value: "famVie",     label: "5 ans Vie privée & familiale" }
+        - { value: "francophone",label: "Ressortissant francophone" }
+        - { value: "rente",      label: "Rente accident du travail" }
+        - { value: "autre",      label: "Autre type" }
+      fact: alg10.type
+      visible_if: [{ fact: nationality, eq: "DZ" }]
+
+    - question_id: R2_absence
+      label: "Absence > 3 ans hors France pendant la validité du titre ?"
+      type: radio
+      options:
+        - { value: true,  label: "Oui" }
+        - { value: false, label: "Non" }
+      fact: resident.longAbsence
+      visible_if: [{ fact: currentPermit, in: ["resident_10ans","resident_ld_ue","resident_permanent"] }]
+
+    - question_id: R3_frA2
+      label: "Quelle preuve atteste d’un niveau de français ≥ B1 ?"
+      type: select
+      options:
+        - { value: "diplome_fr",        label: "Diplôme français (niveau ≥ 3)" }
+        - { value: "diplome_b1_cefrl",  label: "Diplôme B1 CECRL délivré en France" }
+        - { value: "attestation_test",  label: "Attestation TCF/TEF < 2 ans" }
+        - { value: "dispense_enic",     label: "Attestation ENIC-NARIC (niveau ≥ 3)" }
+        - { value: "certif_medicale",   label: "Certificat médical (dispense)" }
+        - { value: "pas_de_preuve",     label: "Aucune preuve (test à prévoir)" }
+      fact: resident.languageB1
+      visible_if: [{ fact: currentPermit, in: ["resident_10ans","resident_ld_ue","resident_permanent"] }]
+
+############################################################
+# 3. SÉQUENCE UX (écrans)
+############################################################
+# 1. Profil – Q1, Q3 (+Q2 si ≠ FR)
+# 2. Motifs – Q4, Q6
+# 3. Panel principal (Famille | Travail | Études | Invest)
+# 4. AES Métiers en tension (si cochée)
+# 5. Titres spéciaux & accords
+# 6. Récapitulatif + checklist de pièces justificatives
+```

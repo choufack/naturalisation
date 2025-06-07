@@ -11,6 +11,9 @@
         { "value": "TN", "label": "Tunisien-ne" },
         { "value": "SN", "label": "Sénégalais-e" },
         { "value": "CM", "label": "Camerounais-e" },
+        { "value": "LB", "label": "Libanais·e" },
+        { "value": "IN", "label": "Indien·ne" },
+        { "value": "PM", "label": "Saint-Pierrais·e / Miquelonais·e" },
         { "value": "OTHER", "label": "Autre nationalité" },
         { "value": "STATELESS", "label": "Apatride" }
       ],
@@ -41,12 +44,14 @@
         { "value": "csp_etudiant", "label": "Carte pluriannuelle Étudiant" },
         { "value": "csp_vpf", "label": "Carte pluriannuelle VPF" },
         { "value": "resident_10ans", "label": "Carte résident 10 ans" },
+        { "value": "resident_ld_ue", "label": "Carte résident longue durée UE" },
         { "value": "resident_permanent", "label": "Carte résident permanent" },
         { "value": "certif_alg_1an", "label": "Certificat algérien 1 an" },
         { "value": "certif_alg_10ans", "label": "Certificat algérien 10 ans" },
         { "value": "other", "label": "Autre titre" }
       ],
-      "fact": "currentPermit"
+      "fact": "currentPermit",
+      "visible_if": { "fact": "nationality", "neq": "FR" }
     },
     {
       "question_id": "Q3_yearsResidence",
@@ -74,20 +79,6 @@
         { "value": "autre", "label": "Autre motif" }
       ],
       "fact": "motifPrincipal"
-    },
-    {
-      "question_id": "Q5_housing",
-      "label": "Quel est votre statut de logement?",
-      "type": "select",
-      "options": [
-        { "value": "locataire", "label": "Locataire" },
-        { "value": "proprietaire", "label": "Propriétaire" },
-        { "value": "heberge", "label": "Hébergé-e gratuitement" },
-        { "value": "foyer", "label": "Foyer / résidence sociale" },
-        { "value": "sans_domicile", "label": "Sans domicile fixe" },
-        { "value": "autre", "label": "Autre situation" }
-      ],
-      "fact": "housingSituation"
     },
     {
       "question_id": "Q6_specialSituations",
@@ -186,8 +177,15 @@
         {
           "question_id": "T3_salary",
           "label": "Salaire brut mensuel (€)",
-          "type": "number",
-          "minimum": 0,
+          "type": "select",
+          "options": [
+            { "value": "0", "label": "Aucun ou non spécifié" },
+            { "value": "<1600", "label": "Moins de 1 600 €" },
+            { "value": "1600-2500", "label": "1 600 € - 2 500 €" },
+            { "value": "2500-3500", "label": "2 500 € - 3 500 €" },
+            { "value": "3500-5000", "label": "3 500 € - 5 000 €" },
+            { "value": ">5000", "label": "Plus de 5 000 €" }
+          ],
           "visible_if": [
             { "fact": "work.contract", "in": ["CDI", "CDD"] }
           ],
@@ -238,17 +236,17 @@
       "questions": [
         {
           "question_id": "I1_registered",
-          "label": "Entreprise immatriculée?",
+          "label": "Votre entreprise est-elle immatriculée (Kbis/URSSAF) ?",
           "type": "radio",
           "options": [
-            { "value": true, "label": "Oui (Kbis/URSSAF)" },
+            { "value": true, "label": "Oui" },
             { "value": false, "label": "Non" }
           ],
           "fact": "invest.registered"
         },
         {
           "question_id": "I2_bp",
-          "label": "Business-plan disponible?",
+          "label": "Disposez-vous d’un business-plan viable ?",
           "type": "radio",
           "options": [
             { "value": true, "label": "Oui" },
@@ -271,16 +269,7 @@
         { "fact": "motifPrincipal", "contains": "metierTension" }
       ],
       "questions": [
-        {
-          "question_id": "M1_emploi",
-          "label": "Occupez-vous actuellement un emploi relevant de la liste des métiers en tension?",
-          "type": "radio",
-          "options": [
-            { "value": true, "label": "Oui" },
-            { "value": false, "label": "Non" }
-          ],
-          "fact": "AES.emploiOK"
-        },
+
         {
           "question_id": "M2_bulletins",
           "label": "J’ai 12 bulletins de salaire (24 derniers mois) **dans un métier en tension**",
@@ -290,73 +279,58 @@
             { "value": false, "label": "Non" }
           ],
           "fact": "AES.bulletinsOK"
-        }
-      ]
-    },
-    {
-      "panel_id": "P_visiteur",
-      "visible_if": [
-        { "fact": "motifPrincipal", "contains": "visiteur" },
-        { "fact": "motifPrincipal", "not_contains": "travail" }
-      ],
-      "questions": [
+        },
         {
-          "question_id": "V1_resources",
-          "label": "Ressources mensuelles (€)",
-          "type": "select",
+          
+          "question_id": "M2_profession",
+          "label": "Dans quel métier en tension travaillez-vous ?",
+          "type": "select", 
           "options": [
-            { "value": "moins_1200", "label": "<1200 €" },
-            { "value": "1200_1426", "label": "1200-1426 €" },
-            { "value": "plus_1426", "label": ">1426 €" },
-            { "value": "autre", "label": "Autre montant" }
+            { "value": "infirmier", "label": "Infirmier·ère" },
+            { "value": "aide_soignant", "label": "Aide-soignant·e" },
+            { "value": "maçon", "label": "Maçon·ne" },
+            { "value": "charpentier", "label": "Charpentier·ère" },
+            { "value": "électricien", "label": "Électricien·ne" },
+            { "value": "plombier", "label": "Plombier·ère" },
+            { "value": "développeur", "label": "Développeur·euse informatique" },
+            { "value": "technicien_it", "label": "Technicien·ne informatique" },
+            { "value": "cuisinier", "label": "Cuisinier·ère" },
+            { "value": "serveur", "label": "Serveur·euse" },
+            { "value": "ouvrier_agricole", "label": "Ouvrier·ère agricole" },
+            { "value": "mécanicien", "label": "Mécanicien·ne automobile" },
+            { "value": "chauffeur_pl", "label": "Chauffeur·euse poids lourd" },
+            { "value": "autre", "label": "Autre métier en tension" }
           ],
-          "fact": "visitor.resources"
+          "fact": "AES.profession"  
+          
         }
       ]
     },
+
     {
-      "panel_id": "P_pluriannuelle",
-      "visible_if": [
-        { "fact": "currentPermit", "starts_with": "csp_" }
-      ],
-      "questions": [
-        {
-          "question_id": "P1_CIR",
-          "label": "Avez-vous suivi le Contrat d'Intégration Républicaine (CIR)?",
-          "type": "radio",
-          "options": [
-            { "value": true, "label": "Oui" },
-            { "value": false, "label": "Non" }
-          ],
-          "fact": "pluri.integrationOK"
-        }
-      ]
-    },
-    {
-      "panel_id": "P_bilateral",
-      "visible_if": [
-        { "fact": "nationality", "in": ["DZ", "MA", "TN", "SN", "CM", "LB", "PM"] }
-      ],
-      "questions": [
-        {
-          "question_id": "B1_agreement",
-          "label": "Bénéficiez-vous d'un accord bilatéral avec la France?",
-          "type": "radio",
-          "options": [
-            { "value": true, "label": "Oui" },
-            { "value": false, "label": "Non" }
-          ],
-          "fact": "bilateralAgreement"
-        }
-      ]
-    },
-    {
-      "panel_id": "P_certifAlg1",
-      "visible_if": [
-        { "fact": "nationality", "eq": "DZ" }
-      ],
-      "questions": [
-        {
+      "panel_id": "P_titresSpeciaux",
+      "visible_if": {
+        "or":[
+          { "fact": "nationality", "in": ["DZ","MA","TN","SN","CM","LB","PM"] },
+          { "fact": "nationality", "eq": "DZ" },
+          { "fact": "currentPermit", "in": ["resident_10ans","resident_ld_ue","resident_permanent"] }
+        ]
+      },
+      "questions":[
+          {
+            "question_id": "B1_agreement",
+            "label": "Bénéficiez-vous d'un accord bilatéral avec la France?",
+            "visible_if": [
+              { "fact": "nationality", "in": ["DZ", "MA", "TN", "SN", "CM", "LB", "PM"] }
+            ],
+            "type": "radio",
+            "options": [
+              { "value": true, "label": "Oui" },
+              { "value": false, "label": "Non" }
+            ],
+            "fact": "bilateralAgreement"
+          },
+          {
           "question_id": "C1_reason",
           "label": "Motif du certificat 1 an",
           "type": "select",
@@ -367,16 +341,9 @@
             { "value": "viePriv", "label": "Vie privée & familiale" },
             { "value": "autre", "label": "Autre motif" }
           ],
-          "fact": "alg1.reason"
-        }
-      ]
-    },
-    {
-      "panel_id": "P_certifAlg10",
-      "visible_if": [
-        { "fact": "nationality", "eq": "DZ" }
-      ],
-      "questions": [
+          "fact": "alg1.reason",
+          "visible_if": [{ "fact": "nationality", "eq": "DZ" }]
+        },
         {
           "question_id": "C10_type",
           "label": "Type du certificat 10 ans",
@@ -388,45 +355,37 @@
             { "value": "rente", "label": "Rente accident du travail" },
             { "value": "autre", "label": "Autre type" }
           ],
-          "fact": "alg10.type"
-        }
-      ]
-    },
-    {
-      "panel_id": "P_residentLong",
-      "visible_if": [
-        { "fact": "currentPermit", "in": ["resident_10ans", "resident_Id_ue", "resident_permanent"] }
-      ],
-      "questions": [
-        {
-          "question_id": "R1_CIR",
-          "label": "Avez-vous suivi le Contrat d'Intégration Républicaine (CIR)?",
-          "type": "radio",
-          "options": [
-            { "value": true, "label": "Oui" },
-            { "value": false, "label": "Non" }
-          ],
-          "fact": "resident.integrationOK"
+          "fact": "alg10.type",
+          "visible_if": [{ "fact": "nationality", "eq": "DZ" }]
         },
         {
           "question_id": "R2_absence",
-          "label": "Absence > 3 ans hors France durant validité?",
+          "label": "Absence > 3 ans hors France durant validité du titre ?",
           "type": "radio",
           "options": [
             { "value": true, "label": "Oui" },
             { "value": false, "label": "Non" }
           ],
-          "fact": "resident.longAbsence"
+          "fact": "resident.longAbsence",
+          "visible_if": [{ "fact": "currentPermit", "in": ["resident_10ans","resident_ld_ue","resident_permanent"] }]
         },
+
         {
           "question_id": "R3_frA2",
-          "label": "Possédez-vous une attestation de français de niveau **A2** minimum?",
-          "type": "radio",
+          "label": "Quelle preuve atteste d'un niveau de français ≥ B1 ?",
+          "type": "select",
           "options": [
-            { "value": true, "label": "Oui" },
-            { "value": false, "label": "Non" }
+            { "value": "diplome_fr", "label": "Diplôme français (niveau ≥ 3)" },
+            { "value": "diplome_b1_cefrl", "label": "Diplôme B1 CECRL délivré en France" },
+            { "value": "attestation_test", "label": "Attestation TCF/TEF < 2 ans" },
+            { "value": "dispense_enic", "label": "Attestation ENIC-NARIC (niveau ≥ 3)" },
+            { "value": "certif_medicale", "label": "Certificat médical (dispense)" },
+            { "value": "pas_de_preuve", "label": "Aucune preuve (test à prévoir)" }
           ],
-          "fact": "resident.languageA2"
+          "fact": "resident.languageB1",
+          "visible_if": [
+            { "fact": "currentPermit", "in": ["resident_10ans","resident_ld_ue","resident_permanent"] }
+          ]
         }
       ]
     }

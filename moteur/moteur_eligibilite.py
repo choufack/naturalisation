@@ -177,8 +177,8 @@ class MoteurEligibilite(KnowledgeEngine):
     @Rule(
         Profil(motifPrincipal=MATCH.m),
         TEST(lambda m: 'famille' in m),
-        Profil(family_link='mariage', family_yearsMarriage=MATCH.y, family_community=True, resident_integrationOK=True, resident_languageA2=True),
-        TEST(lambda y: y >= 3)
+        Profil(family_link='mariage', family_yearsMarriage=MATCH.y, family_community=True, resident_integrationOK=True, resident_languageB1=MATCH.l),
+        TEST(lambda y, l: y >= 3 and l not in ['pas_de_preuve'])
     )
     def resident_epoux_francais(self):
         self.declare(Fact(eligibilite='P031'))
@@ -204,7 +204,8 @@ class MoteurEligibilite(KnowledgeEngine):
         Profil(mainPath='ascendant'),
         Profil(ascendant_link=MATCH.l),
         TEST(lambda l: l in ['parent', 'grandparent']),
-        Profil(resident_integrationOK=True, resident_languageA2=True)
+        Profil(resident_integrationOK=True, resident_languageB1=MATCH.l),
+        TEST(lambda l: l not in ['pas_de_preuve'])
     )
     def resident_ascendant_enfant_francais(self):
         self.declare(Fact(eligibilite='P037'))
@@ -238,7 +239,7 @@ class MoteurEligibilite(KnowledgeEngine):
         Profil(motifPrincipal=MATCH.m),
         TEST(lambda m: 'travail' in m),
         Profil(work_contract='detache', work_salary=MATCH.s),
-        TEST(lambda s: s >= 1801.80)
+        TEST(lambda s: s in ["1600-2500", "2500-3500", "3500-5000", ">5000"])
     )
     def sejour_salarie_detache_ict(self):
         self.declare(Fact(eligibilite='P041'))
@@ -386,7 +387,8 @@ class MoteurEligibilite(KnowledgeEngine):
     @Rule(
         Profil(yearsResidence=MATCH.y),
         TEST(lambda y: y in ['3-5', '>5']),
-        Profil(AES_emploiOK=True)
+        Profil(AES_profession = MATCH.p),
+        TEST(lambda p : p not in ["aucun", "non", "autre"]),
     )
     def passeport_talent_investisseur(self):
         self.declare(Fact(eligibilite='P056'))
@@ -421,21 +423,23 @@ class MoteurEligibilite(KnowledgeEngine):
     @Rule(
         Profil(specialSituations=MATCH.s),
         TEST(lambda s: 'ancienCombattant' in s),
-        Profil(resident_integrationOK=True, resident_languageA2=True)
+        Profil(resident_integrationOK=True, resident_languageB1=MATCH.l),
+        TEST(lambda l: l not in ['pas_de_preuve'])
     )
     def resident_ancien_combattant(self):
         self.declare(Fact(eligibilite='P036'))
 
     # ======================== RÉSIDENCE LONGUE DURÉE ========================
     @Rule(
-        Profil(yearsResidence='>5', resident_integrationOK=True, resident_languageA2=True)
+        Profil(yearsResidence='>5', resident_integrationOK=True, resident_languageB1=MATCH.l),
+        TEST(lambda l: l not in ['pas_de_preuve'])
     )
     def resident_longue_duree_ue(self):
         self.declare(Fact(eligibilite='P032'))
 
     @Rule(
         Profil(currentPermit=MATCH.p),
-        TEST(lambda p: p in ['resident_10ans', 'resident_permanent']),
+        TEST(lambda p: p in ['resident_10ans','resident_ld_ue', 'resident_permanent']),
         Profil(resident_integrationOK=True, resident_longAbsence=False)
     )
     def resident_permanent(self):
@@ -443,7 +447,7 @@ class MoteurEligibilite(KnowledgeEngine):
 
     @Rule(
         Profil(currentPermit=MATCH.p),
-        TEST(lambda p: p in ['resident_10ans', 'resident_permanent'])
+        TEST(lambda p: p in ['resident_10ans', 'resident_ld_ue', 'resident_permanent'])
     )
     def sejour_retraite(self):
         self.declare(Fact(eligibilite='P044'))
