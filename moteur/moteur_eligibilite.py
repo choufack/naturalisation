@@ -96,12 +96,12 @@ class MoteurEligibilite(KnowledgeEngine):
         
     @Rule(
         Profil(nationality=MATCH.n),
-        TEST(lambda s: s == 'STATELESS'),
+        TEST(lambda n: n == 'STATELESS'),
         Profil(yearsResidence=MATCH.y),
         TEST(lambda y: y != '<3'),
         # TODO: ajouter condition sur le niveau de langue (prise en compte du message pour lui de faire les cours de langue si qucun justificatif)
     )
-    def naturalisation_refugie(self):
+    def naturalisation_refugie2(self):
         self.declare(Fact(eligibilite='P055'))
 
     # ======================== FAMILLE ========================

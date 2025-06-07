@@ -70,7 +70,7 @@
         { "value": "etudes", "label": "Études / stage / recherche" },
         { "value": "invest", "label": "Création / investissement" },
         { "value": "visiteur", "label": "Visiteur (ressources propres)" },
-        { "value": "me8erTension","label": "AES – Mé8ers en tension" },
+        { "value": "metierTension","label": "AES – Métiers en tension" },
         { "value": "autre", "label": "Autre motif" }
       ],
       "fact": "motifPrincipal"
@@ -268,12 +268,12 @@
     {
       "panel_id": "P_AES",
       "visible_if": [
-        { "fact": "motifPrincipal", "contains": "me8erTension" }
+        { "fact": "motifPrincipal", "contains": "metierTension" }
       ],
       "questions": [
         {
           "question_id": "M1_emploi",
-          "label": "Occupez actuellement un emploi relevant de la liste des métiers en tension?",
+          "label": "Occupez-vous actuellement un emploi relevant de la liste des métiers en tension?",
           "type": "radio",
           "options": [
             { "value": true, "label": "Oui" },
@@ -283,7 +283,7 @@
         },
         {
           "question_id": "M2_bulletins",
-          "label": "J’ai 12 bulletins de salaire (24 derniers mois) **dans un mé8er en tension**",
+          "label": "J’ai 12 bulletins de salaire (24 derniers mois) **dans un métier en tension**",
           "type": "radio",
           "options": [
             { "value": true, "label": "Oui" },

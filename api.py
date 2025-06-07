@@ -166,16 +166,19 @@ def calculer_eligibilite(answers: Dict[str, Any]) -> Dict[str, Any]:
     # Construire le résultat avec id, nom et documents requis
     eligible_procedures = []
     for proc_id in eligible_ids:
+        new_proc = {
+            "id": proc_id,
+            "name": proc_name_map[proc_id],
+        }
         if proc_id in proc_doc_map and proc_id in proc_name_map:
             required_docs = [
                 {"code": code, "description": doc_map[code]}
                 for code in proc_doc_map[proc_id]
                 if code in doc_map
             ]
-            eligible_procedures.append({
-                "id": proc_id,
-                "name": proc_name_map[proc_id],
-                "required_documents": required_docs
-            })
+            
+            new_proc["required_documents"] = required_docs
+            
+        eligible_procedures.append(new_proc)
 
     return eligible_procedures
