@@ -37,7 +37,7 @@ class MoteurEligibilite(KnowledgeEngine):
         self.declare(Fact(eligibilite='P046'))
 
     @Rule(
-        Profil(mainPath='mariage', marriage4y=True, communityLife=True, frenchA2=True)
+        Profil(mainPath='mariage', marriage4y=True, communityLife=True, frenchB1=True)
     )
     def nationalite_par_mariage(self):
         self.declare(Fact(eligibilite='P047'))
@@ -64,7 +64,7 @@ class MoteurEligibilite(KnowledgeEngine):
         Profil(mainPath='reintegration'),
         Profil(residenceBracket=MATCH.r),
         TEST(lambda r: r in ['5-10', '>10', 'born']),
-        Profil(frenchA2=True, cleanRecord=True)
+        Profil(frenchB1=True, cleanRecord=True)
     )
     def reintegration_decret(self):
         self.declare(Fact(eligibilite='P051'))
@@ -73,7 +73,7 @@ class MoteurEligibilite(KnowledgeEngine):
         Profil(mainPath='naturalisation'),
         Profil(residenceBracket=MATCH.r),
         TEST(lambda r: r in ['5-10', '>10', 'born']),
-        Profil(frenchA2=True, cleanRecord=True, longAbsence=False, stableIncome5y=True)
+        Profil(frenchB1=True, cleanRecord=True, longAbsence=False, stableIncome5y=True)
     )
     def naturalisation_decret(self):
         self.declare(Fact(eligibilite='P052'))
@@ -89,7 +89,7 @@ class MoteurEligibilite(KnowledgeEngine):
         TEST(lambda s: 'refugie' in s),
         Profil(yearsResidence=MATCH.y),
         TEST(lambda y: y in ['3-5', '>5']),
-        Profil(frenchA2=True)
+        Profil(frenchB1=True)
     )
     def naturalisation_refugie(self):
         self.declare(Fact(eligibilite='P055'))
