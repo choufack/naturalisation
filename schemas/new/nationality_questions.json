@@ -31,11 +31,12 @@
         { "value": "jus_soli", "label": "Né-e en France de parents étrangers" },
         { "value": "adoption", "label": "Adopté-e / recueilli-e par un Français" },
         { "value": "reintegration", "label": "J'ai déjà eu la nationalité française" },
-        { "value": "naturalisation", "label": "Résidence longue (naturalisation)" }
+        { "value": "naturalisation", "label": "Résidence longue (naturalisation)" },
+        { "value": "autre", "label": "Autre situation" }
       ],
       "fact": "mainPath",
       "visible_if": [
-        { "fact": "nationality", "eq": "STATELESS" }
+        { "fact": "nationality", "neq": "STATELESS" }
       ]
     },
     {

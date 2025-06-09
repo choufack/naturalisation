@@ -124,9 +124,18 @@
       "id": "P031",
       "name": "Carte de résident - Époux de Français"
     },
+
+    {
+      "id": "P0310",
+      "name": "Carte de résident - Époux de Français (Sous reserve de l'obtention d'un certificat de langue A2)"
+    },
     {
       "id": "P032",
       "name": "Carte de résident longue durée - UE"
+    },
+    {
+      "id": "P0320",
+      "name": "Carte de résident longue durée - UE (Sous reserve de l'obtention d'un certificat de langue A2)"
     },
     {
       "id": "P033",
@@ -145,8 +154,16 @@
       "name": "Carte de résident pour ancien combattant"
     },
     {
+      "id": "P0360",
+      "name": "Carte de résident pour ancien combattant (Sous reserve de l'obtention d'un certificat de langue A2)"
+    },
+    {
       "id": "P037",
       "name": "Carte de résident pour ascendant à charge d’un enfant français"
+    },
+    {
+      "id": "P0370",
+      "name": "Carte de résident pour ascendant à charge d’un enfant français (Sous reserve de l'obtention d'un certificat de langue A2)"
     },
     {
       "id": "P038",
@@ -189,6 +206,10 @@
       "name": "Nationalité par mariage (déclaration)"
     },
     {
+      "id": "P0470",
+      "name": "Nationalité par mariage (déclaration) (Sous reserve de l'obtention d'un certificat de langue B1)"
+    },
+    {
       "id": "P048",
       "name": "Nationalité - Enfant adopté"
     },
@@ -205,8 +226,16 @@
       "name": "Réintégration dans la nationalité française - Décret"
     },
     {
+      "id": "P0510",
+      "name": "Réintégration dans la nationalité française - Décret (sous réserve de l'obtention d'un certificat de langue B1)"
+    },
+    {
       "id": "P052",
       "name": "Naturalisation par décret"
+    },
+    {
+      "id": "P0520",
+      "name": "Naturalisation par décret (sous réserve de l'obtention d'un certificat de langue B1)"
     },
     {
       "id": "P053",
@@ -219,6 +248,10 @@
     {
       "id": "P055",
       "name": "Naturalisation pour réfugiés/statutaires apatrides"
+    },
+    {
+      "id": "P0550",
+      "name": "Naturalisation pour réfugiés/statutaires apatrides (sous réserve de l'obtention d'un certificat de langue B1)"
     },
     {
       "id": "P056",

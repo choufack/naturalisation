@@ -20,6 +20,18 @@
       "fact": "nationality"
     },
     {
+      "question_id": "Q3_yearsResidence",
+      "label": "Depuis combien d'années résidez-vous régulièrement en France?",
+      "type": "select",
+      "options": [
+        { "value": "<1", "label": "Moins d'1 an" },
+        { "value": "1-3", "label": "1 à 3 ans" },
+        { "value": "3-5", "label": "3 à 5 ans" },
+        { "value": ">5", "label": "Plus de 5 ans" }
+      ],
+      "fact": "yearsResidence"
+    },
+    {
       "question_id": "Q2_currentPermit",
       "label": "Quel titre de séjour détenez-vous actuellement?",
       "type": "select",
@@ -54,18 +66,6 @@
       "visible_if": { "fact": "nationality", "neq": "FR" }
     },
     {
-      "question_id": "Q3_yearsResidence",
-      "label": "Depuis combien d'années résidez-vous régulièrement en France?",
-      "type": "select",
-      "options": [
-        { "value": "<1", "label": "Moins d'1 an" },
-        { "value": "1-3", "label": "1 à 3 ans" },
-        { "value": "3-5", "label": "3 à 5 ans" },
-        { "value": ">5", "label": "Plus de 5 ans" }
-      ],
-      "fact": "yearsResidence"
-    },
-    {
       "question_id": "Q4_motifs",
       "label": "Quels sont vos motifs principaux de séjour?",
       "type": "checkbox",
@@ -85,6 +85,7 @@
       "label": "Avez-vous une situation particulière?",
       "type": "checkbox",
       "options": [
+        { "value": "aucune", "label": "Aucune de ces situations" },
         { "value": "auPair", "label": "Jeune au pair" },
         { "value": "volontaire", "label": "Volontaire / service civique" },
         { "value": "medical", "label": "Soins médicaux / humanitaire" },
@@ -93,8 +94,7 @@
         { "value": "refugie", "label": "Réfugié-e / protection subsidiaire" },
         { "value": "parentMalade", "label": "Parent d'un enfant malade" },
         { "value": "etrangerEnfance", "label": "Arrivé-e mineur-e & scolarisé-e" },
-        { "value": "handicap", "label": "Personne en situation de handicap" },
-        { "value": "aucune", "label": "Aucune de ces situations" }
+        { "value": "handicap", "label": "Personne en situation de handicap" }
       ],
       "fact": "specialSituations"
     }
@@ -371,17 +371,17 @@
 
         {
           "question_id": "R3_frA2",
-          "label": "Quelle preuve atteste d'un niveau de français ≥ B1 ?",
+          "label": "Quelle preuve atteste d'un niveau de français ≥ A2 ?",
           "type": "select",
           "options": [
             { "value": "diplome_fr", "label": "Diplôme français (niveau ≥ 3)" },
-            { "value": "diplome_b1_cefrl", "label": "Diplôme B1 CECRL délivré en France" },
+            { "value": "diplome_b1_cefrl", "label": "Diplôme A2 CECRL délivré en France" },
             { "value": "attestation_test", "label": "Attestation TCF/TEF < 2 ans" },
             { "value": "dispense_enic", "label": "Attestation ENIC-NARIC (niveau ≥ 3)" },
             { "value": "certif_medicale", "label": "Certificat médical (dispense)" },
             { "value": "pas_de_preuve", "label": "Aucune preuve (test à prévoir)" }
           ],
-          "fact": "resident.languageB1",
+          "fact": "resident.languageA2",
           "visible_if": [
             { "fact": "currentPermit", "in": ["resident_10ans","resident_ld_ue","resident_permanent"] }
           ]

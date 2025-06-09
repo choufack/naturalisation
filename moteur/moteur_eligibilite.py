@@ -37,11 +37,18 @@ class MoteurEligibilite(KnowledgeEngine):
         self.declare(Fact(eligibilite='P046'))
 
     @Rule(
-        Profil(mainPath='mariage', marriage4y=True, communityLife=True, frenchB1=MATCH.lb),
-        TEST(lambda lb: lb  in ['diplome_fr','diplome_b1_cefrl','dispense_enic','attestation_test','certif_medicale'])
+        Profil(mainPath='mariage', marriage4y=True, family_community=True, frenchB1=MATCH.lb),
+        TEST(lambda lb: lb not in ['aucun','pas_de_preuve'])
     )
     def nationalite_par_mariage(self):
         self.declare(Fact(eligibilite='P047'))
+        
+    @Rule(
+        Profil(mainPath='mariage', marriage4y=True, family_community=True, frenchB1=MATCH.lb),
+        TEST(lambda lb: lb in ['aucun','pas_de_preuve'])
+    )
+    def nationalite_par_mariage2(self):
+        self.declare(Fact(eligibilite='P0470'))
 
     @Rule(
         Profil(mainPath='adoption', adoptionPleniere=True)
@@ -66,20 +73,40 @@ class MoteurEligibilite(KnowledgeEngine):
         Profil(residenceBracket=MATCH.r),
         TEST(lambda r: r in ['5-10', '>10', 'born']),
         Profil(cleanRecord=True ,frenchB1=MATCH.lb),
-        TEST(lambda lb: lb  in ['diplome_fr','diplome_b1_cefrl','dispense_enic','attestation_test','certif_medicale'])
+        TEST(lambda lb: lb not in ['aucun','pas_de_preuve'])
     )
     def reintegration_decret(self):
         self.declare(Fact(eligibilite='P051'))
+        
+    @Rule(
+        Profil(mainPath='reintegration'),
+        Profil(residenceBracket=MATCH.r),
+        TEST(lambda r: r in ['5-10', '>10', 'born']),
+        Profil(cleanRecord=True ,frenchB1=MATCH.lb),
+        TEST(lambda lb: lb  in ['aucun','pas_de_preuve'])
+    )
+    def reintegration_decret2(self):
+        self.declare(Fact(eligibilite='P0510'))
 
     @Rule(
         Profil(mainPath='naturalisation'),
         Profil(residenceBracket=MATCH.r),
         TEST(lambda r: r in ['5-10', '>10', 'born']),
         Profil(stableIncome5y=True, cleanRecord=True, longAbsence=False,frenchB1=MATCH.lb),
-        TEST(lambda lb: lb  in ['diplome_fr','diplome_b1_cefrl','dispense_enic','attestation_test','certif_medicale'])
+        TEST(lambda lb: lb not in ['aucun','pas_de_preuve'])
     )
     def naturalisation_decret(self):
         self.declare(Fact(eligibilite='P052'))
+        
+    @Rule(
+        Profil(mainPath='naturalisation'),
+        Profil(residenceBracket=MATCH.r),
+        TEST(lambda r: r in ['5-10', '>10', 'born']),
+        Profil(stableIncome5y=True, cleanRecord=True, longAbsence=False,frenchB1=MATCH.lb),
+        TEST(lambda lb: lb in ['aucun','pas_de_preuve'])
+    )
+    def naturalisation_decret2(self):
+        self.declare(Fact(eligibilite='P0520'))
 
     @Rule(
         Profil(mainPath='jus_soli', res5since11=True, ageBracket='>=18', residenceBracket='born')
@@ -93,10 +120,21 @@ class MoteurEligibilite(KnowledgeEngine):
         Profil(yearsResidence=MATCH.y),
         TEST(lambda y: y in ['3-5', '>5']),
         Profil(frenchB1=MATCH.lb),
-        TEST(lambda lb: lb  in ['diplome_fr','diplome_b1_cefrl','dispense_enic','attestation_test','certif_medicale'])
+        TEST(lambda lb: lb not in ['aucun','pas_de_preuve'])
     )
     def naturalisation_refugie(self):
         self.declare(Fact(eligibilite='P055'))
+        
+    @Rule(
+        Profil(specialSituations=MATCH.s),
+        TEST(lambda s: 'refugie' in s),
+        Profil(yearsResidence=MATCH.y),
+        TEST(lambda y: y in ['3-5', '>5']),
+        Profil(frenchB1=MATCH.lb),
+        TEST(lambda lb: lb  in ['aucun','pas_de_preuve'])
+    )
+    def naturalisation_refugie2(self):
+        self.declare(Fact(eligibilite='P0550'))
         
     @Rule(
         Profil(nationality=MATCH.n),
@@ -181,11 +219,20 @@ class MoteurEligibilite(KnowledgeEngine):
     @Rule(
         Profil(motifPrincipal=MATCH.m),
         TEST(lambda m: 'famille' in m),
-        Profil(family_link='mariage', family_yearsMarriage=MATCH.y, family_community=True, resident_integrationOK=True, resident_languageB1=MATCH.l),
-        TEST(lambda y, l: y >= 3 and l not in ['pas_de_preuve'])
+        Profil(family_link='mariage', family_yearsMarriage=MATCH.y, family_community=True, resident_integrationOK=True, resident_languageA2=MATCH.l),
+        TEST(lambda y, l: y >= 3 and l not in ['pas_de_preuve','aucun'])
     )
     def resident_epoux_francais(self):
         self.declare(Fact(eligibilite='P031'))
+        
+    @Rule(
+        Profil(motifPrincipal=MATCH.m),
+        TEST(lambda m: 'famille' in m),
+        Profil(family_link='mariage', family_yearsMarriage=MATCH.y, family_community=True, resident_integrationOK=True, resident_languageA2=MATCH.l),
+        TEST(lambda y, l: y >= 3 and l in ['pas_de_preuve','aucun'])
+    )
+    def resident_epoux_francais2(self):
+        self.declare(Fact(eligibilite='P0310'))
 
     @Rule(
         Profil(motifPrincipal=MATCH.m),
@@ -208,11 +255,21 @@ class MoteurEligibilite(KnowledgeEngine):
         Profil(mainPath='ascendant'),
         Profil(ascendant_link=MATCH.al),
         TEST(lambda al: al in ['parent', 'grandparent']),
-        Profil(resident_integrationOK=True, resident_languageB1=MATCH.lb),
-        TEST(lambda lb: lb  in ['diplome_fr','diplome_b1_cefrl','dispense_enic','attestation_test','certif_medicale'])
+        Profil(resident_integrationOK=True, resident_languageA2=MATCH.lb),
+        TEST(lambda lb: lb not in  ['pas_de_preuve',"aucun"])
     )
     def resident_ascendant_enfant_francais(self):
         self.declare(Fact(eligibilite='P037'))
+        
+    @Rule(
+        Profil(mainPath='ascendant'),
+        Profil(ascendant_link=MATCH.al),
+        TEST(lambda al: al in ['parent', 'grandparent']),
+        Profil(resident_integrationOK=True, resident_languageA2=MATCH.lb),
+        TEST(lambda lb: lb  in ['pas_de_preuve',"aucun"])
+    )
+    def resident_ascendant_enfant_francais2(self):
+        self.declare(Fact(eligibilite='P0370'))
 
     @Rule(
         Profil(motifPrincipal=MATCH.m),
@@ -427,18 +484,34 @@ class MoteurEligibilite(KnowledgeEngine):
     @Rule(
         Profil(specialSituations=MATCH.s),
         TEST(lambda s: 'ancienCombattant' in s),
-        Profil(resident_integrationOK=True, resident_languageB1=MATCH.l),
-        TEST(lambda l: l not in ['pas_de_preuve'])
+        Profil(resident_integrationOK=True, resident_languageA2=MATCH.l),
+        TEST(lambda l: l not in ['pas_de_preuve', "aucun"])
     )
     def resident_ancien_combattant(self):
         self.declare(Fact(eligibilite='P036'))
+        
+    @Rule(
+        Profil(specialSituations=MATCH.s),
+        TEST(lambda s: 'ancienCombattant' in s),
+        Profil(resident_integrationOK=True, resident_languageA2=MATCH.l),
+        TEST(lambda l: l in ['pas_de_preuve', "aucun"])
+    )
+    def resident_ancien_combattant2(self):
+        self.declare(Fact(eligibilite='P0360'))
 
     # ======================== RÉSIDENCE LONGUE DURÉE ========================
     @Rule(
-        Profil(yearsResidence='>5', resident_integrationOK=True, resident_languageB1=MATCH.l),
-        TEST(lambda l: l not in ['pas_de_preuve'])
+        Profil(yearsResidence='>5', resident_integrationOK=True, resident_languageA2=MATCH.l),
+        TEST(lambda l: l not in ['pas_de_preuve',"aucun"])
     )
     def resident_longue_duree_ue(self):
+        self.declare(Fact(eligibilite='P032'))
+        
+    @Rule(
+        Profil(yearsResidence='>5', resident_integrationOK=True, resident_languageA2=MATCH.l),
+        TEST(lambda l: l in ['pas_de_preuve',"aucun"])
+    )
+    def resident_longue_duree_ue2(self):
         self.declare(Fact(eligibilite='P032'))
 
     @Rule(
