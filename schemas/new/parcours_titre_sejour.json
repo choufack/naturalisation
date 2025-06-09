@@ -139,7 +139,7 @@
             { "value": false, "label": "Non" }
           ],
           "visible_if": [
-            { "fact": "family.link", "in": ["mariage", "pacs", "regroup"] }
+            { "fact": "family.link", "in": ["mariage", "pacs","famUE", "regroup"] }
           ],
           "fact": "family.community"
         }
@@ -187,7 +187,7 @@
             { "value": ">5000", "label": "Plus de 5 000 €" }
           ],
           "visible_if": [
-            { "fact": "work.contract", "in": ["CDI", "CDD"] }
+            { "fact": "work.contract", "in": ["CDI", "CDD","detache"] }
           ],
           "fact": "work.salary"
         }
@@ -222,7 +222,7 @@
             { "value": "autre", "label": "Autre" }
           ],
           "visible_if": [
-            { "fact": "studies.status", "eq": "etudiant" }
+            { "fact": "studies.status", "in": ["etudiant", "chercheur"] }
           ],
           "fact": "studies.degree"
         }
@@ -309,13 +309,12 @@
 
     {
       "panel_id": "P_titresSpeciaux",
-      "visible_if": {
-        "or":[
+      "visible_associator": "or",
+      "visible_if": [
           { "fact": "nationality", "in": ["DZ","MA","TN","SN","CM","LB","PM"] },
           { "fact": "nationality", "eq": "DZ" },
           { "fact": "currentPermit", "in": ["resident_10ans","resident_ld_ue","resident_permanent"] }
-        ]
-      },
+      ],
       "questions":[
           {
             "question_id": "B1_agreement",

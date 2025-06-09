@@ -202,10 +202,10 @@ class MoteurEligibilite(KnowledgeEngine):
 
     @Rule(
         Profil(mainPath='ascendant'),
-        Profil(ascendant_link=MATCH.l),
-        TEST(lambda l: l in ['parent', 'grandparent']),
-        Profil(resident_integrationOK=True, resident_languageB1=MATCH.l),
-        TEST(lambda l: l not in ['pas_de_preuve'])
+        Profil(ascendant_link=MATCH.al),
+        TEST(lambda al: al in ['parent', 'grandparent']),
+        Profil(resident_integrationOK=True, resident_languageB1=MATCH.lb),
+        TEST(lambda lb: lb  in ['diplome_fr','diplome_b1_cefrl','dispense_enic','attestation_test','certif_medicale'])
     )
     def resident_ascendant_enfant_francais(self):
         self.declare(Fact(eligibilite='P037'))
@@ -258,7 +258,7 @@ class MoteurEligibilite(KnowledgeEngine):
         Profil(studies_degree=MATCH.d),
         TEST(lambda d: d in ['master', 'doctorat']),
         Profil(work_salary=MATCH.s),
-        TEST(lambda s: s >= 3603.58)
+        TEST(lambda s: s in ["3500-5000", ">5000"])
     )
     def passeport_talent_salarie_qualifie(self):
         self.declare(Fact(eligibilite='P016'))
@@ -267,7 +267,7 @@ class MoteurEligibilite(KnowledgeEngine):
         Profil(motifPrincipal=MATCH.m),
         TEST(lambda m: 'travail' in m),
         Profil(work_salary=MATCH.s),
-        TEST(lambda s: s >= 3603.58)
+        TEST(lambda s: s in ["3500-5000", ">5000"])
     )
     def passeport_talent_entreprise_innovante(self):
         self.declare(Fact(eligibilite='P017'))
@@ -278,7 +278,7 @@ class MoteurEligibilite(KnowledgeEngine):
         Profil(studies_degree=MATCH.d),
         TEST(lambda d: d in ['licence', 'master', 'doctorat']),
         Profil(work_salary=MATCH.s),
-        TEST(lambda s: s >= 4486.38)
+        TEST(lambda s: s in ["3500-5000", ">5000"])
     )
     def passeport_talent_carte_bleue(self):
         self.declare(Fact(eligibilite='P018'))
@@ -287,7 +287,7 @@ class MoteurEligibilite(KnowledgeEngine):
         Profil(motifPrincipal=MATCH.m),
         TEST(lambda m: 'travail' in m),
         Profil(work_contract='detache', work_salary=MATCH.s),
-        TEST(lambda s: s >= 3243.24)
+        TEST(lambda s: s in ["3500-5000", ">5000"])
     )
     def passeport_talent_salarie_mission(self):
         self.declare(Fact(eligibilite='P019'))
@@ -296,7 +296,7 @@ class MoteurEligibilite(KnowledgeEngine):
         Profil(motifPrincipal=MATCH.m),
         TEST(lambda m: 'travail' in m),
         Profil(work_salary=MATCH.s),
-        TEST(lambda s: s >= 5405.40)
+        TEST(lambda s: s in [">5000"])
     )
     def passeport_talent_mandataire_social(self):
         self.declare(Fact(eligibilite='P024'))
@@ -390,7 +390,7 @@ class MoteurEligibilite(KnowledgeEngine):
         Profil(AES_profession = MATCH.p),
         TEST(lambda p : p not in ["aucun", "non", "autre"]),
     )
-    def passeport_talent_investisseur(self):
+    def passeport_talent_investisseur2(self):
         self.declare(Fact(eligibilite='P056'))
     
 
@@ -488,6 +488,8 @@ def flatten_keys(form):
         # Tentative de conversion en entier
         try:
             out[key] = int(v)
+            if "_" in v:
+                out[key] = v
         except (ValueError, TypeError):
             # Gestion des booléens
             if isinstance(v, str):

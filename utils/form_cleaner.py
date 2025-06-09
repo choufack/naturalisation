@@ -12,7 +12,7 @@ with open('./schemas/new/nationality_questions.json', 'r', encoding='utf-8') as 
 def evaluate_condition(condition: Dict[str, Any], answers: Dict[str, Any]) -> bool:
     """Évalue une condition visible_if en fonction des réponses."""
     fact = condition['fact'].replace('.', '_')  # Convertir . en _ pour correspondre à answers
-    value = answers.get(fact)
+    value = answers.get(fact) or answers.get(condition['fact'])
     
     operator = condition.get('eq') and 'eq' or \
               condition.get('in') and 'in' or \
@@ -76,10 +76,15 @@ def clean_form_data(answers: Dict[str, Any]) -> Dict[str, Any]:
     # Ajouter les questions des panneaux
     for data in [titre_sejour_data, nationality_data]:
         for panel in data.get('panels', []):
+            if panel.get("visible_associator",None) == "or":
+                # print(f"{panel.get('panel_id')}")
+                p_visible_if = []
+            else:
+                p_visible_if = panel['visible_if'] 
             for question in panel.get('questions', []):
                 all_questions.append({
                     'fact': question['fact'],
-                    'visible_if': panel['visible_if'] + question.get('visible_if', []),
+                    'visible_if': p_visible_if + question.get('visible_if', []),
                     'is_panel': False
                 })
     
