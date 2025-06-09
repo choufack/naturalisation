@@ -37,7 +37,8 @@ class MoteurEligibilite(KnowledgeEngine):
         self.declare(Fact(eligibilite='P046'))
 
     @Rule(
-        Profil(mainPath='mariage', marriage4y=True, communityLife=True, frenchB1=True)
+        Profil(mainPath='mariage', marriage4y=True, communityLife=True, frenchB1=MATCH.lb),
+        TEST(lambda lb: lb  in ['diplome_fr','diplome_b1_cefrl','dispense_enic','attestation_test','certif_medicale'])
     )
     def nationalite_par_mariage(self):
         self.declare(Fact(eligibilite='P047'))
@@ -64,7 +65,8 @@ class MoteurEligibilite(KnowledgeEngine):
         Profil(mainPath='reintegration'),
         Profil(residenceBracket=MATCH.r),
         TEST(lambda r: r in ['5-10', '>10', 'born']),
-        Profil(frenchB1=True, cleanRecord=True)
+        Profil(cleanRecord=True ,frenchB1=MATCH.lb),
+        TEST(lambda lb: lb  in ['diplome_fr','diplome_b1_cefrl','dispense_enic','attestation_test','certif_medicale'])
     )
     def reintegration_decret(self):
         self.declare(Fact(eligibilite='P051'))
@@ -73,7 +75,8 @@ class MoteurEligibilite(KnowledgeEngine):
         Profil(mainPath='naturalisation'),
         Profil(residenceBracket=MATCH.r),
         TEST(lambda r: r in ['5-10', '>10', 'born']),
-        Profil(frenchB1=True, cleanRecord=True, longAbsence=False, stableIncome5y=True)
+        Profil(stableIncome5y=True, cleanRecord=True, longAbsence=False,frenchB1=MATCH.lb),
+        TEST(lambda lb: lb  in ['diplome_fr','diplome_b1_cefrl','dispense_enic','attestation_test','certif_medicale'])
     )
     def naturalisation_decret(self):
         self.declare(Fact(eligibilite='P052'))
@@ -89,7 +92,8 @@ class MoteurEligibilite(KnowledgeEngine):
         TEST(lambda s: 'refugie' in s),
         Profil(yearsResidence=MATCH.y),
         TEST(lambda y: y in ['3-5', '>5']),
-        Profil(frenchB1=True)
+        Profil(frenchB1=MATCH.lb),
+        TEST(lambda lb: lb  in ['diplome_fr','diplome_b1_cefrl','dispense_enic','attestation_test','certif_medicale'])
     )
     def naturalisation_refugie(self):
         self.declare(Fact(eligibilite='P055'))
