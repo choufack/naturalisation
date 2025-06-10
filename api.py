@@ -169,6 +169,7 @@ def calculer_eligibilite(answers: Dict[str, Any]) -> Dict[str, Any]:
         new_proc = {
             "id": proc_id,
             "name": proc_name_map[proc_id],
+            "required_documents":[]
         }
         if proc_id in proc_doc_map and proc_id in proc_name_map:
             required_docs = [

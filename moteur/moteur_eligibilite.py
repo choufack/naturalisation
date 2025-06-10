@@ -37,14 +37,14 @@ class MoteurEligibilite(KnowledgeEngine):
         self.declare(Fact(eligibilite='P046'))
 
     @Rule(
-        Profil(mainPath='mariage', marriage4y=True, family_community=True, frenchB1=MATCH.lb),
+        Profil(mainPath='mariage', marriage4y=True, communityLife=True, frenchB1=MATCH.lb),
         TEST(lambda lb: lb not in ['aucun','pas_de_preuve'])
     )
     def nationalite_par_mariage(self):
         self.declare(Fact(eligibilite='P047'))
         
     @Rule(
-        Profil(mainPath='mariage', marriage4y=True, family_community=True, frenchB1=MATCH.lb),
+        Profil(mainPath='mariage', marriage4y=True, communityLife=True, frenchB1=MATCH.lb),
         TEST(lambda lb: lb in ['aucun','pas_de_preuve'])
     )
     def nationalite_par_mariage2(self):
