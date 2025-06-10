@@ -448,10 +448,9 @@ class MoteurEligibilite(KnowledgeEngine):
     @Rule(
         Profil(yearsResidence=MATCH.y),
         TEST(lambda y: y in ['3-5', '>5']),
-        Profil(AES_profession = MATCH.p),
-        TEST(lambda p : p not in ["aucun", "non", "autre"]),
+        Profil(AES_bulletinsOK = True),
     )
-    def passeport_talent_investisseur2(self):
+    def passeport_talenT_metier_tension(self):
         self.declare(Fact(eligibilite='P056'))
     
 
