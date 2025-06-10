@@ -523,6 +523,8 @@ class MoteurEligibilite(KnowledgeEngine):
         self.declare(Fact(eligibilite='P035'))
 
     @Rule(
+        Profil(specialSituations=MATCH.s),
+        TEST(lambda s: 'retraite' in s),
         Profil(currentPermit=MATCH.p),
         TEST(lambda p: p in ['resident_10ans', 'resident_ld_ue', 'resident_permanent'])
     )

@@ -92,6 +92,7 @@
         { "value": "victimeTraite", "label": "Victime de traite/proxénétisme" },
         { "value": "ancienCombattant", "label": "Ancien combattant / FFI" },
         { "value": "refugie", "label": "Réfugié-e / protection subsidiaire" },
+        { "value": "retraite", "label": "Retraité" },
         { "value": "parentMalade", "label": "Parent d'un enfant malade" },
         { "value": "etrangerEnfance", "label": "Arrivé-e mineur-e & scolarisé-e" },
         { "value": "handicap", "label": "Personne en situation de handicap" }
