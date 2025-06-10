@@ -173,6 +173,21 @@
     {"code": "DOC171", "description": "Bordereaux CAF/MSA"},
     {"code": "DOC172", "description": "État des services, décorations/citations"},
     {"code": "DOC173", "description": "Preuves de services exceptionnels"},
-    {"code": "DOC174", "description": "Certificat de statut de réfugié ou apatride"}
+    {"code": "DOC174", "description": "Certificat de statut de réfugié ou apatride"},
+
+
+    {"code": "DOC175", "description": "Une copie intégrale d'acte de naissance comportant les mentions les plus récentes accompagnée le cas échéant de la décision judiciaire ordonnant sa transcription (jugement déclaratif ou supplétif)."},
+    {"code": "DOC176", "description": "Passeport (pages relatives à l'état civil, aux dates de validité, aux cachets d'entrée et aux visas) ou, à défaut, autres justificatifs dont au moins un revêtu d'une photographie permettant d'identifier le demandeur (attestation consulaire, carte d'identité, carte consulaire, certificat de nationalité, etc.)."},
+    {"code": "DOC177", "description": "Datant de moins de six mois : facture (électricité, gaz, eau, téléphone fixe, accès à internet), bail de location de moins de six mois, quittance de loyer (si locataire) ou taxe d'habitation; en cas d'hébergement à l'hôtel : attestation de l'hôtelier et facture du dernier mois ; en cas d'hébergement chez un particulier : attestation de l'hébergeant datée et signée, copie de sa carte nationale d'identité ou de sa carte de séjour, et justificatif de son domicile si l'adresse de sa carte nationale d'identité ou de sa carte de séjour n'est plus à jour."},
+    {"code": "DOC178", "description": "3 photographies originales identiques d'identité de face, tête nue, récentes et parfaitement ressemblantes (format 35 mm x 45 mm - norme ISO/IEC 19794-5 : 2005)."},
+    {"code": "DOC179", "description": "Justificatif d'acquittement de la taxe sur le titre de séjour et du droit de timbre et si exigé le droit de visa de régularisation à remettre au moment de la remise du titre."},
+    {"code": "DOC180", "description": "Tout document justifiant d'une résidence ininterrompue en France depuis au moins trois ans (par exemple : avis d'imposition, attestation AME, copie de visa d'entrée, factures, etc.)."},
+    {"code": "DOC181", "description": "Preuves d'exercice antérieur d'une activité salariée dans un métier en tension au cours des vingt-quatre derniers mois (par exemple : bulletins de salaire ou à défaut relevés ou virements bancaires, certificat de travail, attestation Pôle Emploi, avis d'imposition sur le revenu correspondant aux périodes de travail, etc.)."},
+    {"code": "DOC182", "description": "Preuves de l'exercice actuel d'une activité salariée dans un métier en tension (par exemple : copie du contrat de travail, bulletins de salaire, attestation d'activité ou d'emploi, etc.)."},
+    {"code": "DOC183", "description": "Si l'emploi que vous occupez est réglementé, preuves du respect des conditions réglementaires d'exercice de la profession (diplôme, titre, certification, habilitation, autorisation, déclaration, inscription, etc.)."},
+    {"code": "DOC184", "description": "Preuves de l'insertion sociale et familiale, de l'intégration à la société française et de l'adhésion aux modes de vie ainsi qu'aux valeurs de la France (par exemple : attestations de cercles amicaux, adhésion à des associations, activité bénévole, participation aux activités scolaires des enfants, etc.)."},
+    {"code": "DOC185", "description": "Déclaration sur l'honneur de non polygamie en France si vous êtes marié et originaire d'un pays autorisant la polygamie."},
+    {"code": "DOC186", "description": "Contrat signé d'engagement au respect des principes de la République."}
   ]
 }
+

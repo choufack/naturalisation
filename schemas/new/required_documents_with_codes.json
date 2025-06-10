@@ -219,6 +219,10 @@
     {
       "id": "P055",
       "required_documents": ["DOC001", "DOC002", "DOC003", "DOC004", "DOC174", "DOC134", "DOC006", "DOC010", "DOC140", "DOC147", "DOC026", "DOC013"]
+    },
+    {
+      "id": "P056",
+      "required_documents": ["DOC175","DOC176","DOC177","DOC178","DOC179","DOC180","DOC181","DOC182","DOC183","DOC184","DOC185","DOC186"]
     }
   ]
 }
