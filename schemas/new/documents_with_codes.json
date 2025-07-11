@@ -187,7 +187,19 @@
     {"code": "DOC183", "description": "Si l'emploi que vous occupez est réglementé, preuves du respect des conditions réglementaires d'exercice de la profession (diplôme, titre, certification, habilitation, autorisation, déclaration, inscription, etc.)."},
     {"code": "DOC184", "description": "Preuves de l'insertion sociale et familiale, de l'intégration à la société française et de l'adhésion aux modes de vie ainsi qu'aux valeurs de la France (par exemple : attestations de cercles amicaux, adhésion à des associations, activité bénévole, participation aux activités scolaires des enfants, etc.)."},
     {"code": "DOC185", "description": "Déclaration sur l'honneur de non polygamie en France si vous êtes marié et originaire d'un pays autorisant la polygamie."},
-    {"code": "DOC186", "description": "Contrat signé d'engagement au respect des principes de la République."}
+    {"code": "DOC186", "description": "Contrat signé d'engagement au respect des principes de la République."},
+    {"code": "DOC187", "description": "Titre de voyage pour les bénéficiaires de la protection internationale"},
+    {"code": "DOC188", "description": "Document d'identité du conjoint attestant la (ou les) nationalité(s) d'origine."},
+    {"code": "DOC189", "description": "Titre de séjour du conjoint(e) ou concubin(e)."},
+    {"code": "DOC190", "description": "Avis d’imposition (ou de non-imposition) du conjoint/concubin des 3 dernières années."},
+    {"code": "DOC191", "description": "Ressources du conjoint/concubin."},
+    {"code": "DOC192", "description": "Justificatif de résidence en France."},
+    {"code": "DOC193", "description": "Contrat de location."},
+    {"code": "DOC194", "description": "Trois dernières quittances de loyer."},
+    {"code": "DOC195", "description": "Justificatif de domicile datant de moins de 6 mois."},
+    {"code": "DOC196", "description": "Casier judiciaire étranger des pays dont vous avez la nationalité."},
+    {"code": "DOC197", "description": "Les contrats, sur les 3 dernières années le cas échéant ou le Relevé de Carrière."},
+    {"code": "DOC198", "description": "Bulletins de salaire de novembre et décembre des 3 dernières années."}
   ]
 }
 
